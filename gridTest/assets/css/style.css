@@ -36,9 +36,7 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    -webkit-box-shadow: inset 0px 2px 27px 5px #000000;
-    box-shadow: inset 0px 2px 27px 5px #000000;
-    color: white;
+    color: #333;
 }
 
 .selected {
