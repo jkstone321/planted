@@ -1,0 +1,48 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ccc;
+}
+
+#gridContainer {
+    background-color: white;
+    height: auto;
+    width: auto;
+    border-radius: .5rem;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid gold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #333;
+}
+
+.selected {
+    background-color: red !important;
+}
+
+.grid:hover {
+    background-color: aqua;
+}
