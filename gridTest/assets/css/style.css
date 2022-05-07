@@ -15,7 +15,6 @@ main {
     border-radius: .5rem;
     display: grid;
     overflow: hidden;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .grid {
