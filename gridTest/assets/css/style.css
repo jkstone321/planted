@@ -23,7 +23,6 @@ main {
     width: 2.5rem;
     margin: 0;
     padding: 0;
-    background-color: white;
     border: 1px solid gold;
     cursor: pointer;
     display: flex;
@@ -39,10 +38,13 @@ main {
     color: #333;
 }
 
-.selected {
-    background-color: red !important;
+.grid:hover {
+    background-color: aqua !important;
 }
 
-.grid:hover {
-    background-color: aqua;
+#currentColorDisplay {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid black;
+    border-radius: .5rem;
 }

@@ -1,5 +1,6 @@
 var gridItems = []
-
+var currentColor = "red"
+var inactiveColor = "white"
 // class for each new grid item to be saved in gridItems array
 class GridItem {
     constructor(column, row) {
@@ -7,10 +8,16 @@ class GridItem {
         this.row = row
         this.selected = false
         this.plant = ""
+        this.selectedColor = currentColor
+    }
+
+    setColor(value) {
+        this.selectedColor = value
+        return this
     }
 
     //dont toggle it. explicitly set it to true or false
-    set(value) {
+    setSelected(value) {
         this.selected = value
         return this
     }
@@ -19,6 +26,7 @@ class GridItem {
         // whatever the current value of selected is,
         // set it to the opposite and return the updated object
         this.selected = !this.selected
+        if (this.selected && this.selectedColor !== currentColor) this.setColor(currentColor)
         return this
     }
 }
@@ -54,7 +62,7 @@ async function handleDrawGrid(index) {
         if (index === i) currentGi = gridItems[i].toggle()
 
         // create the grid square and add it to gridContainer
-        let gi = `<div id="${gridId}" class="grid${currentGi.selected ? ' selected' : ''}" onClick="handleDrawGrid(${i})">${gridId}</div>`
+        let gi = `<div id="${gridId}" class="grid" style="background-color: ${currentGi.selected ? currentGi.selectedColor : inactiveColor}" onClick="handleDrawGrid(${i})">&nbsp;</div>`
         gridContainer.append(gi)
 
         if (!index) gridItems.push(currentGi)
@@ -65,8 +73,23 @@ async function handleDrawGrid(index) {
 }
 
 function clearGrid() {
-    gridItems = gridItems.map(gi => gi.set(false))
+    gridItems = gridItems.map(gi => gi.setSelected(false))
     handleDrawGrid()
 }
 
-$(document).ready(() => handleDrawGrid().then(() => console.log(gridItems)))
+function handleColorPalette(e) {
+    e.preventDefault()
+    let newColor = $('#inpCurrentColor').val()
+    let currentColorDisplay = $('#currentColorDisplay')
+
+    currentColorDisplay.css({ backgroundColor: newColor })
+    currentColor = newColor
+}
+
+$(document).ready(() => {
+    var currentColorDisplay = $('#currentColorDisplay')
+    currentColorDisplay.css({ backgroundColor: currentColor })
+    let frmColorPalette = $('#frmColorPalette')
+    frmColorPalette.on('submit', handleColorPalette)
+    handleDrawGrid().then(() => console.log(gridItems))
+})
