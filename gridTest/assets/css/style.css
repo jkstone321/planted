@@ -38,19 +38,15 @@ main {
 }
 
 #currentColorDisplay {
-    height: 5rem;
-    width: 5rem;
+    height: 7rem;
+    width: 7rem;
     border: 1px solid black;
-    border-radius: .5rem;
+    border-radius: .25rem;
 }
 
 #colorPalette {
-
     width: 21rem;
     height: auto;
-    /* border: 1px solid black; */
-    /* display: grid;
-    grid-template-columns: 1fr repeat(10, 1rem); */
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

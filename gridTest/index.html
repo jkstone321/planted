@@ -21,23 +21,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <form id="frmColorPicker">
-
-                    <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
-                    <input type="submit" value="Set Color" />
-                </form>
-            </div>
             <div class="col" style="display:flex">
-                <div id="currentColorDisplay"></div>
+                <div id="currentColorDisplay">
+                    <!-- this box shows the currently selected color -->
+                </div>
                 <div id="colorPalette">
                     <!-- color palette squares go here -->
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col">
-                <button onClick="clearGrid()">Clear Grid</button>
+                <div class="col">
+                    <form id="frmColorPicker">
+                        <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
+                        <input type="submit" value="Set Color" />
+                        <button onClick="clearGrid()">Clear Grid</button>
+                    </form>
+
+                </div>
+
             </div>
         </div>
 

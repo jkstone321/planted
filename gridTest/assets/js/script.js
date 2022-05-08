@@ -71,8 +71,13 @@ function handleSetColor(e) {
     e.preventDefault()
     let newColor = $('#inpCurrentColor').val()
 
-    setColor(newColor)
-    console.log(colorExists(newColor))
+    // before we try to set the color, check if its a valid hex color,
+    // or if its in the list of html colors
+    if (colorExists(newColor)
+        || (newColor.startsWith('#') && newColor.length === 7)
+        || newColor.startsWith('#') && newColor.length === 4) { setColor(newColor) } else {
+        alert('The color is invalid.')
+    }
 }
 
 // handleSetColor takes the event, this one actually does the work
