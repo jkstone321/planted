@@ -62,28 +62,41 @@ function drawPalette() {
     })
 }
 
+// first use array.findIndex to see if color is in list of colors.
+// if findIndex doesn;t find it, it returns -1, otherwise it returns
+// the index in the array where it found it.
+
+// next, if the index isnt -1, return true because we found it else return false
 function colorExists(color) {
-    return colors.findIndex(c => c.toLowerCase() === color.toLowerCase())
+    return colors.findIndex(c => c.toLowerCase() === color.toLowerCase()) !== -1 ? true : false
+}
+
+// returns true if color is in the list of colors, or in a valid hex format
+function colorValid(newColor) {
+    if (colorExists(newColor)
+        || (newColor.startsWith('#') && newColor.length === 7)
+        || newColor.startsWith('#') && newColor.length === 4) { return true } else {
+        alert('The color is invalid.')
+        return false
+    }
 }
 
 // this is triggered when they click setColor button
 function handleSetColor(e) {
     e.preventDefault()
     let newColor = $('#inpCurrentColor').val()
-
     // before we try to set the color, check if its a valid hex color,
     // or if its in the list of html colors
-    if (colorExists(newColor)
-        || (newColor.startsWith('#') && newColor.length === 7)
-        || newColor.startsWith('#') && newColor.length === 4) { setColor(newColor) } else {
-        alert('The color is invalid.')
-    }
+    if (!colorValid(newColor)) return
+
+    setColor(newColor)
 }
 
 // handleSetColor takes the event, this one actually does the work
 // if we need to set the color and we dont need to get the value from
 // the form, we can use this function directly
 function setColor(newColor) {
+    if (!colorValid(newColor)) return
     console.log(newColor)
     let currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: newColor })
