@@ -16,19 +16,23 @@
         <div class="row">
             <div class="col">
                 <div id="gridContainer">
+                    <!-- grid squares go here -->
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <form id="frmColorPalette">
-                    <div id="currentColorDisplay"></div>
+                <form id="frmColorPicker">
+
                     <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
-                    <input type="submit" value="Set color" />
+                    <input type="submit" value="Set Color" />
                 </form>
             </div>
-            <div class="col">
-
+            <div class="col" style="display:flex">
+                <div id="currentColorDisplay"></div>
+                <div id="colorPalette">
+                    <!-- color palette squares go here -->
+                </div>
             </div>
         </div>
         <div class="row">
@@ -46,5 +50,6 @@
     crossorigin="anonymous"></script>
 <script src="./assets/js/script.js"></script>
 <script src="./assets/js/GridItem.js"></script>
+<script src="./assets/js/colors.js"></script>
 
 </html>
