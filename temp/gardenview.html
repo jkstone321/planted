@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planted</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/gardenstyle.css">
+</head>
+
+<body>
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="./homepage.html">Planted</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./signup.html">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log Out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./homepage.html">My Garden</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- SEARCH FORM -->
+    <div class="row w-100">
+        <div class="col-2">
+            <div class="card m-4 p-0" id="search-card">
+                <h3 class="card-header m-0">Search</h3>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="nput" class="form-control" id="search-plants"
+                                aria-describedby="searchbox-plants">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- MY LIST -->
+            <div class="card m-4 p-0" id="my-list">
+                <h3 class="card-header m-0">My List</h3>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
+                        <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
+                        <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- GARDEN GRID -->
+        <div class="card my-4 p-0" id="garden-grid">
+            <h3 class="card-header m-0">Big Papa's Garden</h3>
+            <div class="card-body">
+                <img src="./assets/grid.png" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -6,7 +6,7 @@ body {
 }
 
 #main {
-    background-color: #18181849;
+    background-color: #18181850;
     color: white;
     backdrop-filter: blur(10px);
 }
@@ -28,4 +28,29 @@ hr {
 
 #submitBtn:hover{
     background-color: rgb(77, 77, 77);
+}
+
+.navbar {
+    font-size: larger;
+    color: white;
+    background-color: #181818;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#list-name {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#list-name li {
+    display: inline;
+}
+
+#links {
+    color: white;
 }
