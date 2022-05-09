@@ -1,0 +1,31 @@
+body {
+    background-color: gray;
+    background-image: url("../assets/background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main {
+    background-color: #18181849;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.card {
+    background-color: #2c2c2c8a;
+    backdrop-filter: blur(20px);
+}
+
+hr {
+    color: #404040;
+    background-color: #404040;
+}
+
+#submitBtn {
+    background-color: gray;
+    border-color: black;
+}
+
+#submitBtn:hover{
+    background-color: rgb(77, 77, 77);
+}
