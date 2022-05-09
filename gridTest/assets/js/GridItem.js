@@ -14,6 +14,11 @@ class GridItem {
         this.gridSquare.on('mouseover', this.handleMouseOver)
     }
 
+    // call this method to just return the data
+    getGridInfo = () => {
+        return { column, row, index, selected, selectedColor } = this
+    }
+
     // this will check if mousekey is held down while the mouse is over this square
     // it will let user paint over multiple squares at once
     handleMouseOver = () => {
