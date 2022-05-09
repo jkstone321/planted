@@ -1,24 +1,21 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
+<!-- SHORT LITTLE BIO -->
+<div class="container border border-dark my-5" id="main">
+  <div class="jumbotron-fluid m-4">
+    <h1 class="text-center">Planted</h1>
+    <hr class="my-4">
+    <p class="lead">Planted is an app to keep track of your personal garden. To get started sign up for an
+      account today.
     </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
+    <p class="lead">When you are in My Garden you can search for what you want to plant and add it to your list.
+      Once it is in your list select it and start arranging your garden using the grid.</p>
+    <hr class="my-4">
+    <h3>Future Plans</h3>
+    <p class="lead">In the future we would like to add an option to select the size of your garden and with that
+      we would
+      like to implement industrial farming and keep track of succesison.</p>
+    <hr class="my-4">
+    <a href="./about-us.html" id="about-us-link">
+      <h5>Visit our about us page to learn more</h5>
+    </a>
   </div>
 </div>
-{{/each}}

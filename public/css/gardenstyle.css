@@ -1,0 +1,38 @@
+body {
+    background-color: gray;
+    background-image: url("../assets/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#main {
+    background-color: #18181849;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    font-size: larger;
+    color: white;
+    background-color: #181818;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#my-list {
+    min-height: 69vh;
+}
+
+#garden-grid {
+    width: 162vh;
+}
+
+#garden-grid,
+#my-list,
+#search-card {
+    background-color: #404040;
+    color: white;
+}
