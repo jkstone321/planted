@@ -1,0 +1,39 @@
+[
+  {
+    "name": "tomato",
+    "description": "1",
+    "name_scientific": "toms",
+    "food_group": "veggie",
+    "food_subgroup": "fruit",
+    "user_id": "",
+    "food_type": ""
+  },
+  {
+    "name": "potato",
+    "description": "1",
+    "name_scientific": "toms",
+    "food_group": "veggie",
+    "food_subgroup": "fruit",
+    "user_id": "",
+    "food_type": ""
+  },
+  {
+    "name": "rotato",
+    "description": "1",
+    "name_scientific": "toms",
+    "food_group": "veggie",
+    "food_subgroup": "fruit",
+    "user_id": "",
+    "food_type": ""
+  },
+  {
+    "name": "tornado",
+    "description": "1",
+    "name_scientific": "toms",
+    "food_group": "veggie",
+    "food_subgroup": "fruit",
+    "user_id": "",
+    "food_type": ""
+  }
+  
+]

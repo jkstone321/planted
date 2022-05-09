@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Garden extends Model {}
+class Plant extends Model {}
 //,id,name,name_scientific,description,itis_id,wikipedia_id,wikipedia_id.1,picture_content_type,picture_file_size,picture_updated_at,legacy_id,food_group,food_subgroup,food_type,created_at,updated_at,creator_id,updater_id,export_to_afcdb,category,ncbi_taxonomy_id,export_to_foodb
-Garden.init(
+Plant.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -48,8 +48,8 @@ Garden.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'garden',
+    modelName: 'plant',
   }
 );
 
-module.exports = Garden;
+module.exports = Plant;
