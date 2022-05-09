@@ -1544,7 +1544,6 @@
       "food_subgroup": "Peas"
     },
     {
-      "FIELD1": 202,
       "id": 203,
       "name": "Muscadine grape",
       "name_scientific": "Vitis rotundifolia",
@@ -1552,7 +1551,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 203,
       "id": 204,
       "name": "Common grape",
       "name_scientific": "Vitis vinifera",
@@ -1560,7 +1558,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 205,
       "id": 206,
       "name": "Ginger",
       "name_scientific": "Zingiber officinale",
@@ -1568,7 +1565,7 @@
       "food_subgroup": "Spices"
     },
     {
-      "FIELD1": 206,
+
       "id": 207,
       "name": "Arctic blackberry",
       "name_scientific": "Rubus arcticus",
@@ -1576,7 +1573,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 207,
       "id": 208,
       "name": "Banana",
       "name_scientific": "Musa acuminata",
@@ -1584,7 +1580,6 @@
       "food_subgroup": "Tropical fruits"
     },
     {
-      "FIELD1": 208,
       "id": 209,
       "name": "Bayberry",
       "name_scientific": "Myrica",
@@ -1592,7 +1587,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 209,
       "id": 210,
       "name": "Elliott's blueberry",
       "name_scientific": "Vaccinium elliottii",
@@ -1600,7 +1594,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 210,
       "id": 211,
       "name": "Canada blueberry",
       "name_scientific": "Vaccinium myrtilloides",
@@ -1608,7 +1601,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 211,
       "id": 212,
       "name": "Bog bilberry",
       "name_scientific": "Vaccinium uliginosum",
@@ -1616,7 +1608,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 212,
       "id": 213,
       "name": "Buffalo currant",
       "name_scientific": "Ribes aureum var. villosum",
@@ -1624,7 +1615,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 213,
       "id": 214,
       "name": "Celeriac",
       "name_scientific": "Apium graveolens var. rapaceum",
@@ -1632,7 +1622,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 214,
       "id": 215,
       "name": "Celery stalks",
       "name_scientific": "Apium graveolens var. dulce",
@@ -1640,7 +1629,6 @@
       "food_subgroup": "Stalk vegetables"
     },
     {
-      "FIELD1": 215,
       "id": 216,
       "name": "Chinese chives",
       "name_scientific": "Allium tuberosum",
@@ -1648,7 +1636,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 216,
       "id": 217,
       "name": "European cranberry",
       "name_scientific": "Vaccinium oxycoccos",
@@ -1656,7 +1643,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 217,
       "id": 218,
       "name": "Deerberry",
       "name_scientific": "Vaccinium stamineum",
@@ -1664,7 +1650,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 218,
       "id": 219,
       "name": "Ginseng",
       "name_scientific": "Panax",
@@ -1672,7 +1657,6 @@
       "food_subgroup": "Spices"
     },
     {
-      "FIELD1": 219,
       "id": 220,
       "name": "Cascade huckleberry",
       "name_scientific": "Vaccinium deliciosum",
@@ -1680,7 +1664,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 220,
       "id": 221,
       "name": "Oval-leaf huckleberry",
       "name_scientific": "Vaccinium ovalifolium",
@@ -1688,7 +1671,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 221,
       "id": 222,
       "name": "Evergreen huckleberry",
       "name_scientific": "Vaccinium ovatum",
@@ -1696,7 +1678,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 222,
       "id": 223,
       "name": "Red huckleberry",
       "name_scientific": "Vaccinium parvifolium",
@@ -1704,7 +1685,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 223,
       "id": 224,
       "name": "Longan",
       "name_scientific": "Dimocarpus longan",
@@ -1712,7 +1692,6 @@
       "food_subgroup": "Tropical fruits"
     },
     {
-      "FIELD1": 224,
       "id": 225,
       "name": "Macadamia nut (M. tetraphylla)",
       "name_scientific": "Macadamia tetraphylla",
@@ -1720,7 +1699,6 @@
       "food_subgroup": "Nuts"
     },
     {
-      "FIELD1": 225,
       "id": 226,
       "name": "Garden onion (var.)",
       "name_scientific": "Allium cepa var. cepa",
@@ -1728,7 +1706,6 @@
       "food_subgroup": "Onion-family vegetables"
     },
     {
-      "FIELD1": 226,
       "id": 227,
       "name": "Summer grape",
       "name_scientific": "Vitis aestivalis",
@@ -1736,7 +1713,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 227,
       "id": 228,
       "name": "Fox grape",
       "name_scientific": "Vitis labrusca",
@@ -1744,7 +1720,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 228,
       "id": 229,
       "name": "Nectarine",
       "name_scientific": "Prunus persica var. nucipersica",
@@ -1752,7 +1727,6 @@
       "food_subgroup": "Drupes"
     },
     {
-      "FIELD1": 229,
       "id": 230,
       "name": "Peach (var.)",
       "name_scientific": "Prunus persica var. persica",
@@ -1760,7 +1734,6 @@
       "food_subgroup": "Drupes"
     },
     {
-      "FIELD1": 230,
       "id": 231,
       "name": "Pepper (C. baccatum)",
       "name_scientific": "Capsicum baccatum var. baccatum",
@@ -1768,7 +1741,6 @@
       "food_subgroup": "Fruit vegetables"
     },
     {
-      "FIELD1": 231,
       "id": 232,
       "name": "Pepper (C. chinense)",
       "name_scientific": "Capsicum chinense",
@@ -1776,7 +1748,6 @@
       "food_subgroup": "Fruit vegetables"
     },
     {
-      "FIELD1": 232,
       "id": 233,
       "name": "Pepper (Capsicum)",
       "name_scientific": "Capsicum",
@@ -1784,7 +1755,6 @@
       "food_subgroup": "Fruit vegetables"
     },
     {
-      "FIELD1": 233,
       "id": 234,
       "name": "Rambutan",
       "name_scientific": "Nephelium lappaceum",
@@ -1792,7 +1762,6 @@
       "food_subgroup": "Tropical fruits"
     },
     {
-      "FIELD1": 236,
       "id": 237,
       "name": "Swiss chard",
       "name_scientific": "Beta vulgaris ssp. cicla",
@@ -1800,7 +1769,6 @@
       "food_subgroup": "Leaf vegetables"
     },
     {
-      "FIELD1": 237,
       "id": 238,
       "name": "Lemon thyme",
       "name_scientific": "Thymus pulegioides",
@@ -1808,7 +1776,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 238,
       "id": 239,
       "name": "Tronchuda cabbage",
       "name_scientific": "Brassica oleracea var. costata",
@@ -1816,7 +1783,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 239,
       "id": 240,
       "name": "Japanese walnut",
       "name_scientific": "Juglans ailanthifolia",
@@ -1824,7 +1790,6 @@
       "food_subgroup": "Nuts"
     },
     {
-      "FIELD1": 240,
       "id": 241,
       "name": "Welsh onion",
       "name_scientific": "Allium fistulosum",
@@ -1832,7 +1797,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 242,
       "id": 243,
       "name": "Shallot",
       "name_scientific": "Allium ascalonicum",
@@ -1840,7 +1804,6 @@
       "food_subgroup": "Onion-family vegetables"
     },
     {
-      "FIELD1": 243,
       "id": 244,
       "name": "Rocket salad",
       "name_scientific": "Eruca vesicaria",
@@ -1848,7 +1811,6 @@
       "food_subgroup": "Leaf vegetables"
     },
     {
-      "FIELD1": 244,
       "id": 245,
       "name": "Carrot",
       "name_scientific": "Daucus carota ssp. sativus",
@@ -1856,7 +1818,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 246,
       "id": 247,
       "name": "Black cabbage",
       "name_scientific": "Brassica oleracea var. viridis",
@@ -1864,7 +1825,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 247,
       "id": 248,
       "name": "Half-highbush blueberry",
       "name_scientific": "Vaccinium angustifolium X Vaccinium corymbosum",
@@ -1872,7 +1832,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 248,
       "id": 249,
       "name": "Celery leaves",
       "name_scientific": "Apium graveolens var. secalinum",
@@ -1880,7 +1839,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 249,
       "id": 250,
       "name": "Chicory leaves",
       "name_scientific": "Cichorium intybus var. foliosum",
@@ -1888,7 +1846,6 @@
       "food_subgroup": "Leaf vegetables"
     },
     {
-      "FIELD1": 250,
       "id": 251,
       "name": "Komatsuna",
       "name_scientific": "Brassica rapa var. perviridis",
@@ -1896,7 +1853,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 251,
       "id": 252,
       "name": "Pak choy",
       "name_scientific": "Brassica rapa var. chinensis",
@@ -1904,7 +1860,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 252,
       "id": 253,
       "name": "Napa cabbage",
       "name_scientific": "Brassica rapa var. pekinensis",
@@ -1912,7 +1867,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 253,
       "id": 254,
       "name": "Chicory roots",
       "name_scientific": "Cichorium intybus var. sativum",
@@ -1920,7 +1874,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 254,
       "id": 255,
       "name": "Grapefruit/Pummelo hybrid",
       "name_scientific": "Citrus paradisi X Citrus maxima",
@@ -1928,7 +1881,6 @@
       "food_subgroup": "Citrus"
     },
     {
-      "FIELD1": 255,
       "id": 256,
       "name": "Grapefruit",
       "name_scientific": "Citrus X paradisi",
@@ -1936,7 +1888,6 @@
       "food_subgroup": "Citrus"
     },
     {
-      "FIELD1": 256,
       "id": 257,
       "name": "Jostaberry",
       "name_scientific": "Ribes � nidigrolaria",
@@ -1944,7 +1895,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 257,
       "id": 258,
       "name": "Kai-lan",
       "name_scientific": "Brassica oleracea var. alboglabra",
@@ -1952,7 +1902,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 258,
       "id": 259,
       "name": "Italian oregano",
       "name_scientific": "Origanum X majoricum",
@@ -1960,7 +1909,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 259,
       "id": 260,
       "name": "Oxheart cabbage",
       "name_scientific": "Brassica oleracea var. conica",
@@ -1968,7 +1916,6 @@
       "food_subgroup": "Cabbages"
     },
     {
-      "FIELD1": 260,
       "id": 261,
       "name": "Daikon radish",
       "name_scientific": "Raphanus sativus var. longipinnatus",
@@ -1976,7 +1923,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 261,
       "id": 262,
       "name": "Black radish",
       "name_scientific": "Raphanus sativus var. niger",
@@ -1984,7 +1930,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 262,
       "id": 263,
       "name": "Radish (var.)",
       "name_scientific": "Raphanus sativus var. sativus",
@@ -1992,7 +1937,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 263,
       "id": 264,
       "name": "Red beetroot",
       "name_scientific": "Beta vulgaris var. rubra",
@@ -2000,7 +1944,6 @@
       "food_subgroup": "Root vegetables"
     },
     {
-      "FIELD1": 264,
       "id": 265,
       "name": "Sweet rowanberry",
       "name_scientific": "Grataegosorbus mitschurinii",
@@ -2008,7 +1951,6 @@
       "food_subgroup": "Berries"
     },
     {
-      "FIELD1": 265,
       "id": 266,
       "name": "Pineappple sage",
       "name_scientific": "Salvia elegans",
@@ -2016,7 +1958,6 @@
       "food_subgroup": "Herbs"
     },
     {
-      "FIELD1": 266,
       "id": 267,
       "name": "Skunk currant",
       "name_scientific": "Ribes glandulosum",
@@ -2633,7 +2574,6 @@
       "food_subgroup": "Spices"
     },
     {
-      "FIELD1": 446,
       "id": 448,
       "name": "Prairie turnip",
       "name_scientific": "Pediomelum esculentum",
