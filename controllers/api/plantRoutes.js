@@ -5,7 +5,7 @@ const withAuth = require('../../utils/auth');
 //********SET UP AUTHOTIZATION********//
 
 //========GETS ALL PLANTS========//
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const plantData = await Plant.findAll();
       res.status(200).json(plantData)
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
   });
 
 //========GETS PLANTS BY ID========//
-  router.get('/:id', async (req, res) => {
+  router.get('/:id', withAuth ,async (req, res) => {
     try {
       const plantData = await Plant.findOne({where: { id: req.params.id}});
       res.status(200).json(plantData)
@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
   });
 
 //========UPDATES A PLANT BY ID========//
-router.put('/:id', async (req, res) => {
+router.put('/:id', withAuth,  async (req, res) => {
     try{
     const plantData = await Plant.update({
       tag_name: req.body.tag_name
@@ -45,7 +45,7 @@ router.put('/:id', async (req, res) => {
   
 
 //========DELETES A PLANT========//
-router.delete('/:id',  async (req, res) => {
+router.delete('/:id', withAuth,  async (req, res) => {
   try {
     const plantData = await Plant.destroy({where: {id: req.params.id},});
 
@@ -61,7 +61,7 @@ router.delete('/:id',  async (req, res) => {
 });
 
 //========POSTS A NEW PLANT========//
-router.post('/',  async (req, res) => {
+router.post('/',  withAuth, async (req, res) => {
     try {
       const newPlant = await Plant.create({
         ...req.body,
