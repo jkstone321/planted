@@ -1,6 +1,7 @@
-<!-- SEARCH FORM -->
 <div class="row w-100">
+
   <div class="col-2">
+    <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
       <div class="card-body">
@@ -25,44 +26,31 @@
     </div>
   </div>
   <!-- GARDEN GRID -->
-  {{!-- <div class="card my-4 p-0" id="garden-grid">
+  <div class="col-8 card m-4 p-0" id="grid-system">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <div class="card-body">
-      <img src="./assets/grid.png" />
-    </div>
-  </div> --}}
-  <div class="col-10">
-    <div class="row">
-      <div class="col">
-        <div id="gridContainer">
-          <!-- grid squares go here -->
-        </div>
+      <div id="gridContainer">
+        <!-- grid squares generated here -->
+
       </div>
-    </div>
-    <div class="row">
-      <div class="col" style="display:flex">
+
+      <div style="display:flex">
         <div id="currentColorDisplay">
           <!-- this box shows the currently selected color -->
         </div>
         <div id="colorPalette">
-          <!-- color palette squares go here -->
+          <!-- color palette squares generated here -->
         </div>
       </div>
+
+
+
+      <form id="frmColorPicker">
+        <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
+        <input type="submit" value="Set Color" />
+        <button onClick="clearGrid()">Clear Grid</button>
+      </form>
+
     </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="col">
-          <form id="frmColorPicker">
-            <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
-            <input type="submit" value="Set Color" />
-            <button onClick="clearGrid()">Clear Grid</button>
-          </form>
-
-        </div>
-
-      </div>
-    </div>
   </div>
-
-</div>
