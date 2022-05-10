@@ -7,7 +7,7 @@
       <div class="card-body">
         <form>
           <div class="form-group">
-            <input type="nput" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
+            <input type="input" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
           </div>
           <button class="btn btn-secondary w-100">Add to List</button>
         </form>
@@ -34,7 +34,7 @@
 
       </div>
 
-      <div style="display:flex">
+      <div id="colorPickerContainer" style="display:flex">
         <div id="currentColorDisplay">
           <!-- this box shows the currently selected color -->
         </div>
@@ -43,12 +43,10 @@
         </div>
       </div>
 
-
-
       <form id="frmColorPicker">
-        <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
-        <input type="submit" value="Set Color" />
-        <button onClick="clearGrid()">Clear Grid</button>
+        <input id="inpCurrentColor" class="form-control w-50" type="text" placeholder="e.g.: red or #FF0000" />
+        <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+        <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
       </form>
 
     </div>
