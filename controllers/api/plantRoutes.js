@@ -3,22 +3,24 @@ const { Plant } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //********SET UP AUTHOTIZATION********//
-//========GETS ONLY PLANT NAMES========//
-router.get('/name', async (req, res) => {
-  try {
-    const plantData = await Plant.findAll({ attributes: ['name'] });
-    const plantNames = plantData.map((p) => p.name);
-    res.status(200).json(plantNames);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
 
 //========GETS ALL PLANTS========//
 router.get('/', async (req, res) => {
   try {
     const plantData = await Plant.findAll();
     res.status(200).json(plantData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//========GETS ONLY PLANT NAMES========//
+router.get('/name', async (req, res) => {
+  try {
+    const plantData = await Plant.findAll({ attributes: ['name'] });
+    const plantNames = plantData.map((p) => p.name);
+    res.status(200).json(plantNames);
   } catch (err) {
     res.status(500).json(err);
   }
