@@ -1,39 +1,3498 @@
 [
-  {
-    "name": "tomato",
-    "description": "1",
-    "name_scientific": "toms",
-    "food_group": "veggie",
-    "food_subgroup": "fruit",
-    "user_id": "",
-    "food_type": ""
-  },
-  {
-    "name": "potato",
-    "description": "1",
-    "name_scientific": "toms",
-    "food_group": "veggie",
-    "food_subgroup": "fruit",
-    "user_id": "",
-    "food_type": ""
-  },
-  {
-    "name": "rotato",
-    "description": "1",
-    "name_scientific": "toms",
-    "food_group": "veggie",
-    "food_subgroup": "fruit",
-    "user_id": "",
-    "food_type": ""
-  },
-  {
-    "name": "tornado",
-    "description": "1",
-    "name_scientific": "toms",
-    "food_group": "veggie",
-    "food_subgroup": "fruit",
-    "user_id": "",
-    "food_type": ""
-  }
+    {
+    
+      "id": 1,
+      "name": "Angelica",
+      "name_scientific": "Angelica keiskei",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
   
-]
+      "id": 2,
+      "name": "Savoy cabbage",
+      "name_scientific": "Brassica oleracea var. sabauda",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 3,
+      "name": "Silver linden",
+      "name_scientific": "Tilia argentea",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 4,
+      "name": "Kiwi",
+      "name_scientific": "Actinidia chinensis",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+ 
+      "id": 5,
+      "name": "Allium (Onion)",
+      "name_scientific": "Allium",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+    
+      "id": 6,
+      "name": "Garden onion",
+      "name_scientific": "Allium cepa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+     
+      "id": 7,
+      "name": "Leek",
+      "name_scientific": "Allium porrum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+     
+      "id": 8,
+      "name": "Garlic",
+      "name_scientific": "Allium sativum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+  
+      "id": 9,
+      "name": "Chives",
+      "name_scientific": "Allium schoenoprasum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+   
+      "id": 10,
+      "name": "Lemon verbena",
+      "name_scientific": "Aloysia triphylla",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 11,
+      "name": "Cashew nut",
+      "name_scientific": "Anacardium occidentale",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+  
+      "id": 12,
+      "name": "Pineapple",
+      "name_scientific": "Ananas comosus",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+ 
+      "id": 13,
+      "name": "Dill",
+      "name_scientific": "Anethum graveolens",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 14,
+      "name": "Custard apple",
+      "name_scientific": "Annona reticulata",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+    
+      "id": 15,
+      "name": "Wild celery",
+      "name_scientific": "Apium graveolens",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+    
+      "id": 16,
+      "name": "Peanut",
+      "name_scientific": "Arachis hypogaea",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+   
+      "id": 17,
+      "name": "Burdock",
+      "name_scientific": "Arctium lappa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+   
+      "id": 18,
+      "name": "Horseradish",
+      "name_scientific": "Armoracia rusticana",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+    
+      "id": 19,
+      "name": "Tarragon",
+      "name_scientific": "Artemisia dracunculus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 20,
+      "name": "Mugwort",
+      "name_scientific": "Artemisia vulgaris",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 21,
+      "name": "Asparagus",
+      "name_scientific": "Asparagus officinalis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Shoot vegetables"
+    },
+    {
+    
+      "id": 23,
+      "name": "Star fruit",
+      "name_scientific": "Averrhoa carambola",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      
+      "id": 24,
+      "name": "Brazil nut",
+      "name_scientific": "Bertholletia excelsa",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 25,
+      "name": "Common beet",
+      "name_scientific": "Beta vulgaris",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 26,
+      "name": "Borage",
+      "name_scientific": "Borago officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+     
+      "id": 27,
+      "name": "Chinese mustard",
+      "name_scientific": "Brassica juncea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+     
+      "id": 28,
+      "name": "Swede",
+      "name_scientific": "Brassica napus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+     
+      "id": 29,
+      "name": "Rape",
+      "name_scientific": "Brassica napus var. napus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+    
+      "id": 30,
+      "name": "Common cabbage",
+      "name_scientific": "Brassica oleracea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      
+      "id": 31,
+      "name": "Cauliflower",
+      "name_scientific": "Brassica oleracea var. botrytis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 32,
+      "name": "Brussel sprouts",
+      "name_scientific": "Brassica oleracea var. gemmifera",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 33,
+      "name": "Kohlrabi",
+      "name_scientific": "Brassica oleracea var. gongylodes",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+  
+      "id": 34,
+      "name": "Broccoli",
+      "name_scientific": "Brassica oleracea var. italica",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+   
+      "id": 35,
+      "name": "Chinese cabbage",
+      "name_scientific": "Brassica rapa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 36,
+      "name": "Turnip",
+      "name_scientific": "Brassica rapa var. rapa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 37,
+      "name": "Pigeon pea",
+      "name_scientific": "Cajanus cajan",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+     
+      "id": 38,
+      "name": "Tea",
+      "name_scientific": "Camellia sinensis",
+      "food_group": "Teas",
+      "food_subgroup": "Teas"
+    },
+    {
+   
+      "id": 39,
+      "name": "Capers",
+      "name_scientific": "Capparis spinosa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+   
+      "id": 40,
+      "name": "Pepper (C. annuum)",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+    
+      "id": 41,
+      "name": "Papaya",
+      "name_scientific": "Carica papaya",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      
+      "id": 42,
+      "name": "Safflower",
+      "name_scientific": "Carthamus tinctorius",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      
+      "id": 43,
+      "name": "Caraway",
+      "name_scientific": "Carum carvi",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+     
+      "id": 44,
+      "name": "Pecan nut",
+      "name_scientific": "Carya illinoinensis",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 45,
+      "name": "Chestnut",
+      "name_scientific": "Castanea",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+   
+      "id": 46,
+      "name": "Roman camomile",
+      "name_scientific": "Chamaemelum nobile",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 47,
+      "name": "Chickpea",
+      "name_scientific": "Cicer arietinum",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+     
+      "id": 48,
+      "name": "Endive",
+      "name_scientific": "Cichorium endivia",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 49,
+      "name": "Chicory",
+      "name_scientific": "Cichorium intybus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+     
+      "id": 50,
+      "name": "Chinese cinnamon",
+      "name_scientific": "Cinnamomum aromaticum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+     
+      "id": 51,
+      "name": "Ceylon cinnamon",
+      "name_scientific": "Cinnamomum verum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+    
+      "id": 52,
+      "name": "Watermelon",
+      "name_scientific": "Citrullus lanatus",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+     
+      "id": 53,
+      "name": "Lime",
+      "name_scientific": "Citrus aurantiifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+    
+      "id": 54,
+      "name": "Lemon",
+      "name_scientific": "Citrus limon",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+   
+      "id": 55,
+      "name": "Pummelo",
+      "name_scientific": "Citrus maxima",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+    
+      "id": 56,
+      "name": "Mandarin orange (Clementine, Tangerine)",
+      "name_scientific": "Citrus reticulata",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+    
+      "id": 57,
+      "name": "Sweet orange",
+      "name_scientific": "Citrus sinensis",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+      
+      "id": 58,
+      "name": "Coffee",
+      "name_scientific": "Coffea",
+      "food_group": "Coffee and coffee products",
+      "food_subgroup": "Coffee"
+    },
+    {
+    
+      "id": 59,
+      "name": "Arabica coffee",
+      "name_scientific": "Coffea arabica",
+      "food_group": "Coffee and coffee products",
+      "food_subgroup": "Coffee"
+    },
+    {
+     
+      "id": 60,
+      "name": "Robusta coffee",
+      "name_scientific": "Coffea canephora",
+      "food_group": "Coffee and coffee products",
+      "food_subgroup": "Coffee"
+    },
+    {
+     
+      "id": 61,
+      "name": "Coriander",
+      "name_scientific": "Coriandrum sativum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 62,
+      "name": "Common hazelnut",
+      "name_scientific": "Corylus avellana",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 63,
+      "name": "Saffron",
+      "name_scientific": "Crocus sativus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+  
+      "id": 64,
+      "name": "Muskmelon",
+      "name_scientific": "Cucumis melo",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+     
+      "id": 65,
+      "name": "Cucumber",
+      "name_scientific": "Cucumis sativus",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+     
+      "id": 66,
+      "name": "Cucurbita (Gourd)",
+      "name_scientific": "Cucurbita",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+    
+      "id": 67,
+      "name": "Cumin",
+      "name_scientific": "Cuminum cyminum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+   
+      "id": 68,
+      "name": "Turmeric",
+      "name_scientific": "Curcuma longa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+  
+      "id": 69,
+      "name": "Quince",
+      "name_scientific": "Cydonia oblonga",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+   
+      "id": 70,
+      "name": "Lemon grass",
+      "name_scientific": "Cymbopogon citratus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 71,
+      "name": "Globe artichoke",
+      "name_scientific": "Cynara scolymus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Shoot vegetables"
+    },
+    {
+ 
+      "id": 72,
+      "name": "Wild carrot",
+      "name_scientific": "Daucus carota",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      
+      "id": 73,
+      "name": "Japanese persimmon",
+      "name_scientific": "Diospyros kaki",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 74,
+      "name": "Cardamom",
+      "name_scientific": "Elettaria cardamomum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      
+      "id": 75,
+      "name": "Black crowberry",
+      "name_scientific": "Empetrum nigrum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 76,
+      "name": "Loquat",
+      "name_scientific": "Eriobotrya japonica",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+   
+      "id": 77,
+      "name": "Rocket salad (ssp.)",
+      "name_scientific": "Eruca vesicaria ssp. sativa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+    
+      "id": 78,
+      "name": "Wax apple",
+      "name_scientific": "Eugenia",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 81,
+      "name": "Fig",
+      "name_scientific": "Ficus carica",
+      "food_group": "Fruits",
+      "food_subgroup": "Other fruits"
+    },
+    {
+   
+      "id": 82,
+      "name": "Fennel",
+      "name_scientific": "Foeniculum vulgare",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 83,
+      "name": "Strawberry",
+      "name_scientific": "Fragaria X ananassa",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 84,
+      "name": "Black huckleberry",
+      "name_scientific": "Gaylussacia baccata",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 85,
+      "name": "Soy bean",
+      "name_scientific": "Glycine max",
+      "food_group": "Soy",
+      "food_subgroup": "Soy"
+    },
+    {
+    
+      "id": 86,
+      "name": "Sunflower",
+      "name_scientific": "Helianthus annuus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+  
+      "id": 87,
+      "name": "Sea-buckthornberry",
+      "name_scientific": "Hippophae rhamnoides",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 89,
+      "name": "Hyssop",
+      "name_scientific": "Hyssopus officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+   
+      "id": 90,
+      "name": "Star anise",
+      "name_scientific": "Illicium verum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      
+      "id": 91,
+      "name": "Swamp cabbage",
+      "name_scientific": "Ipomoea aquatica",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      
+      "id": 92,
+      "name": "Sweet potato",
+      "name_scientific": "Ipomoea batatas",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      
+      "id": 93,
+      "name": "Black walnut",
+      "name_scientific": "Juglans nigra",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 94,
+      "name": "Common walnut",
+      "name_scientific": "Juglans regia",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      
+      "id": 95,
+      "name": "Lettuce",
+      "name_scientific": "Lactuca sativa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 96,
+      "name": "Grass pea",
+      "name_scientific": "Lathyrus sativus",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+    
+      "id": 97,
+      "name": "Sweet bay",
+      "name_scientific": "Laurus nobilis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 98,
+      "name": "Lentils",
+      "name_scientific": "Lens culinaris",
+      "food_group": "Pulses",
+      "food_subgroup": "Lentils"
+    },
+    {
+     
+      "id": 99,
+      "name": "Garden cress",
+      "name_scientific": "Lepidium sativum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 100,
+      "name": "Lovage",
+      "name_scientific": "Levisticum officinale",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 101,
+      "name": "Flaxseed",
+      "name_scientific": "Linum usitatissimum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+     
+      "id": 102,
+      "name": "Mexican oregano",
+      "name_scientific": "Lippia graveolens",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 103,
+      "name": "Lichee",
+      "name_scientific": "Litchi chinensis",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 104,
+      "name": "Lupine",
+      "name_scientific": "Lupinus",
+      "food_group": "Pulses",
+      "food_subgroup": "Other pulses"
+    },
+    {
+     
+      "id": 105,
+      "name": "Apple",
+      "name_scientific": "Malus pumila",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      
+      "id": 106,
+      "name": "Mango",
+      "name_scientific": "Mangifera indica",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      
+      "id": 107,
+      "name": "German camomile",
+      "name_scientific": "Matricaria recutita",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 108,
+      "name": "Lemon balm",
+      "name_scientific": "Melissa officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 109,
+      "name": "Mentha (Mint)",
+      "name_scientific": "Mentha",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 110,
+      "name": "Orange mint",
+      "name_scientific": "Mentha aquatica",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 111,
+      "name": "Cornmint",
+      "name_scientific": "Mentha arvensis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 112,
+      "name": "Spearmint",
+      "name_scientific": "Mentha spicata",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 113,
+      "name": "Peppermint",
+      "name_scientific": "Mentha X piperita",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 114,
+      "name": "Medlar",
+      "name_scientific": "Mespilus germanica",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      
+      "id": 115,
+      "name": "Bitter gourd",
+      "name_scientific": "Momordica charantia",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+    
+      "id": 116,
+      "name": "Mulberry",
+      "name_scientific": "Morus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 117,
+      "name": "Black mulberry",
+      "name_scientific": "Morus nigra",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 118,
+      "name": "Nutmeg",
+      "name_scientific": "Myristica fragrans",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      
+      "id": 119,
+      "name": "Sweet basil",
+      "name_scientific": "Ocimum basilicum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 120,
+      "name": "Evening primrose",
+      "name_scientific": "Oenothera biennis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+     
+      "id": 121,
+      "name": "Olive",
+      "name_scientific": "Olea europaea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+     
+      "id": 122,
+      "name": "Sweet marjoram",
+      "name_scientific": "Origanum majorana",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 123,
+      "name": "Pot marjoram",
+      "name_scientific": "Origanum onites",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 124,
+      "name": "Common oregano",
+      "name_scientific": "Origanum vulgare",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 127,
+      "name": "Poppy",
+      "name_scientific": "Papaver",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+     
+      "id": 128,
+      "name": "Passion fruit",
+      "name_scientific": "Passiflora edulis",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 129,
+      "name": "Parsnip",
+      "name_scientific": "Pastinaca sativa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      
+      "id": 130,
+      "name": "Avocado",
+      "name_scientific": "Persea americana",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      
+      "id": 131,
+      "name": "Parsley",
+      "name_scientific": "Petroselinum crispum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 132,
+      "name": "Scarlet bean",
+      "name_scientific": "Phaseolus coccineus",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      
+      "id": 133,
+      "name": "Lima bean",
+      "name_scientific": "Phaseolus lunatus",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      
+      "id": 134,
+      "name": "Common bean",
+      "name_scientific": "Phaseolus vulgaris",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+     
+      "id": 135,
+      "name": "Date",
+      "name_scientific": "Phoenix dactylifera",
+      "food_group": "Fruits",
+      "food_subgroup": "Other fruits"
+    },
+    {
+     
+      "id": 136,
+      "name": "Black chokeberry",
+      "name_scientific": "Photinia melanocarpa",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 137,
+      "name": "Anise",
+      "name_scientific": "Pimpinella anisum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 138,
+      "name": "Pine nut",
+      "name_scientific": "Pinus",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+    
+      "id": 139,
+      "name": "Pepper (Spice)",
+      "name_scientific": "Piper nigrum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+     
+      "id": 140,
+      "name": "Pistachio",
+      "name_scientific": "Pistacia vera",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      
+      "id": 141,
+      "name": "Common pea",
+      "name_scientific": "Pisum sativum",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+     
+      "id": 142,
+      "name": "Purslane",
+      "name_scientific": "Portulaca oleracea",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 143,
+      "name": "Prunus (Cherry, Plum)",
+      "name_scientific": "Prunus",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+    
+      "id": 144,
+      "name": "Apricot",
+      "name_scientific": "Prunus armeniaca",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+     
+      "id": 145,
+      "name": "Sweet cherry",
+      "name_scientific": "Prunus avium",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+     
+      "id": 146,
+      "name": "Sour cherry",
+      "name_scientific": "Prunus cerasus",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+    
+      "id": 147,
+      "name": "European plum",
+      "name_scientific": "Prunus domestica",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+      
+      "id": 148,
+      "name": "Almond",
+      "name_scientific": "Prunus dulcis",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 149,
+      "name": "Peach",
+      "name_scientific": "Prunus persica",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+    
+      "id": 150,
+      "name": "Guava",
+      "name_scientific": "Psidium guajava",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 151,
+      "name": "Pomegranate",
+      "name_scientific": "Punica granatum",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 152,
+      "name": "Pear",
+      "name_scientific": "Pyrus communis",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      
+      "id": 153,
+      "name": "Radish",
+      "name_scientific": "Raphanus sativus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+   
+      "id": 154,
+      "name": "Garden rhubarb",
+      "name_scientific": "Rheum rhabarbarum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Stalk vegetables"
+    },
+    {
+      
+      "id": 155,
+      "name": "Blackcurrant",
+      "name_scientific": "Ribes nigrum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 156,
+      "name": "Redcurrant",
+      "name_scientific": "Ribes rubrum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 157,
+      "name": "Gooseberry",
+      "name_scientific": "Ribes uva-crispa",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 158,
+      "name": "Watercress",
+      "name_scientific": "Rorippa nasturtium-aquaticum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 159,
+      "name": "Rosemary",
+      "name_scientific": "Rosmarinus officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 160,
+      "name": "Rubus (Blackberry, Raspberry)",
+      "name_scientific": "Rubus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 161,
+      "name": "Cloudberry",
+      "name_scientific": "Rubus chamaemorus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 162,
+      "name": "Red raspberry",
+      "name_scientific": "Rubus idaeus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 163,
+      "name": "Black raspberry",
+      "name_scientific": "Rubus occidentalis",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 164,
+      "name": "Sorrel",
+      "name_scientific": "Rumex acetosa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 165,
+      "name": "Common sage",
+      "name_scientific": "Salvia officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+   
+      "id": 166,
+      "name": "Black elderberry",
+      "name_scientific": "Sambucus nigra",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 167,
+      "name": "Summer savory",
+      "name_scientific": "Satureja hortensis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 168,
+      "name": "Winter savory",
+      "name_scientific": "Satureja montana",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 170,
+      "name": "Sesame",
+      "name_scientific": "Sesamum orientale",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      
+      "id": 171,
+      "name": "Garden tomato",
+      "name_scientific": "Solanum lycopersicum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+     
+      "id": 172,
+      "name": "Cherry tomato",
+      "name_scientific": "Solanum lycopersicum var. cerasiforme",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+     
+      "id": 173,
+      "name": "Garden tomato (var.)",
+      "name_scientific": "Solanum lycopersicum var. lycopersicum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+     
+      "id": 174,
+      "name": "Eggplant",
+      "name_scientific": "Solanum melongena",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+    
+      "id": 175,
+      "name": "Potato",
+      "name_scientific": "Solanum tuberosum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+     
+      "id": 176,
+      "name": "Rowanberry",
+      "name_scientific": "Sorbus aucuparia",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 178,
+      "name": "Spinach",
+      "name_scientific": "Spinacia oleracea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      
+      "id": 179,
+      "name": "Cloves",
+      "name_scientific": "Syzygium aromaticum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+     
+      "id": 180,
+      "name": "Tamarind",
+      "name_scientific": "Tamarindus indica",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 181,
+      "name": "Dandelion",
+      "name_scientific": "Taraxacum officinale",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      
+      "id": 182,
+      "name": "Cocoa bean",
+      "name_scientific": "Theobroma cacao",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa"
+    },
+    {
+  
+      "id": 183,
+      "name": "Common thyme",
+      "name_scientific": "Thymus vulgaris",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 184,
+      "name": "Linden",
+      "name_scientific": "Tilia",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 185,
+      "name": "Small-leaf linden",
+      "name_scientific": "Tilia cordata",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 186,
+      "name": "Fenugreek",
+      "name_scientific": "Trigonella foenum-graecum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 188,
+      "name": "Vaccinium (Blueberry, Cranberry, Huckleberry)",
+      "name_scientific": "Vaccinium",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 189,
+      "name": "Lowbush blueberry",
+      "name_scientific": "Vaccinium angustifolium",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 190,
+      "name": "Sparkleberry",
+      "name_scientific": "Vaccinium arboreum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 191,
+      "name": "Highbush blueberry",
+      "name_scientific": "Vaccinium corymbosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 192,
+      "name": "American cranberry",
+      "name_scientific": "Vaccinium macrocarpon",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 193,
+      "name": "Bilberry",
+      "name_scientific": "Vaccinium myrtillus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 194,
+      "name": "Lingonberry",
+      "name_scientific": "Vaccinium vitis-idaea",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 195,
+      "name": "Vanilla",
+      "name_scientific": "Vanilla",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+     
+      "id": 196,
+      "name": "Common verbena",
+      "name_scientific": "Verbena officinalis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 197,
+      "name": "Broad bean",
+      "name_scientific": "Vicia faba",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      
+      "id": 198,
+      "name": "Adzuki bean",
+      "name_scientific": "Vigna angularis",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+    
+      "id": 199,
+      "name": "Gram bean",
+      "name_scientific": "Vigna mungo",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+     
+      "id": 200,
+      "name": "Mung bean",
+      "name_scientific": "Vigna radiata",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+     
+      "id": 201,
+      "name": "Climbing bean",
+      "name_scientific": "Vigna umbellata",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+     
+      "id": 202,
+      "name": "Cowpea",
+      "name_scientific": "Vigna unguiculata",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+     
+      "id": 203,
+      "name": "Muscadine grape",
+      "name_scientific": "Vitis rotundifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 204,
+      "name": "Common grape",
+      "name_scientific": "Vitis vinifera",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 206,
+      "name": "Ginger",
+      "name_scientific": "Zingiber officinale",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+   
+      "id": 207,
+      "name": "Arctic blackberry",
+      "name_scientific": "Rubus arcticus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 208,
+      "name": "Banana",
+      "name_scientific": "Musa acuminata",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 209,
+      "name": "Bayberry",
+      "name_scientific": "Myrica",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 210,
+      "name": "Elliott's blueberry",
+      "name_scientific": "Vaccinium elliottii",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 211,
+      "name": "Canada blueberry",
+      "name_scientific": "Vaccinium myrtilloides",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+   
+      "id": 212,
+      "name": "Bog bilberry",
+      "name_scientific": "Vaccinium uliginosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 213,
+      "name": "Buffalo currant",
+      "name_scientific": "Ribes aureum var. villosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 214,
+      "name": "Celeriac",
+      "name_scientific": "Apium graveolens var. rapaceum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+   
+      "id": 215,
+      "name": "Celery stalks",
+      "name_scientific": "Apium graveolens var. dulce",
+      "food_group": "Vegetables",
+      "food_subgroup": "Stalk vegetables"
+    },
+    {
+     
+      "id": 216,
+      "name": "Chinese chives",
+      "name_scientific": "Allium tuberosum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 217,
+      "name": "European cranberry",
+      "name_scientific": "Vaccinium oxycoccos",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 218,
+      "name": "Deerberry",
+      "name_scientific": "Vaccinium stamineum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 219,
+      "name": "Ginseng",
+      "name_scientific": "Panax",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+  
+      "id": 220,
+      "name": "Cascade huckleberry",
+      "name_scientific": "Vaccinium deliciosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+   
+      "id": 221,
+      "name": "Oval-leaf huckleberry",
+      "name_scientific": "Vaccinium ovalifolium",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 222,
+      "name": "Evergreen huckleberry",
+      "name_scientific": "Vaccinium ovatum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+ 
+      "id": 223,
+      "name": "Red huckleberry",
+      "name_scientific": "Vaccinium parvifolium",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 224,
+      "name": "Longan",
+      "name_scientific": "Dimocarpus longan",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+    
+      "id": 225,
+      "name": "Macadamia nut (M. tetraphylla)",
+      "name_scientific": "Macadamia tetraphylla",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+    
+      "id": 226,
+      "name": "Garden onion (var.)",
+      "name_scientific": "Allium cepa var. cepa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+     
+      "id": 227,
+      "name": "Summer grape",
+      "name_scientific": "Vitis aestivalis",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 228,
+      "name": "Fox grape",
+      "name_scientific": "Vitis labrusca",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 229,
+      "name": "Nectarine",
+      "name_scientific": "Prunus persica var. nucipersica",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+   
+      "id": 230,
+      "name": "Peach (var.)",
+      "name_scientific": "Prunus persica var. persica",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+    
+      "id": 231,
+      "name": "Pepper (C. baccatum)",
+      "name_scientific": "Capsicum baccatum var. baccatum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+    
+      "id": 232,
+      "name": "Pepper (C. chinense)",
+      "name_scientific": "Capsicum chinense",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      
+      "id": 233,
+      "name": "Pepper (Capsicum)",
+      "name_scientific": "Capsicum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+     
+      "id": 234,
+      "name": "Rambutan",
+      "name_scientific": "Nephelium lappaceum",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+     
+      "id": 237,
+      "name": "Swiss chard",
+      "name_scientific": "Beta vulgaris ssp. cicla",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 238,
+      "name": "Lemon thyme",
+      "name_scientific": "Thymus pulegioides",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 239,
+      "name": "Tronchuda cabbage",
+      "name_scientific": "Brassica oleracea var. costata",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+     
+      "id": 240,
+      "name": "Japanese walnut",
+      "name_scientific": "Juglans ailanthifolia",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+     
+      "id": 241,
+      "name": "Welsh onion",
+      "name_scientific": "Allium fistulosum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 243,
+      "name": "Shallot",
+      "name_scientific": "Allium ascalonicum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+     
+      "id": 244,
+      "name": "Rocket salad",
+      "name_scientific": "Eruca vesicaria",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+     
+      "id": 245,
+      "name": "Carrot",
+      "name_scientific": "Daucus carota ssp. sativus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      
+      "id": 247,
+      "name": "Black cabbage",
+      "name_scientific": "Brassica oleracea var. viridis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      
+      "id": 248,
+      "name": "Half-highbush blueberry",
+      "name_scientific": "Vaccinium angustifolium X Vaccinium corymbosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      
+      "id": 249,
+      "name": "Celery leaves",
+      "name_scientific": "Apium graveolens var. secalinum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 250,
+      "name": "Chicory leaves",
+      "name_scientific": "Cichorium intybus var. foliosum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      
+      "id": 251,
+      "name": "Komatsuna",
+      "name_scientific": "Brassica rapa var. perviridis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+     
+      "id": 252,
+      "name": "Pak choy",
+      "name_scientific": "Brassica rapa var. chinensis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+     
+      "id": 253,
+      "name": "Napa cabbage",
+      "name_scientific": "Brassica rapa var. pekinensis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 254,
+      "name": "Chicory roots",
+      "name_scientific": "Cichorium intybus var. sativum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+     
+      "id": 255,
+      "name": "Grapefruit/Pummelo hybrid",
+      "name_scientific": "Citrus paradisi X Citrus maxima",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+     
+      "id": 256,
+      "name": "Grapefruit",
+      "name_scientific": "Citrus X paradisi",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+     
+      "id": 257,
+      "name": "Jostaberry",
+      "name_scientific": "Ribes � nidigrolaria",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+     
+      "id": 258,
+      "name": "Kai-lan",
+      "name_scientific": "Brassica oleracea var. alboglabra",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      
+      "id": 259,
+      "name": "Italian oregano",
+      "name_scientific": "Origanum X majoricum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+    
+      "id": 260,
+      "name": "Oxheart cabbage",
+      "name_scientific": "Brassica oleracea var. conica",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+    
+      "id": 261,
+      "name": "Daikon radish",
+      "name_scientific": "Raphanus sativus var. longipinnatus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+  
+      "id": 262,
+      "name": "Black radish",
+      "name_scientific": "Raphanus sativus var. niger",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+   
+      "id": 263,
+      "name": "Radish (var.)",
+      "name_scientific": "Raphanus sativus var. sativus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+     
+      "id": 264,
+      "name": "Red beetroot",
+      "name_scientific": "Beta vulgaris var. rubra",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      
+      "id": 265,
+      "name": "Sweet rowanberry",
+      "name_scientific": "Grataegosorbus mitschurinii",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+    
+      "id": 266,
+      "name": "Pineappple sage",
+      "name_scientific": "Salvia elegans",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+     
+      "id": 267,
+      "name": "Skunk currant",
+      "name_scientific": "Ribes glandulosum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 272,
+      "name": "Other soy product",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 281,
+      "name": "Abiyuch",
+      "name_scientific": "Crateva religiosa",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 282,
+      "name": "Acerola",
+      "name_scientific": "Malpighia emarginata",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 283,
+      "name": "Acorn",
+      "name_scientific": "Quercus",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 284,
+      "name": "Winter squash",
+      "name_scientific": "Cucurbita maxima",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 287,
+      "name": "Alfalfa",
+      "name_scientific": "Medicago sativa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 288,
+      "name": "Allspice",
+      "name_scientific": "Pimenta dioica",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "id": 289,
+      "name": "Amaranth",
+      "name_scientific": "Amaranthus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 290,
+      "name": "Arrowhead",
+      "name_scientific": "Sagittaria latifolia",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 291,
+      "name": "Arrowroot",
+      "name_scientific": "Maranta arundinacea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 292,
+      "name": "Asian pear",
+      "name_scientific": "Pyrus pyrifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      "id": 298,
+      "name": "Bamboo shoots",
+      "name_scientific": "Phyllostachys edulis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Shoot vegetables"
+    },
+    {
+      "id": 301,
+      "name": "Beech nut",
+      "name_scientific": "Fagus",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 312,
+      "name": "Breadfruit",
+      "name_scientific": "Artocarpus altilis",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 313,
+      "name": "Breadnut tree seed",
+      "name_scientific": "Brosimum alicastrum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 314,
+      "name": "Rapini",
+      "name_scientific": "Brassica ruvo",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 318,
+      "name": "Giant butterbur",
+      "name_scientific": "Petasites japonicus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 320,
+      "name": "Butternut",
+      "name_scientific": "Juglans cinerea",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 321,
+      "name": "Butternut squash",
+      "name_scientific": "Cucurbita moschata",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 322,
+      "name": "Calabash",
+      "name_scientific": "Lagenaria siceraria",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 323,
+      "name": "Cardoon",
+      "name_scientific": "Cynara cardunculus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Shoot vegetables"
+    },
+    {
+      "id": 325,
+      "name": "Natal plum",
+      "name_scientific": "Carissa macrocarpa",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 326,
+      "name": "Carob",
+      "name_scientific": "Ceratonia siliqua",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 328,
+      "name": "Cassava",
+      "name_scientific": "Manihot esculenta",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 330,
+      "name": "Chayote",
+      "name_scientific": "Sechium edule",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 331,
+      "name": "Cherimoya",
+      "name_scientific": "Annona cherimola",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 332,
+      "name": "Chervil",
+      "name_scientific": "Anthriscus cerefolium",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "id": 333,
+      "name": "Chia",
+      "name_scientific": "Salvia hispanica",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 335,
+      "name": "Chinese broccoli",
+      "name_scientific": "Brassica alboglabra",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 336,
+      "name": "Chinese chestnut",
+      "name_scientific": "Castanea mollissima",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 337,
+      "name": "Chinese water chestnut",
+      "name_scientific": "Eleocharis dulcis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 338,
+      "name": "Garland chrysanthemum",
+      "name_scientific": "Chrysanthemum coronarium",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 341,
+      "name": "Coconut",
+      "name_scientific": "Cocos nucifera",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 345,
+      "name": "Corn salad",
+      "name_scientific": "Valerianella locusta",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 346,
+      "name": "Cottonseed",
+      "name_scientific": "Gossypium",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 347,
+      "name": "Catjang pea",
+      "name_scientific": "Vigna unguiculata ssp. cylindrica",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+      "id": 348,
+      "name": "Malus (Crab apple)",
+      "name_scientific": "Malus",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      "id": 349,
+      "name": "Squashberry",
+      "name_scientific": "Viburnum edule",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 355,
+      "name": "Dock",
+      "name_scientific": "Rumex",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 360,
+      "name": "Durian",
+      "name_scientific": "Durio zibethinus",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 363,
+      "name": "Elderberry",
+      "name_scientific": "Sambucus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 366,
+      "name": "Oregon yampah",
+      "name_scientific": "Perideridia oregana",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 368,
+      "name": "European chestnut",
+      "name_scientific": "Castanea sativa",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 370,
+      "name": "Fireweed",
+      "name_scientific": "Chamerion angustifolium",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 372,
+      "name": "Ginkgo nuts",
+      "name_scientific": "Ginkgo biloba",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 374,
+      "name": "Grape",
+      "name_scientific": "Vitis",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 376,
+      "name": "Groundcherry",
+      "name_scientific": "Physalis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 381,
+      "name": "Hazelnut",
+      "name_scientific": "Corylus",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 382,
+      "name": "Hickory nut",
+      "name_scientific": "Carya",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 384,
+      "name": "Horseradish tree",
+      "name_scientific": "Moringa oleifera",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 385,
+      "name": "Alaska blueberry",
+      "name_scientific": "Vaccinium alaskaense",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 386,
+      "name": "Hyacinth bean",
+      "name_scientific": "Lablab purpureus",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 389,
+      "name": "Jackfruit",
+      "name_scientific": "Artocarpus heterophyllus",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 390,
+      "name": "Japanese chestnut",
+      "name_scientific": "Castanea crenata",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 391,
+      "name": "Java plum",
+      "name_scientific": "Syzygium cumini",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 392,
+      "name": "Jerusalem artichoke",
+      "name_scientific": "Helianthus tuberosus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 393,
+      "name": "Jujube",
+      "name_scientific": "Ziziphus zizyphus",
+      "food_group": "Fruits",
+      "food_subgroup": "Other fruits"
+    },
+    {
+      "id": 394,
+      "name": "Jute",
+      "name_scientific": "Corchorus olitorius",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 395,
+      "name": "Kale",
+      "name_scientific": "Brassica napus var. pabularia",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 398,
+      "name": "Kumquat",
+      "name_scientific": "Fortunella",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 399,
+      "name": "Lambsquarters",
+      "name_scientific": "Chenopodium album",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 401,
+      "name": "Wild leek",
+      "name_scientific": "Allium ampeloprasum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+      "id": 405,
+      "name": "Loganberry",
+      "name_scientific": "Rubus loganobaccus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 406,
+      "name": "Lotus",
+      "name_scientific": "Nelumbo",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 407,
+      "name": "Sacred lotus",
+      "name_scientific": "Nelumbo nucifera",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 408,
+      "name": "White lupine",
+      "name_scientific": "Lupinus albus",
+      "food_group": "Pulses",
+      "food_subgroup": "Other pulses"
+    },
+    {
+      "id": 409,
+      "name": "Malabar spinach",
+      "name_scientific": "Basella alba",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 410,
+      "name": "Mammee apple",
+      "name_scientific": "Mammea americana",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 411,
+      "name": "Purple mangosteen",
+      "name_scientific": "Garcinia mangostana",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 412,
+      "name": "Alpine sweetvetch",
+      "name_scientific": "Hedysarum alpinum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 416,
+      "name": "Moth bean",
+      "name_scientific": "Vigna aconitifolia",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 417,
+      "name": "Mountain yam",
+      "name_scientific": "Dioscorea pentaphylla",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 420,
+      "name": "White mustard",
+      "name_scientific": "Sinapis alba",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "id": 421,
+      "name": "Mustard spinach",
+      "name_scientific": "Brassica perviridis",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 422,
+      "name": "New Zealand spinach",
+      "name_scientific": "Tetragonia tetragonioides",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 423,
+      "name": "Nopal",
+      "name_scientific": "Opuntia cochenillifera",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 426,
+      "name": "Ohelo berry",
+      "name_scientific": "Vaccinium reticulatum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 427,
+      "name": "Okra",
+      "name_scientific": "Abelmoschus esculentus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 436,
+      "name": "Pepper (C. frutescens)",
+      "name_scientific": "Capsicum annuum var. annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 437,
+      "name": "Common persimmon",
+      "name_scientific": "Diospyros virginiana",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 440,
+      "name": "Pili nut",
+      "name_scientific": "Canarium ovatum",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 441,
+      "name": "Colorado pinyon",
+      "name_scientific": "Pinus edulis",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 442,
+      "name": "Pitanga",
+      "name_scientific": "Eugenia uniflora",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 443,
+      "name": "Plains prickly pear",
+      "name_scientific": "Opuntia macrorhiza",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 444,
+      "name": "French plantain",
+      "name_scientific": "Musa X paradisiaca",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 445,
+      "name": "American pokeweed",
+      "name_scientific": "Phytolacca americana",
+      "food_group": "Vegetables",
+      "food_subgroup": "Shoot vegetables"
+    },
+    {
+      "id": 447,
+      "name": "Opium poppy",
+      "name_scientific": "Papaver somniferum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "FIELD1": 446,
+      "id": 448,
+      "name": "Prairie turnip",
+      "name_scientific": "Pediomelum esculentum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 449,
+      "name": "Prickly pear",
+      "name_scientific": "Opuntia",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 450,
+      "name": "Quinoa",
+      "name_scientific": "Chenopodium quinoa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 455,
+      "name": "Malabar plum",
+      "name_scientific": "Syzygium jambos",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 456,
+      "name": "Rose hip",
+      "name_scientific": "Rosa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 457,
+      "name": "Roselle",
+      "name_scientific": "Hibiscus sabdariffa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 466,
+      "name": "Salmonberry",
+      "name_scientific": "Rubus spectabilis",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 467,
+      "name": "Common salsify",
+      "name_scientific": "Tragopogon porrifolius",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 468,
+      "name": "Sapodilla",
+      "name_scientific": "Manilkara zapota",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 469,
+      "name": "Mamey sapote",
+      "name_scientific": "Pouteria sapota",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 479,
+      "name": "Sesbania flower",
+      "name_scientific": "Sesbania bispinosa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 485,
+      "name": "Hedge mustard",
+      "name_scientific": "Sisymbrium",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 488,
+      "name": "Soursop",
+      "name_scientific": "Annona muricata",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 493,
+      "name": "Strawberry guava",
+      "name_scientific": "Psidium cattleianum",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 496,
+      "name": "Sugar apple",
+      "name_scientific": "Annona squamosa",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 499,
+      "name": "Taro",
+      "name_scientific": "Colocasia esculenta",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 500,
+      "name": "Teff",
+      "name_scientific": "Eragrostis tef",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 502,
+      "name": "Mexican groundcherry",
+      "name_scientific": "Physalis philadelphica var. immaculata",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 503,
+      "name": "Towel gourd",
+      "name_scientific": "Luffa aegyptiaca",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 509,
+      "name": "Wasabi",
+      "name_scientific": "Wasabia japonica",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "id": 510,
+      "name": "Wax gourd",
+      "name_scientific": "Benincasa hispida",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 517,
+      "name": "Tea leaf willow",
+      "name_scientific": "Salix pulchra",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 518,
+      "name": "Winged bean",
+      "name_scientific": "Psophocarpus tetragonolobus",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 519,
+      "name": "Yam",
+      "name_scientific": "Dioscorea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Tubers"
+    },
+    {
+      "id": 520,
+      "name": "Jicama",
+      "name_scientific": "Pachyrhizus erosus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 521,
+      "name": "Yautia",
+      "name_scientific": "Xanthosoma sagittifolium",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 534,
+      "name": "Black-eyed pea",
+      "name_scientific": "Vigna unguiculata ssp. unguiculata",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+      "id": 536,
+      "name": "Macadamia nut",
+      "name_scientific": "Macadamia",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 551,
+      "name": "Alaska wild rhubarb",
+      "name_scientific": "Polygonum alpinum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Stalk vegetables"
+    },
+    {
+      "id": 553,
+      "name": "Yardlong bean",
+      "name_scientific": "Vigna unguiculata ssp. sesquipedalis",
+      "food_group": "Pulses",
+      "food_subgroup": "Peas"
+    },
+    {
+      "id": 556,
+      "name": "Boysenberry",
+      "name_scientific": "Rubus ursinus X idaeus",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 557,
+      "name": "Persian lime",
+      "name_scientific": "Citrus latifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+      "id": 558,
+      "name": "Feijoa",
+      "name_scientific": "Feijoa sellowiana",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 559,
+      "name": "Rowal",
+      "name_scientific": "Pangium edule",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Other seeds"
+    },
+    {
+      "id": 560,
+      "name": "Jew's ear",
+      "name_scientific": "Auricularia auricula-judae",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 561,
+      "name": "Common mushroom",
+      "name_scientific": "Agaricus bisporus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 562,
+      "name": "Shiitake",
+      "name_scientific": "Lentinus edodes",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 565,
+      "name": "Enokitake",
+      "name_scientific": "Flammulina velutipes",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 566,
+      "name": "Epazote",
+      "name_scientific": "Dysphania ambrosioides",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 567,
+      "name": "Oyster mushroom",
+      "name_scientific": "Pleurotus ostreatus",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 568,
+      "name": "Cloud ear fungus",
+      "name_scientific": "Auricularia polytricha",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 569,
+      "name": "Maitake",
+      "name_scientific": "Grifola frondosa",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 570,
+      "name": "Ostrich fern",
+      "name_scientific": "Matteuccia struthiopteris",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    },
+    {
+      "id": 572,
+      "name": "Sourdock",
+      "name_scientific": "Rumex articus",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 573,
+      "name": "Tinda",
+      "name_scientific": "Citrullus lanatus var. fistulosus",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 576,
+      "name": "Common chokecherry",
+      "name_scientific": "Prunus virginiana",
+      "food_group": "Fruits",
+      "food_subgroup": "Drupes"
+    },
+    {
+      "id": 577,
+      "name": "Agave",
+      "name_scientific": "Agave",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 578,
+      "name": "Narrowleaf cattail",
+      "name_scientific": "Typha angustifolia",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 583,
+      "name": "Chanterelle",
+      "name_scientific": "Cantharellus cibarius",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 586,
+      "name": "Cinnamon",
+      "name_scientific": "Cinnamomum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Spices"
+    },
+    {
+      "id": 605,
+      "name": "Oil palm",
+      "name_scientific": "Elaeis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 607,
+      "name": "Sago palm",
+      "name_scientific": "Metroxylon sagu",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 608,
+      "name": "Persimmon",
+      "name_scientific": "Diospyros",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 613,
+      "name": "Black salsify",
+      "name_scientific": "Scorzonera hispanica",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 620,
+      "name": "Thistle",
+      "name_scientific": "Cirsium",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 622,
+      "name": "Walnut",
+      "name_scientific": "Juglans",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 638,
+      "name": "Bean",
+      "name_scientific": "",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 681,
+      "name": "Fruit preserve",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Fruit products"
+    },
+    {
+      "id": 693,
+      "name": "Other vegetable product",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Vegetable products"
+    },
+    {
+      "id": 700,
+      "name": "Curry powder",
+      "name_scientific": "",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herb and spice mixtures"
+    },
+    {
+      "id": 705,
+      "name": "Other cocoa product",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 706,
+      "name": "Cocoa butter",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 707,
+      "name": "Cocoa powder",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 708,
+      "name": "Cocoa liquor",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 709,
+      "name": "Chocolate",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 710,
+      "name": "Hot chocolate",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa products"
+    },
+    {
+      "id": 716,
+      "name": "Soy sauce",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 717,
+      "name": "Miso",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 718,
+      "name": "Tofu",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 743,
+      "name": "Heart of palm",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 748,
+      "name": "Hibiscus tea",
+      "name_scientific": "Hibiscus sabbariffa",
+      "food_group": "Teas",
+      "food_subgroup": "Herbal teas"
+    },
+    {
+      "id": 756,
+      "name": "Morchella (Morel)",
+      "name_scientific": "Morchellaceae",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 761,
+      "name": "Soy milk",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 768,
+      "name": "Coffee mocha",
+      "name_scientific": "",
+      "food_group": "Coffee and coffee products",
+      "food_subgroup": "Coffee products"
+    },
+    {
+      "id": 786,
+      "name": "Horned melon",
+      "name_scientific": "Cucumis metuliferus",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+
+      "id": 790,
+      "name": "Other fruit product",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Fruit products"
+    },
+    {
+      "id": 791,
+      "name": "Fruit salad",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Fruit products"
+    },
+    {
+      "id": 792,
+      "name": "Soy yogurt",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 796,
+      "name": "Mixed nuts",
+      "name_scientific": "",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 798,
+      "name": "Babassu palm",
+      "name_scientific": "Attalea speciosa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 799,
+      "name": "Cupua�_u",
+      "name_scientific": "Theobroma grandiflorum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 800,
+      "name": "Shea tree",
+      "name_scientific": "Vitellaria paradoxa",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 801,
+      "name": "Oil-seed Camellia",
+      "name_scientific": "Camellia oleifera",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 802,
+      "name": "Ucuhuba",
+      "name_scientific": "Virola surinamensis",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Oilseed crops"
+    },
+    {
+      "id": 809,
+      "name": "Soy cream",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 813,
+      "name": "Nance",
+      "name_scientific": "Byrsonima crassifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 814,
+      "name": "Naranjilla",
+      "name_scientific": "Solanum quitoense",
+      "food_group": "Fruits",
+      "food_subgroup": "Tropical fruits"
+    },
+    {
+      "id": 815,
+      "name": "Natto",
+      "name_scientific": "",
+      "food_group": "Soy",
+      "food_subgroup": "Soy products"
+    },
+    {
+      "id": 823,
+      "name": "Tree fern",
+      "name_scientific": "Cyathea",
+      "food_group": "Vegetables",
+      "food_subgroup": "Other vegetables"
+    },
+    {
+      "id": 849,
+      "name": "Greenthread tea",
+      "name_scientific": "Thelesperma",
+      "food_group": "Teas",
+      "food_subgroup": "Herbal teas"
+    },
+    {
+      "id": 863,
+      "name": "Yellow pond-lily",
+      "name_scientific": "Nuphar lutea",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 879,
+      "name": "Pepper (C. pubescens)",
+      "name_scientific": "Capsicum pubescens",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 880,
+      "name": "Soft-necked garlic",
+      "name_scientific": "Allium sativum L. var. sativum",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs"
+    },
+    {
+      "id": 881,
+      "name": "Cabbage",
+      "name_scientific": "Brassica oleracea var. capitata",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 882,
+      "name": "Chinese bayberry",
+      "name_scientific": "Myrica rubra",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 883,
+      "name": "Mushrooms",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Mushrooms"
+    },
+    {
+      "id": 885,
+      "name": "Onion-family vegetables",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Onion-family vegetables"
+    },
+    {
+      "id": 886,
+      "name": "Pomes",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Pomes"
+    },
+    {
+      "id": 887,
+      "name": "Brassicas",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Brassicas"
+    },
+    {
+      "id": 889,
+      "name": "Citrus",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Citrus"
+    },
+    {
+      "id": 890,
+      "name": "Cocoa and cocoa products",
+      "name_scientific": "",
+      "food_group": "Cocoa and cocoa products",
+      "food_subgroup": "Cocoa and cocoa products"
+    },
+    {
+      "id": 891,
+      "name": "Coffee and coffee products",
+      "name_scientific": "",
+      "food_group": "Coffee and coffee products",
+      "food_subgroup": "Coffee and coffee products"
+    },
+    {
+      "id": 897,
+      "name": "Herbs and Spices",
+      "name_scientific": "",
+      "food_group": "Herbs and Spices",
+      "food_subgroup": "Herbs and Spices"
+    },
+    {
+      "id": 898,
+      "name": "Pulses",
+      "name_scientific": "",
+      "food_group": "Pulses",
+      "food_subgroup": "Pulses"
+    },
+    {
+      "id": 901,
+      "name": "Nuts",
+      "name_scientific": "",
+      "food_group": "Nuts",
+      "food_subgroup": "Nuts"
+    },
+    {
+      "id": 903,
+      "name": "Fruits",
+      "name_scientific": "",
+      "food_group": "Fruits",
+      "food_subgroup": "Fruits"
+    },
+    {
+      "id": 904,
+      "name": "Green vegetables",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Green vegetables"
+    },
+    {
+      "id": 905,
+      "name": "Root vegetables",
+      "name_scientific": "",
+      "food_group": "Vegetables",
+      "food_subgroup": "Root vegetables"
+    },
+    {
+      "id": 906,
+      "name": "Sunburst squash (pattypan squash)",
+      "name_scientific": "Cucurbita pepo var. clypeata",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 907,
+      "name": "Green zucchini",
+      "name_scientific": "Cucurbita pepo var. cylindrica",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 908,
+      "name": "Yellow zucchini",
+      "name_scientific": "Cucurbita pepo var. cylindrica",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 909,
+      "name": "Green bell pepper",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 910,
+      "name": "Yellow bell pepper",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 911,
+      "name": "Orange bell pepper",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 912,
+      "name": "Red bell pepper",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 913,
+      "name": "Italian sweet red pepper",
+      "name_scientific": "Capsicum annuum",
+      "food_group": "Vegetables",
+      "food_subgroup": "Fruit vegetables"
+    },
+    {
+      "id": 914,
+      "name": "Yellow wax bean",
+      "name_scientific": "Phaseolus vulgaris",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 915,
+      "name": "Green bean",
+      "name_scientific": "Phaseolus vulgaris",
+      "food_group": "Pulses",
+      "food_subgroup": "Beans"
+    },
+    {
+      "id": 916,
+      "name": "Saskatoon berry",
+      "name_scientific": "Amelanchier alnifolia",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 917,
+      "name": "Nanking cherry",
+      "name_scientific": "Prunus tomentosa",
+      "food_group": "Fruits",
+      "food_subgroup": "Berries"
+    },
+    {
+      "id": 918,
+      "name": "Japanese pumpkin",
+      "name_scientific": "Cucurbita maxima",
+      "food_group": "Gourds",
+      "food_subgroup": "Gourds"
+    },
+    {
+      "id": 919,
+      "name": "White cabbage",
+      "name_scientific": "Brassica oleracea L. var. capitata L. f. alba DC.",
+      "food_group": "Vegetables",
+      "food_subgroup": "Cabbages"
+    },
+    {
+      "id": 920,
+      "name": "Romaine lettuce",
+      "name_scientific": "Lactuca sativa L. var. longifolia",
+      "food_group": "Vegetables",
+      "food_subgroup": "Leaf vegetables"
+    }
+   ]

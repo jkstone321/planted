@@ -1999,8 +1999,7 @@
       "food_group": "Vegetables",
       "food_subgroup": "Root vegetables"
     },
-    {
-      
+    { 
       "id": 265,
       "name": "Sweet rowanberry",
       "name_scientific": "Grataegosorbus mitschurinii",
@@ -2008,7 +2007,6 @@
       "food_subgroup": "Berries"
     },
     {
-    
       "id": 266,
       "name": "Pineappple sage",
       "name_scientific": "Salvia elegans",
@@ -2016,7 +2014,6 @@
       "food_subgroup": "Herbs"
     },
     {
-     
       "id": 267,
       "name": "Skunk currant",
       "name_scientific": "Ribes glandulosum",
