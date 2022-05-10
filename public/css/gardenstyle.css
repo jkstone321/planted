@@ -30,12 +30,22 @@ body {
     width: 162vh;
 }
 
+#grid-system {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 #garden-grid,
 #my-list,
+#grid-system,
 #search-card {
     background-color: #404040;
     color: white;
 }
+
 .autocomplete {
     /*the container must be positioned relative:*/
     position: relative;
