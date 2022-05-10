@@ -1,18 +1,23 @@
+<!--Make sure the form has the autocomplete function switched off:-->
 <div class="row w-100">
-
   <div class="col-2">
+  
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
       <div class="card-body">
-        <form>
-          <div class="form-group">
-            <input type="input" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
+
+        <form autocomplete="off" action="/action_page.php">
+          <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myCountry" placeholder="Country">
           </div>
-          <button class="btn btn-secondary w-100">Add to List</button>
+          <input type="submit">
         </form>
+
+        <script src="./js/autocomplete.js"></script>
       </div>
     </div>
+
     <!-- MY LIST -->
     <div class="card m-4 p-0" id="my-list">
       <h3 class="card-header m-0">My List</h3>
