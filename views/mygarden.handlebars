@@ -25,10 +25,44 @@
     </div>
   </div>
   <!-- GARDEN GRID -->
-  <div class="card my-4 p-0" id="garden-grid">
+  {{!-- <div class="card my-4 p-0" id="garden-grid">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <div class="card-body">
       <img src="./assets/grid.png" />
     </div>
+  </div> --}}
+  <div class="col-10">
+    <div class="row">
+      <div class="col">
+        <div id="gridContainer">
+          <!-- grid squares go here -->
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" style="display:flex">
+        <div id="currentColorDisplay">
+          <!-- this box shows the currently selected color -->
+        </div>
+        <div id="colorPalette">
+          <!-- color palette squares go here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="col">
+          <form id="frmColorPicker">
+            <input id="inpCurrentColor" type="text" placeholder="e.g.: red or #FF0000" />
+            <input type="submit" value="Set Color" />
+            <button onClick="clearGrid()">Clear Grid</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
   </div>
+
 </div>
