@@ -3,7 +3,7 @@ const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('homepage', { logged_in: req.session.logged_in });
 });
 
 // router.get('/project/:id', async (req, res) => {
@@ -49,11 +49,14 @@ router.get('/', (req, res) => {
 // });
 
 router.get('/mygarden', withAuth, (req, res) => {
-  res.render('mygarden', { layout: 'gardenview' });
+  res.render('mygarden', {
+    layout: 'gardenview',
+    logged_in: req.session.logged_in,
+  });
 });
 
 router.get('/about', (req, res) => {
-  res.render('aboutus');
+  res.render('aboutus', { logged_in: req.session.logged_in });
 });
 
 router.get('/login', (req, res) => {
@@ -63,7 +66,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login', { logged_in: req.session.logged_in });
 });
 
 module.exports = router;
