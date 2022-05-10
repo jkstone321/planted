@@ -21,9 +21,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        {{#if loggedIn}}
+        {{#if logged_in}}
         <li class="nav-item">
-          <a class="nav-link" href="#">Log Out</a>
+          <a class="nav-link" href="#" id="logout">Log Out</a>
         </li>
         {{else}}
         <li class="nav-item">
@@ -40,6 +40,10 @@
     </div>
   </nav>
   {{{body}}}
+  {{#if logged_in}}
+  <script src="./js/logout.js"></script>
+  {{/if}}
 </body>
+
 
 </html>
