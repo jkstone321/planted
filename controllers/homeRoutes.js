@@ -49,7 +49,7 @@ router.get('/', (req, res) => {
 // });
 
 router.get('/mygarden', withAuth, (req, res) => {
-  res.render('mygarden');
+  res.render('mygarden', { layout: 'gardenview' });
 });
 
 router.get('/about', (req, res) => {
