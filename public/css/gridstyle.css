@@ -37,11 +37,17 @@ main {
     background-color: aqua !important;
 }
 
+#colorPickerContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
 #currentColorDisplay {
     height: 7rem;
     width: 7rem;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
+    margin: 1rem;
 }
 
 #colorPalette {
@@ -50,10 +56,23 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    margin: 1rem;
 }
 
 #colorPalette div {
     height: 1rem;
     width: 1rem;
     border: 1px solid black;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#frmColorPicker {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

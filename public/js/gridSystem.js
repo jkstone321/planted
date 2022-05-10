@@ -73,10 +73,12 @@ function colorExists(color) {
 
 // returns true if color is in the list of colors, or in a valid hex format
 function colorValid(newColor) {
+    if (!newColor) return false
     if (colorExists(newColor)
         || (newColor.startsWith('#') && newColor.length === 7)
         || newColor.startsWith('#') && newColor.length === 4) { return true } else {
         alert('The color is invalid.')
+        $('#inpCurrentColor').val("")
         return false
     }
 }
