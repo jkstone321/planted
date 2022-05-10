@@ -11,12 +11,46 @@
           <div class="autocomplete" style="width:300px;">
             <input id="myInput" type="text" name="myCountry" placeholder="Country">
           </div>
-          <input type="submit">
+          <input type="submit" id="Submitbtn" onclick="handleAddClick(Input)">
         </form>
 
         <script src="./js/autocomplete.js"></script>
       </div>
     </div>
+
+<script>    
+
+var Input = document.getElementById("myInput").value;
+console.log(Input);
+
+
+function handleAddClick(Input) {
+
+  event.preventDefault()
+  console.log('d')
+
+
+
+var plantList = document.getElementById("plantList");
+
+
+var pickedPlant = document.createElement("a");
+
+
+pickedPlant.textContent = document.getElementById("myInput").value;
+
+
+pickedPlant.className = 'list-group-item';
+
+pickedPlant.classList.add('list-group-item-action');
+
+
+
+plantList.appendChild(pickedPlant);
+
+  }
+
+</script>
 
 
 
@@ -25,7 +59,7 @@
     <div class="card m-4 p-0" id="my-list">
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
-        <div class="list-group">
+        <div class="list-group" id="plantList">
           <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
