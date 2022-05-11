@@ -51,3 +51,26 @@ body {
     overflow-x: hidden; /* add padding to account for vertical scrollbar */
     z-index:1000 !important;
 }
+
+#rightClickMenu{
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background-color: aqua;
+    display: none;
+}
+
+#rightClickMenu.visible{
+    display: block;
+}
+
+.rightClickOption {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #eee;
+    cursor: pointer;
+}
+
+.rightClickOption:hover{
+    background: #343434;
+}
