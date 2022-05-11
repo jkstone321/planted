@@ -35,6 +35,11 @@ User.init(
         len: [8],
       },
     },
+    chosen_plant: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
   },
   {
     hooks: {
