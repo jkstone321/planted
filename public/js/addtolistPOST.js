@@ -20,7 +20,9 @@ async function userPlantsPOST(){
         method:'PUT',
         headers: { 'Content-Type': 'application/json' },
         body:myNewChosenPlantsArray,
-    })
+    }).catch(err => {console.log(err); alert(err.msg)})
+
+    // get error from fetch request
 }
 
 
