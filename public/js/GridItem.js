@@ -8,6 +8,7 @@ class GridItem {
         this.index = index
         this.selected = false
         this.selectedColor = currentColor
+        this.borderColor = 'gold'
         this.gridSquare = $(`<div id="${this.gridId}" class="grid">${coordinatesOn ? gridId : '&nbsp;'}</div>`)
         this.gridSquare.css({ backgroundColor: inactiveColor, height: gridSquareSize, width: gridSquareSize })
         this.gridSquare.on('click', this.toggle)
@@ -44,12 +45,13 @@ class GridItem {
         this.gridSquare.css({
             borderColor: value
         })
+        this.borderColor = value
     }
 
     //dont toggle it. explicitly set it to true or false
     setSelected = (value, override) => {
         if (colorIsLocked(this.selectedColor) && value === false && !override) return
-        if (colorIsLocked(this.selectedColor) && this.selectedColor !== currentColor) return
+        if (colorIsLocked(currentColor) && value === true && this.selectedColor !== currentColor) return
         this.selected = value
         this.updateSquare()
         return this
