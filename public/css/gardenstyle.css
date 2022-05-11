@@ -1,3 +1,7 @@
+ul {
+    list-style-type: none;
+}
+
 body {
     background-color: gray;
     background-image: url("../assets/background.png");
@@ -45,14 +49,17 @@ body {
     background-color: #404040;
     color: white;
 }
+
 .ui-autocomplete {
     max-height: 600px;
-    overflow-y: auto;   /* prevent horizontal scrollbar */
-    overflow-x: hidden; /* add padding to account for vertical scrollbar */
-    z-index:1000 !important;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+    /* add padding to account for vertical scrollbar */
+    z-index: 1000 !important;
 }
 
-#rightClickMenu{
+#rightClickMenu {
     position: fixed;
     z-index: 10000;
     width: 150px;
@@ -60,7 +67,7 @@ body {
     display: none;
 }
 
-#rightClickMenu.visible{
+#rightClickMenu.visible {
     display: block;
 }
 
@@ -71,6 +78,20 @@ body {
     cursor: pointer;
 }
 
-.rightClickOption:hover{
+.rightClickOption:hover {
     background: #343434;
+}
+
+.plantColors {
+    height: 1rem;
+    width: 1rem;
+}
+
+.plantButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+select::-ms-expand {
+    display: none;
 }

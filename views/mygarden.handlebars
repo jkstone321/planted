@@ -1,6 +1,6 @@
 <!-- SEARCH FORM -->
 <div class="row w-100">
-  <div class="col-2">
+  <div class="col-lg-2 col-md-3">
 
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
@@ -25,7 +25,7 @@
       console.log(Input);
 
 
-      function handleAddClick(Input) {
+      function handleAddClick2(Input) {
 
         event.preventDefault()
         console.log('d')
@@ -52,8 +52,44 @@
 
       }
 
+      var buttonId = 0
 
 
+      function handleOptionSelect(e) {
+        const color = e.target.value
+        console.log(e.target.id)
+        var idNum = e.target.id.split('-')
+        console.log(idNum)
+        var os = $(`#ig-${1}`)
+        os.css("background-color", color)
+      }
+
+      function handleAddClick(e) {
+        buttonId++;
+        event.preventDefault()
+        var plantButtonClasses = "btn btn-secondary plantButton"
+
+        var pickedPlant = document.getElementById("myInput").value
+
+        var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
+
+        var inputGroup = $(`
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button id="btn-${buttonId}" class="${plantButtonClasses}">${pickedPlant}</button>
+          </div>
+          <select class="custom-select" id="ig-${buttonId}" aria-label="color selection">
+            <option selected>&nbsp;</option>
+            ${colorOptions}
+          </select>
+        </div>
+          `)
+        var plantList = $("#plantList");
+
+        inputGroup.change(handleOptionSelect)
+        plantList.append(inputGroup)
+
+      }
     </script>
 
     {{!-- <div class="btn-group dropright">
@@ -79,6 +115,9 @@
           <div class="btn-group dropright"></div>
           <button type="button" class="btn btn-secondary">
             {{chosen_plant.type}}
+            <ul>
+              <li class="plantColors" style="background-color: red, height: 1rem; width: 1rem;">&nbsp;</li>
+            </ul>
           </button>
           <button type="button" id="dropButton" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
             data-toggle="dropdown" aria-expanded="false">
@@ -86,7 +125,7 @@
 
           </button>
           <ul id="list" class="dropdown-menu">
-           
+
           </ul>
         </div>
         {{!-- <a href="#" class="list-group-item list-group-item-action">{{chosen_plant.type}}</a> --}}
@@ -96,8 +135,11 @@
   </div>
 </div>
 <!-- GARDEN GRID -->
-<div class="card my-4 p-0" id="garden-grid">
-  <h3 class="card-header m-0">Big Papa's Garden</h3>
+<div class="col-lg-10 col-md-9 card my-4 p-0" id="garden-grid">
+  <div style="display: flex; justify-content: space-between">
+    <h3 class="card-header m-0">Big Papa's Garden</h3>
+    <button class="btn btn-secondary" id="grid-save-btn">Save</button>
+  </div>
   <div class="card-body">
 
     <div id="gridContainer">
