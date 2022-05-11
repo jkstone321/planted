@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-
+const { color_options } = require('../utils/helpers');
 router.get('/', (req, res) => {
   res.render('homepage', { logged_in: req.session.logged_in });
 });
@@ -54,7 +54,10 @@ router.get('/mygarden', withAuth, async (req, res) => {
     //get all chosen plants as an array .map to plain text
     //pass those plants to homepages
     //so we can do the each
+  
     const userData = await User.findByPk(req.session.user_id);
+    const colors = color_options();
+    console.log(colors);
     const user = userData.get({ plain: true });
     const unparsedPlants = user.chosen_plant;
     console.log(user);
@@ -62,6 +65,7 @@ router.get('/mygarden', withAuth, async (req, res) => {
     console.log(user.chosen_plant);
     res.render('mygarden', {
       chosen_plants,
+      colors,
       layout: 'gardenview',
       logged_in: req.session.logged_in,
     });

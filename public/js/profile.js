@@ -201,14 +201,15 @@ function listColors() {
     'Yellow',
     'YellowGreen',
   ];
-  console.log('pallet', pallet);
+//   console.log('pallet', pallet);
   for (var i = 0; i < 10; i++) {
     color_options.push(pallet[Math.floor(Math.random() * 147)]);
   }
-  console.log(color_options);
+  return console.log(color_options);
+
 }
 
-document.getElementById('dropButton').addEventListener('click', listColors());
+// document.getElementById('dropButton').addEventListener('click', listColors());
 
 // function chooseColors() {
 //   colors = [];
