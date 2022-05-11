@@ -18,7 +18,7 @@
     </div>
 
 
-    <<script>
+    <script>
 
 
       var Input = document.getElementById("myInput").value;
@@ -35,7 +35,7 @@
       var plantList = document.getElementById("plantList");
 
 
-      var pickedPlant = document.createElement("a");
+      var pickedPlant = document.createElement("button");
 
 
       pickedPlant.textContent = document.getElementById("myInput").value;
@@ -79,11 +79,11 @@
               <button type="button" class="btn btn-secondary">
                   {{chosen_plant.type}}
                 </button>
-                <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                <button type="button" id="dropButton" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
                   <span class="sr-only">Toggle Dropright</span>
                 </button>
                 <div class="dropdown-menu">
-                  <!-- Dropdown menu links -->
+                  {{color_options}}
                 </div>
                 </div>
             {{!-- <a href="#" class="list-group-item list-group-item-action">{{chosen_plant.type}}</a> --}}
@@ -117,7 +117,7 @@
         <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
         <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
       </form>
-
+      
       <script src="./js/colors.js"></script>
       <script src="./js/rightclickmenu.js"></script>
       <script src="./js/addtolistPOST.js"></script>
