@@ -1,5 +1,5 @@
 // // 148 colors total
-const colors = [
+var colors = [
     "AliceBlue",
     "AntiqueWhite",
     "Aqua",
