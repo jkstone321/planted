@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 
 // router.get('/project/:id', async (req, res) => {
 //   try {
-//     const projectData = await Project.findByPk(req.params.id, {
+//     cdonst projectData = await Project.finByPk(req.params.id, {
 //       include: [
 //         {
 //           model: User,
@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
 //       include: [{ model: Project }],
 //     });
 
-//     const user = userData.get({ plain: true });
+//     const user = userData.map((user) => user.get({ plain: true }));
 
 //     res.render('profile', {
 //       ...user,
@@ -48,11 +48,26 @@ router.get('/', (req, res) => {
 //   }
 // });
 
-router.get('/mygarden', withAuth, (req, res) => {
-  res.render('mygarden', {
-    layout: 'gardenview',
-    logged_in: req.session.logged_in,
-  });
+router.get('/mygarden', withAuth, async (req, res) => {
+  try {
+    //fetch to users getting user by primary key = req.session.user_id
+    //get all chosen plants as an array .map to plain text
+    //pass those plants to homepages
+    //so we can do the each
+    const userData = await User.findByPk(req.session.user_id);
+    const user = userData.get({ plain: true });
+    const unparsedPlants = user.chosen_plant;
+    console.log(user);
+    const chosen_plants = JSON.parse(unparsedPlants);
+    console.log(user.chosen_plant);
+    res.render('mygarden', {
+      chosen_plants,
+      layout: 'gardenview',
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get('/about', (req, res) => {
