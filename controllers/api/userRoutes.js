@@ -62,25 +62,26 @@ router.post('/logout', (req, res) => {
 
 router.get('/mylist', async (req, res) => {
   try {
-    const listData = await User.findOne({ where: { id: 1 }});
-  //  let chosen_plants = listData.chosen_plants; // pulls comma seperated string from object recieved
- //  let chosen_plants_array = chosen_plants.split(',') // creates an array from string with split
-    res.status(200).json(listData)
+    const listDataRaw = await User.findOne({ where: { id: req.session.user_id }});
+    if(!listDataRaw) console.log('no list data');
+    let listDataAtts = listDataRaw.chosen_plant
+    console.log(listDataAtts);
+    res.status(200).json(listDataAtts)
   } catch (err) {
     console.log(err)
-    res.status(500).json({msg: "something went wrong"});
+    res.status(500).json(err);
   }
 });
 
 router.put('/mylist', async (req, res) => {
   try {
     let fuckAnArray = JSON.stringify(req.body)
-    const newChosenPlants = await User.update({chosen_plant:fuckAnArray},{where:{id:1}});
+    const newChosenPlants = await User.update({chosen_plant:fuckAnArray},{where:{id:req.session.user_id}});
 
     res.status(200).json(newChosenPlants);
   } catch (err) {
     console.log(err)
-    res.status(400).json({msg: "something went wrong"});
+    res.status(400).json({msg: "something went wrong, in the post route to /mylist"});
   }
 });
 

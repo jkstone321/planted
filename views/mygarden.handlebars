@@ -11,14 +11,14 @@
           <div class="form-group">
             <input type="input" class="form-control" id="myInput" aria-describedby="searchbox-plants">
           </div>
-          <button class="btn btn-secondary w-100" onClick="handleAddClick(Input)">Add to List</button>
+          <button class="btn btn-secondary w-100" onClick="handleAddClick(Input), userPlantsPOST()">Add to List</button>
 
         </form>
       </div>
     </div>
 
 
-    <<script>
+    <script>
 
 
       var Input = document.getElementById("myInput").value;
