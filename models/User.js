@@ -41,6 +41,16 @@ User.init(
       allowNull: false,
       defaultValue: '[]',
     },
+    personal_grid: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      defaultValue: '[]',
+    },
+    grid_size: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      defaultValue: '[]',
+    },
   },
   {
     hooks: {
