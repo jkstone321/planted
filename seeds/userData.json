@@ -3,6 +3,8 @@
     "name": "Lernantino",
     "email": "lernantino@gmail.com",
     "password": "password12345",
-    "chosen_plant": [{ "type": "tomato", "color": "yalla"},{ "type": "jordan's dicord picture", "color": "green"}]
-    }
+    "chosen_plant": [{ "type": "tomato", "color": "yalla"},{ "type": "jordan's dicord picture", "color": "green"}],
+    "personal_grid":[{"column":1, "row":1, "index":1, "selected": true, "selectedColor": "green"},{"column":2, "row":1, "index":2, "selected": true, "selectedColor": "green"},{"column":3, "row":1, "index":3, "selected": true, "selectedColor": "yellow"}],
+    "grid_size" :[{"x":10 , "y":10}]
+  }
 ]
