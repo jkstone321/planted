@@ -1,50 +1,52 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
+// const newFormHandler = async (event) => {
+//   event.preventDefault();
 
-  const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+const { append } = require("express/lib/response");
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+//   const name = document.querySelector('#project-name').value.trim();
+//   const needed_funding = document.querySelector('#project-funding').value.trim();
+//   const description = document.querySelector('#project-desc').value.trim();
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to create project');
-    }
-  }
-};
+//   if (name && needed_funding && description) {
+//     const response = await fetch(`/api/projects`, {
+//       method: 'POST',
+//       body: JSON.stringify({ name, needed_funding, description }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to create project');
+//     }
+//   }
+// };
 
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
+//     const response = await fetch(`/api/projects/${id}`, {
+//       method: 'DELETE',
+//     });
 
-document
-  .querySelector('.new-project-form')
-  .addEventListener('submit', newFormHandler);
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete project');
+//     }
+//   }
+// };
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.new-project-form')
+//   .addEventListener('submit', newFormHandler);
+
+// document
+//   .querySelector('.project-list')
+//   .addEventListener('click', delButtonHandler);
 
 
 
@@ -202,21 +204,20 @@ function listColors() {
     "YellowGreen",
 ];
 console.log("colors", colors)
-  for (var i = 0; i < colors.length; i++) {
-    color_options.push(colors[Math.floor(Math.random()*(10))]);
-    console.log(Math.floor(Math.random()*(10)));
-    console.log(color_options);
-  }
-  return color_options;
+  for (var i = 0; i < 10; i++) {
+    color_options.push(colors[Math.floor(Math.random()*(147))]);
 
+  }
+  console.log(color_options); 
 }
 
-function chooseColors() {
-  colors = [];
-  var tenColors = listColors();
-  var list = document.querySelector("color_options");
+myInput.addEventListener("click", listColors());
 
-  list.innerHTML(tenColors);
-};
+// function chooseColors() {
+//   colors = [];
+//   var tenColors = listColors();
+//   var list = document.querySelector("color_options");
 
-button.addEventListener("click", chooseColors());
+//   list.innerHTML(tenColors);
+// };
+

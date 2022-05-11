@@ -1,58 +1,22 @@
-<!--Make sure the form has the autocomplete function switched off:-->
+<!-- SEARCH FORM -->
 <div class="row w-100">
   <div class="col-2">
-
-    <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
       <div class="card-body">
-        <form autocomplete="off" action="/action_page.php">
-          <input id="myInput" class="form-control mb-2" type="text" name="search-plant" placeholder="Tomato">
-          <button class="btn btn-secondary w-100" id="SubitBtn" onclick="handleAddClick(Input)">Add to List</button>
+        <form>
+          <div class="form-group">
+            <input type="nput" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
+          </div>
+          <button class="btn btn-secondary w-100">Add to List</button>
         </form>
-
       </div>
     </div>
-
-<script>    
-
-var Input = document.getElementById("myInput").value;
-console.log(Input);
-
-
-function handleAddClick(Input) {
-
-  event.preventDefault()
-  console.log('d')
-
-
-
-var plantList = document.getElementById("plantList");
-
-
-var pickedPlant = document.createElement("a");
-
-
-pickedPlant.textContent = document.getElementById("myInput").value;
-
-
-pickedPlant.className = 'list-group-item';
-
-pickedPlant.classList.add('list-group-item-action');
-
-
-
-plantList.appendChild(pickedPlant);
-
-  }
-
-</script>
-
     <!-- MY LIST -->
     <div class="card m-4 p-0" id="my-list">
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
-        <div class="list-group" id="plantList">
+        <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
@@ -61,29 +25,10 @@ plantList.appendChild(pickedPlant);
     </div>
   </div>
   <!-- GARDEN GRID -->
-  <div class="col-8 card m-4 p-0" id="grid-system">
+  <div class="card my-4 p-0" id="garden-grid">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <div class="card-body">
-      <div id="gridContainer">
-        <!-- grid squares generated here -->
-
-      </div>
-
-      <div id="colorPickerContainer" style="display:flex">
-        <div id="currentColorDisplay">
-          <!-- this box shows the currently selected color -->
-        </div>
-        <div id="colorPalette">
-          <!-- color palette squares generated here -->
-        </div>
-      </div>
-
-      <form id="frmColorPicker">
-        <input id="inpCurrentColor" class="form-control w-50" type="text" placeholder="e.g.: red or #FF0000" />
-        <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-        <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
-      </form>
-
+      <img src="./assets/grid.png" />
     </div>
-
   </div>
+</div>
