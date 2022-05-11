@@ -23,16 +23,31 @@ body {
 }
 
 #my-list {
-    min-height: 65vh;
+    min-height: 63vh;
 }
 
 #garden-grid {
     width: 162vh;
 }
 
+#grid-system {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 #garden-grid,
 #my-list,
+#grid-system,
 #search-card {
     background-color: #404040;
     color: white;
+}
+.ui-autocomplete {
+    max-height: 600px;
+    overflow-y: auto;   /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
 }
