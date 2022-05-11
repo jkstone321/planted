@@ -12,7 +12,8 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(400).json({msg:"something went wrong"});
   }
 });
 
@@ -44,7 +45,8 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err)
+    res.status(400).json({msg: "something went wrong"});
   }
 });
 
@@ -65,7 +67,8 @@ router.get('/mylist', async (req, res) => {
  //  let chosen_plants_array = chosen_plants.split(',') // creates an array from string with split
     res.status(200).json(listData)
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json({msg: "something went wrong"});
   }
 });
 
@@ -76,7 +79,8 @@ router.put('/mylist', async (req, res) => {
 
     res.status(200).json(newChosenPlants);
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err)
+    res.status(400).json({msg: "something went wrong"});
   }
 });
 

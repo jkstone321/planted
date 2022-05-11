@@ -37,6 +37,7 @@ User.init(
     },
     chosen_plant: {
       type: DataTypes.TEXT,
+
       allowNull: false,
       defaultValue: '[]',
     },

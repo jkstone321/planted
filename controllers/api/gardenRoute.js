@@ -8,7 +8,9 @@ router.get('/', async (req, res) => {
       const gardendata = await Garden.findAll({include: Product});
       res.status(200).json(gardendata)
     } catch (err) {
-      res.status(500).json(err);
+      // log and display error on the fron end
+      console.log(err)
+      res.status(500).json({msg: "Something went wrong"});
     }
   });
 
@@ -27,7 +29,9 @@ router.put('/:id', async (req, res) => {
     );
     res.status(200).json(gardendata);
     }catch(err){
-      res.status(400).json(err);
+      console.log(err)
+      res.status(400).json({msg: "Something went wrong"});
+
     }
   });
   
@@ -49,7 +53,8 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(gardenData);
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json({msg: "Something went wrong"});
   }
 });
 
@@ -63,7 +68,8 @@ router.post('/', withAuth, async (req, res) => {
   
       res.status(200).json(newgarden);
     } catch (err) {
-      res.status(400).json(err);
+      console.log(err);
+      res.status(400).json({msg: "something went wrong"});
     }
   });
 
