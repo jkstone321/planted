@@ -1,7 +1,7 @@
 <!--Make sure the form has the autocomplete function switched off:-->
 <div class="row w-100">
   <div class="col-2">
-  
+
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
@@ -42,6 +42,7 @@
       <div id="colorPickerContainer" style="display:flex">
         <div id="currentColorDisplay">
           <!-- this box shows the currently selected color -->
+          <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
         </div>
         <div id="colorPalette">
           <!-- color palette squares generated here -->
@@ -49,7 +50,7 @@
       </div>
 
       <form id="frmColorPicker">
-        <input id="inpCurrentColor" class="form-control w-50" type="text" placeholder="e.g.: red or #FF0000" />
+        <input id="inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
         <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
         <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
       </form>

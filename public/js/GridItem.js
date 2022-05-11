@@ -41,6 +41,7 @@ class GridItem {
 
     //dont toggle it. explicitly set it to true or false
     setSelected = (value) => {
+        if (colorIsLocked(this.selectedColor) && value === false) return
         this.selected = value
         this.updateSquare()
         return this

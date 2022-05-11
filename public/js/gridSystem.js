@@ -3,6 +3,11 @@ var currentColor = "red"
 var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = '1rem'
+var lockedColors = []
+
+const iconButton = $('#iconButton')
+const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
+const lockedIcon = $('<i class="fas fa-lock"></i>')
 
 // change to true to show grid coordinates for the squares
 var coordinatesOn = false
@@ -103,7 +108,30 @@ function setColor(newColor) {
     let currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: newColor })
     currentColor = newColor
+    iconButton.html(colorIsLocked(newColor) ? lockedIcon : unlockedIcon)
 }
+
+function colorLockedToggle() {
+    //if color is locked unlock it and vice/versa
+    if (colorIsLocked(currentColor)) {
+        setColorLocked(currentColor, false)
+    } else {
+        setColorLocked(currentColor, true)
+    }
+}
+
+function setColorLocked(color, locked) {
+    if (locked && !lockedColors.includes(color)) {
+        lockedColors.push(color)
+        iconButton.html(lockedIcon)
+    } else {
+        lockedColors = lockedColors.filter(c => c !== currentColor)
+        iconButton.html(unlockedIcon)
+    }
+}
+
+const colorIsLocked = (color) => lockedColors.includes(color)
+
 
 $(document).ready(() => {
     var currentColorDisplay = $('#currentColorDisplay')
