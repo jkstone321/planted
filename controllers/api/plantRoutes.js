@@ -11,7 +11,8 @@ router.get('/', async (req, res) => {
     const plantData = await Plant.findAll();
     res.status(200).json(plantData);
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json({msg: "Something went wrong"});
   }
 });
 
@@ -22,7 +23,8 @@ router.get('/name', async (req, res) => {
     const plantNames = plantData.map((p) => p.name);
     res.status(200).json(plantNames);
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json({msg: "something went wrong"});
   }
 });
 
@@ -32,7 +34,8 @@ router.get('/:id', async (req, res) => {
     const plantData = await Plant.findOne({ where: { id: req.params.id } });
     res.status(200).json(plantData);
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err)
+    res.status(500).json({msg: "something went wrong"});
   }
 });
 
@@ -51,7 +54,8 @@ router.put('/:id', async (req, res) => {
     );
     res.status(200).json(plantData);
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(400).json({msg: "something went wrong"});
   }
 });
 
@@ -67,7 +71,8 @@ router.delete('/:id', async (req, res) => {
 
     res.status(200).json(plantData);
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({msg: "something went wrong"});
   }
 });
 
@@ -81,7 +86,8 @@ router.post('/', async (req, res) => {
 
     res.status(200).json(newPlant);
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err)
+    res.status(400).json({msg: "something went wrong"});
   }
 });
 
