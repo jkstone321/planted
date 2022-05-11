@@ -1,7 +1,7 @@
 <!-- SEARCH FORM -->
 <div class="row w-100">
   <div class="col-2">
-  
+
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
@@ -9,74 +9,65 @@
 
         <form>
           <div class="form-group">
-            <input type="nput" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
+            <input type="input" class="form-control" id="myInput" aria-describedby="searchbox-plants">
           </div>
-          <button class="btn btn-secondary w-100">Add to List</button>
+          <button class="btn btn-secondary w-100" onClick="handleAddClick(Input)">Add to List</button>
 
         </form>
       </div>
     </div>
 
 
-<script>    
-
-var Input = document.getElementById("myInput").value;
-console.log(Input);
-
-function handleAddClick(Input) {
-
-  event.preventDefault()
-  console.log('d')
+    <<script>
 
 
-
-var plantList = document.getElementById("plantList");
-
-
-var pickedPlant = document.createElement("a");
-const rightClickMenuDiv = document.createElement("div");
-var rightClickMenuOptDiv = document.createElement("div");
-//--added static colors to make setting up dynamic right click menu easier intially--//
-var staticColors = ['red','blue','green','yellow','black','white'];
+      var Input = document.getElementById("myInput").value;
+      console.log(Input);
 
 
-pickedPlant.textContent = document.getElementById("myInput").value;
+      function handleAddClick(Input) {
 
-
-pickedPlant.className = 'list-group-item';
-
-pickedPlant.classList.add('list-group-item-action');
+      event.preventDefault()
+      console.log('d')
 
 
 
-plantList.appendChild(pickedPlant);
-rightClickMenuDiv.id = 'rightClickMenu'
-pickedPlant.appendChild(rightClickMenuDiv);
-//--MRI: JS IS NOT RECOGNIZING DYNAMIC DATA WITH EVENT HANDLERS, THANKS EVENT DELEGATION--//
-for( let i=0; i < colors.length; i++){
-rightClickMenuOptDiv.className = 'rightClickOption';
-rightClickMenuOptDiv.textContent = "testing";
-rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
-}
-
-  }
-</script>
+      var plantList = document.getElementById("plantList");
 
 
-    <!-- MY LIST -->
-    <div class="card m-4 p-0" id="my-list">
-      <h3 class="card-header m-0">My List</h3>
-      <div class="card-body">
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
+      var pickedPlant = document.createElement("a");
 
-          <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
 
-          <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
+      pickedPlant.textContent = document.getElementById("myInput").value;
 
+
+      pickedPlant.className = 'list-group-item';
+
+      pickedPlant.classList.add('list-group-item-action');
+
+
+
+      plantList.appendChild(pickedPlant);
+
+
+      }
+
+
+
+      </script>
+
+
+      <!-- MY LIST -->
+      <div class="card m-4 p-0" id="my-list">
+        <h3 class="card-header m-0">My List</h3>
+        <div class="card-body">
+          <div class="list-group" id="plantList">
+            {{#each chosen_plants as |chosen_plant|}}
+            <a href="#" class="list-group-item list-group-item-action">{{chosen_plant.type}}</a>
+            {{/each}}
+          </div>
         </div>
       </div>
-    </div>
   </div>
   <!-- GARDEN GRID -->
   <div class="card my-4 p-0" id="garden-grid">
@@ -104,8 +95,7 @@ rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
         <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
       </form>
 
-        <script src="./js/colors.js"></script>
-    <script src="./js/rightclickmenu.js"></script>
-        <script src="./js/addtolistPOST.js"></script>
-  </div>
-
+      <script src="./js/colors.js"></script>
+      <script src="./js/rightclickmenu.js"></script>
+      <script src="./js/addtolistPOST.js"></script>
+    </div>
