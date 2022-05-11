@@ -60,6 +60,7 @@ router.post('/logout', (req, res) => {
   }
 });
 
+//====MYLIST ROUTERS, NEED TO MOVE TO OWN ROUTER====//
 router.get('/mylist', async (req, res) => {
   try {
     const listDataRaw = await User.findOne({ where: { id: req.session.user_id }});
@@ -82,6 +83,55 @@ router.put('/mylist', async (req, res) => {
   } catch (err) {
     console.log(err)
     res.status(400).json({msg: "something went wrong, in the post route to /mylist"});
+  }
+});
+
+
+//====MYGRID ROUTERS, NEED TO MOVE TO OWN ROUTER====//
+router.get('/mygridinfo', async (req, res) => {
+  try {
+    const gridDataRaw = await User.findOne({ where: { id:req.session.user_id}});
+    if(!gridDataRaw) console.log('no grid data in DB, err @ rouert.get /mygrid');
+    let gridDataAtts = gridDataRaw.personal_grid
+    res.status(200).json(gridDataAtts)
+  } catch (err) {
+    console.log(err)
+    console.log("getting an error in the router.get /mygrid, but the raw data is there")
+    res.status(500).json(err);
+  }
+});
+router.get('/mygridsize', async (req, res) => {
+  try {
+    const gridSizeRaw = await User.findOne({ where: { id:req.session.user_id}});
+    if(!gridSizeRaw) console.log('no grid data in DB, err @ rouert.get /mygrid');
+    let gridSizeAtts = gridSizeRaw.grid_size
+    res.status(200).json(gridSizeAtts)
+  } catch (err) {
+    console.log(err)
+    console.log("getting an error in the router.get /mygrid, but the raw data is there")
+    res.status(500).json(err);
+  }
+});
+
+router.put('/mygridinfo', async (req, res) => {
+  try {
+    let fuckAnArray = JSON.stringify(req.body)
+    const newGridData = await User.update({personal_grid:fuckAnArray},{where:{id:req.session.user_id}});
+    res.status(200).json(newGridData);
+  } catch (err) {
+    console.log(err)
+    res.status(400).json({msg: "something went wrong, in the post route to /mygridinfo"});
+  }
+});
+
+router.put('/mygridsize', async (req, res) => {
+  try {
+    let fuckAnArray = JSON.stringify(req.body)
+    const newGridSize = await User.update({grid_size:fuckAnArray},{where:{id:req.session.user_id}});
+    res.status(200).json(newGridSize);
+  } catch (err) {
+    console.log(err)
+    res.status(400).json({msg: "something went wrong, in the post route to /mygridinfo"});
   }
 });
 
