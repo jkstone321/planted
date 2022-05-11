@@ -1,5 +1,5 @@
 var gridItems = []
-var currentColor = "red"
+var currentColor = "DarkBlue"
 var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = '1rem'
@@ -55,7 +55,10 @@ async function drawGrid() {
 
 //loop through each grid item and clear them
 function clearGrid() {
-    gridItems = gridItems.map(gi => gi.setSelected(false))
+    // for setSelected, the first property sets the value to false
+    // the second property is setting override to true since setSelected
+    // wont clear a square if its color has been locked
+    gridItems = gridItems.map(gi => gi.setSelected(false, true))
 }
 
 function drawPalette() {

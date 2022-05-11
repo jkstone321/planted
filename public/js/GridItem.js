@@ -30,6 +30,7 @@ class GridItem {
             this.selectedColor = currentColor
         }
         this.gridSquare.css({ backgroundColor: this.selected ? this.selectedColor : inactiveColor })
+        this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         return this
     }
 
@@ -39,9 +40,16 @@ class GridItem {
         return this
     }
 
+    setBorderColor = (value) => {
+        this.gridSquare.css({
+            borderColor: value
+        })
+    }
+
     //dont toggle it. explicitly set it to true or false
-    setSelected = (value) => {
-        if (colorIsLocked(this.selectedColor) && value === false) return
+    setSelected = (value, override) => {
+        if (colorIsLocked(this.selectedColor) && value === false && !override) return
+        if (colorIsLocked(this.selectedColor) && this.selectedColor !== currentColor) return
         this.selected = value
         this.updateSquare()
         return this
