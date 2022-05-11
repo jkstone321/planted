@@ -17,6 +17,17 @@
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
         <div class="list-group">
+          {{#if color_options }}
+            <div class="btn-group dropright">
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Dropright
+              </button>
+              <div class="dropdown-menu">
+                <!-- Dropdown menu links -->
+                {{}}
+              </div>
+            </div>
+          {{/if}}
           <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
           <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
