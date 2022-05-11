@@ -31,6 +31,10 @@ var plantList = document.getElementById("plantList");
 
 
 var pickedPlant = document.createElement("a");
+const rightClickMenuDiv = document.createElement("div");
+var rightClickMenuOptDiv = document.createElement("div");
+//--added static colors to make setting up dynamic right click menu easier intially--//
+var staticColors = ['red','blue','green','yellow','black','white'];
 
 
 pickedPlant.textContent = document.getElementById("myInput").value;
@@ -43,6 +47,14 @@ pickedPlant.classList.add('list-group-item-action');
 
 
 plantList.appendChild(pickedPlant);
+rightClickMenuDiv.id = 'rightClickMenu'
+pickedPlant.appendChild(rightClickMenuDiv);
+//--MRI: JS IS NOT RECOGNIZING DYNAMIC DATA WITH EVENT HANDLERS, THANKS EVENT DELEGATION--//
+for( let i=0; i < colors.length; i++){
+rightClickMenuOptDiv.className = 'rightClickOption';
+rightClickMenuOptDiv.textContent = "testing";
+rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
+}
 
   }
 </script>
@@ -53,26 +65,11 @@ plantList.appendChild(pickedPlant);
       <div class="card-body">
         <div class="list-group" id="plantList">
           <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
-            <div id="rightClickMenu">
-              <div class="rightClickOption">testing</div>
-              <div class="rightClickOption">1</div>
-              <div class="rightClickOption">2</div>
-              <div class="rightClickOption">3</div>
-            </div>
+
           <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
-                      <div id="rightClickMenu">
-              <div class="rightClickOption">testing</div>
-              <div class="rightClickOption">1</div>
-              <div class="rightClickOption">2</div>
-              <div class="rightClickOption">3</div>
-            </div>
+
           <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
-                      <div id="rightClickMenu">
-              <div class="rightClickOption">testing</div>
-              <div class="rightClickOption">1</div>
-              <div class="rightClickOption">2</div>
-              <div class="rightClickOption">3</div>
-            </div>
+
         </div>
       </div>
     </div>
@@ -102,5 +99,6 @@ plantList.appendChild(pickedPlant);
       </form>
 
     </div>
+        <script src="./js/colors.js"></script>
     <script src="./js/rightclickmenu.js"></script>
   </div>
