@@ -1,22 +1,67 @@
-<!--Make sure the form has the autocomplete function switched off:-->
+<!-- SEARCH FORM -->
 <div class="row w-100">
   <div class="col-2">
-
+  
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
       <div class="card-body">
 
-        <form autocomplete="off" action="/action_page.php">
-          <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+        <form>
+          <div class="form-group">
+            <input type="nput" class="form-control" id="search-plants" aria-describedby="searchbox-plants">
           </div>
-          <input type="submit">
-        </form>
+          <button class="btn btn-secondary w-100">Add to List</button>
 
-        <script src="./js/autocomplete.js"></script>
+        </form>
       </div>
     </div>
+
+
+<script>    
+
+var Input = document.getElementById("myInput").value;
+console.log(Input);
+
+function handleAddClick(Input) {
+
+  event.preventDefault()
+  console.log('d')
+
+
+
+var plantList = document.getElementById("plantList");
+
+
+var pickedPlant = document.createElement("a");
+const rightClickMenuDiv = document.createElement("div");
+var rightClickMenuOptDiv = document.createElement("div");
+//--added static colors to make setting up dynamic right click menu easier intially--//
+var staticColors = ['red','blue','green','yellow','black','white'];
+
+
+pickedPlant.textContent = document.getElementById("myInput").value;
+
+
+pickedPlant.className = 'list-group-item';
+
+pickedPlant.classList.add('list-group-item-action');
+
+
+
+plantList.appendChild(pickedPlant);
+rightClickMenuDiv.id = 'rightClickMenu'
+pickedPlant.appendChild(rightClickMenuDiv);
+//--MRI: JS IS NOT RECOGNIZING DYNAMIC DATA WITH EVENT HANDLERS, THANKS EVENT DELEGATION--//
+for( let i=0; i < colors.length; i++){
+rightClickMenuOptDiv.className = 'rightClickOption';
+rightClickMenuOptDiv.textContent = "testing";
+rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
+}
+
+  }
+</script>
+
 
     <!-- MY LIST -->
     <div class="card m-4 p-0" id="my-list">
@@ -24,16 +69,20 @@
       <div class="card-body">
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">Potatoes</a>
+
           <a href="#" class="list-group-item list-group-item-action">Tomatoes</a>
+
           <a href="#" class="list-group-item list-group-item-action">Special Lettuce</a>
+
         </div>
       </div>
     </div>
   </div>
   <!-- GARDEN GRID -->
-  <div class="col-8 card m-4 p-0" id="grid-system">
+  <div class="card my-4 p-0" id="garden-grid">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <div class="card-body">
+
       <div id="gridContainer">
         <!-- grid squares generated here -->
 
@@ -55,6 +104,8 @@
         <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
       </form>
 
-    </div>
-
+        <script src="./js/colors.js"></script>
+    <script src="./js/rightclickmenu.js"></script>
+        <script src="./js/addtolistPOST.js"></script>
   </div>
+
