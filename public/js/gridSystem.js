@@ -1,8 +1,13 @@
 var gridItems = []
-var currentColor = "red"
+var currentColor = "DarkBlue"
 var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = '1rem'
+var lockedColors = []
+
+const iconButton = $('#iconButton')
+const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
+const lockedIcon = $('<i class="fas fa-lock"></i>')
 
 // change to true to show grid coordinates for the squares
 var coordinatesOn = false
@@ -50,7 +55,10 @@ async function drawGrid() {
 
 //loop through each grid item and clear them
 function clearGrid() {
-    gridItems = gridItems.map(gi => gi.setSelected(false))
+    // for setSelected, the first property sets the value to false
+    // the second property is setting override to true since setSelected
+    // wont clear a square if its color has been locked
+    gridItems = gridItems.map(gi => gi.setSelected(false, true))
 }
 
 function drawPalette() {
@@ -74,7 +82,7 @@ function colorExists(color) {
 // returns true if color is in the list of colors, or in a valid hex format
 function colorValid(newColor) {
     if (!newColor) return false
-    if (colorExists(newColor)
+    if (colorExists(newColor.toLowerCase())
         || (newColor.startsWith('#') && newColor.length === 7)
         || newColor.startsWith('#') && newColor.length === 4) { return true } else {
         alert('The color is invalid.')
@@ -103,7 +111,37 @@ function setColor(newColor) {
     let currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: newColor })
     currentColor = newColor
+    iconButton.html(colorIsLocked(newColor) ? lockedIcon : unlockedIcon)
 }
+
+function colorLockedToggle() {
+    //if color is locked unlock it and vice/versa
+    if (colorIsLocked(currentColor)) {
+        setColorLocked(currentColor, false)
+    } else {
+        setColorLocked(currentColor, true)
+    }
+}
+
+function setColorLocked(color, locked) {
+    if (locked && !lockedColors.includes(color)) {
+        lockedColors.push(color)
+        iconButton.html(lockedIcon)
+        gridItems.map(g => {
+            console.log(g.selectedColor)
+            //if (gi.selectedColor === color) gi.setBorderColor(color)
+        })
+    } else {
+        lockedColors = lockedColors.filter(c => c !== currentColor)
+        gridItems.map(gi => {
+            if (gi.selectedColor === color) gi.setBorderColor('gold')
+        })
+        iconButton.html(unlockedIcon)
+    }
+}
+
+const colorIsLocked = (color) => lockedColors.includes(color)
+
 
 $(document).ready(() => {
     var currentColorDisplay = $('#currentColorDisplay')

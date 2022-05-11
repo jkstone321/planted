@@ -1,6 +1,8 @@
 <!-- SEARCH FORM -->
 <div class="row w-100">
   <div class="col-2">
+  
+    <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
       <h3 class="card-header m-0">Search</h3>
       <div class="card-body">
@@ -80,10 +82,27 @@ rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
   <div class="card my-4 p-0" id="garden-grid">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <div class="card-body">
-      <img src="./assets/grid.png" />
-    </div>
 
-</div>
+      <div id="gridContainer">
+        <!-- grid squares generated here -->
+
+      </div>
+
+      <div id="colorPickerContainer" style="display:flex">
+        <div id="currentColorDisplay">
+          <!-- this box shows the currently selected color -->
+          <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
+        </div>
+        <div id="colorPalette">
+          <!-- color palette squares generated here -->
+        </div>
+      </div>
+
+      <form id="frmColorPicker">
+        <input id="inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+        <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+        <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+      </form>
 
         <script src="./js/colors.js"></script>
     <script src="./js/rightclickmenu.js"></script>
