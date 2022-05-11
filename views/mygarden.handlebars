@@ -8,7 +8,7 @@
       <div class="card-body">
         <form autocomplete="off" action="/action_page.php">
           <input id="myInput" class="form-control mb-2" type="text" name="search-plant" placeholder="Tomato">
-          <button class="btn btn-secondary w-100" id="SubitBtn" onclick="handleAddClick(Input)">Add to List</button>
+          <button class="btn btn-secondary w-100" id="SubitBtn" onclick="handleAddClick(Input),userPlantsPOST()">Add to List</button>
         </form>
 
       </div>
@@ -18,7 +18,6 @@
 
 var Input = document.getElementById("myInput").value;
 console.log(Input);
-
 
 function handleAddClick(Input) {
 
@@ -101,4 +100,5 @@ rightClickMenuDiv.appendChild(rightClickMenuOptDiv);
     </div>
         <script src="./js/colors.js"></script>
     <script src="./js/rightclickmenu.js"></script>
+        <script src="./js/addtolistPOST.js"></script>
   </div>
