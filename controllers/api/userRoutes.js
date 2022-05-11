@@ -39,7 +39,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
+
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
@@ -55,6 +55,17 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.get('/mylist', async (req, res) => {
+  try {
+    const listData = await User.findOne({ where: { id: 1 } }); //req.session.user.user_id replaces id
+  //  let chosen_plants = listData.chosen_plants; // pulls comma seperated string from object recieved
+ //  let chosen_plants_array = chosen_plants.split(',') // creates an array from string with split
+    res.status(200).json(listData)
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
