@@ -17,7 +17,7 @@ class GridItem {
 
     // call this method to just return the data
     getGridInfo = () => {
-        return { column, row, index, selected, selectedColor } = this
+        return { column: this.column, row: this.row, index: this.index, selected: this.selected, selectedColor: this.selectedColor }
     }
 
     // this will check if mousekey is held down while the mouse is over this square

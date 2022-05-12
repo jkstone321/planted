@@ -115,8 +115,10 @@ router.get('/mygridsize', async (req, res) => {
 });
 
 router.put('/mygridinfo', async (req, res) => {
+  console.log('mygridinfo', req.body)
   try {
     let fuckAnArray = JSON.stringify(req.body)
+    console.log("====================================> gridInfo", fuckAnArray)
     const newGridData = await User.update({ personal_grid: fuckAnArray }, { where: { id: req.session.user_id } });
     res.status(200).json(newGridData);
   } catch (err) {

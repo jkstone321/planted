@@ -30,16 +30,31 @@ async function userGridPOST() {
     return gridDimensions?.length ? gridDimensions : { x: 32, y: 18 }
 };
 
+async function handleSave() {
+    let gis = gridItems.map(gi => gi.getGridInfo())
+    console.log(gis)
+
+    await fetch('/api/users/mygridinfo', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(gis),
+    })
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+
+}
+
 // draw the grid
-async function drawGrid() {
+async function drawGrid(gridInfo) {
+    if (gridInfo?.length < 1) gridInfo = null
     let currentGridDimensions = gridDimensions
     //save the grid container to variable
     const gridContainer = $('#gridContainer')
     // empty it if theres anything in there
     gridContainer.html('')
 
-    let row = 0;
-    let column = 0;
+    var row = 0;
+    var column = 0;
 
     // create a grid
     var { x, y } = currentGridDimensions
@@ -55,9 +70,10 @@ async function drawGrid() {
         // check which row we're on by doing i mod x
         // if it returns anything other than 0 we're not at
         // the end of the row yet
-        if (i >= x && i % x == 0) { row++; column = 0 }
-
-        let currentGi = new GridItem(column, row, i)
+        if (!gridInfo && i >= x && i % x == 0) { row++; column = 0 }
+        let gi = gridInfo ? gridInfo[i] : null
+        console.log('gi', gi)
+        let currentGi = !gridInfo ? new GridItem(column, row, i) : new GridItem(gi.column, gi.row, gi.index)
 
         gridContainer.append(currentGi.gridSquare)
 
@@ -347,6 +363,14 @@ $(document).ready(async () => {
             plantData = JSON.parse(data)
             console.log(plantData)
             plantData.map(({ type, color }) => addPlantToList(type, color))
+        })
+
+
+    await fetch('/api/users/mygridinfo')
+        .then(data => data.json())
+        .then(data => {
+            console.log('myGridInfo', JSON.parse(data))
+            drawGrid(data)
         })
 
 
