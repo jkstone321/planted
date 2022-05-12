@@ -5,7 +5,7 @@ ul {
 body {
     background-color: gray;
     background-image: url("../assets/background.png");
-    background-size: cover;
+    background-size: fill;
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -32,7 +32,9 @@ body {
 }
 
 #garden-grid {
-    width: 162vh;
+    width: 150vh;
+    display: block;
+    position: relative;
 }
 
 #grid-system {
