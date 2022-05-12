@@ -16,6 +16,7 @@
 
         </form>
       </div>
+
     </div>
 
 
@@ -39,16 +40,24 @@
         const color = e.target.value
         console.log(e.target.id)
         var idNum = e.target.id.split('-')[1]
-        console.log(idNum)
+        console.log("idNum:", idNum)
         var os = $(`#ig-${idNum}`)
         os.css("background-color", color)
+        console.log(idNum, plantData[idNum])
         currentColor = color
+        plantData[idNum].color = color
+
+        fetch('/api/users/mylist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(plantData),
+        }).catch(err => { console.log(err); alert(err.msg) })
+
       }
 
       function handleAddClick() {
         event.preventDefault()
 
-        buttonId++;
         var plantButtonClasses = "btn btn-secondary plantButton w-90"
 
         var pickedPlant = document.getElementById("myInput").value
@@ -69,7 +78,32 @@
 
         inputGroup.change(handleOptionSelect)
         plantList.append(inputGroup)
+        plantData.push({ "type": pickedPlant, "color": "" })
+        buttonId++;
+      }
 
+      function addPlantToList(plant, color) {
+        var plantButtonClasses = "btn btn-secondary plantButton w-90"
+
+        var pickedPlant = document.getElementById("myInput").value
+
+        var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
+
+        var inputGroup = $(`
+        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
+          <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
+            <button id="btn-${buttonId}" class="${plantButtonClasses}">${plant}</button>
+          </div>
+          <select class="custom-select" id="ig-${buttonId}" style="background-color: ${color}" aria-label="color selection">
+            ${colorOptions}
+          </select>
+        </div>
+          `)
+        var plantList = $("#plantList");
+
+        inputGroup.change(handleOptionSelect)
+        plantList.append(inputGroup)
+        buttonId++;
       }
     </script>
 
@@ -82,13 +116,18 @@
       </div>
     </div>
   </div>
-  <!-- GARDEN GRID -->
-  <div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
-    <div style="display: flex; justify-content: space-between">
-      <h3 class="card-header m-0">{{user.name}}'s Garden</h3>
-      <button class="btn btn-secondary" id="grid-save-btn">Save</button>
-    </div>
-    <div class="card-body">
+
+</div>
+<!-- GARDEN GRID -->
+<div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
+  <div style="display: flex; justify-content: space-between">
+    <h3 class="card-header m-0">{{user.name}}'s Garden</h3>
+    {{!-- <button class="btn btn-secondary" id="grid-save-btn" onclick="handleSave()">Save</button> --}}
+  </div>
+  <div class="card-body">
+
+    <div id="gridContainer" style="margin: 1rem auto;">
+      <!-- grid squares generated here -->
 
       <div id="gridContainer" style="margin: 1rem auto;">
         <!-- grid squares generated here -->

@@ -4,7 +4,8 @@ var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = 2
 var lockedColors = []
-let gridDimensions = userGridPOST();
+let gridDimensions = { x: 32, y: 18 };
+var plantData = []
 
 const iconButton = $('#iconButton')
 const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
@@ -13,32 +14,47 @@ const lockedIcon = $('<i class="fas fa-lock"></i>')
 // change to true to show grid coordinates for the squares
 var coordinatesOn = false
 
-
-
 async function userGridPOST() {
-    const gridInfoRaw = await fetch('/api/users/mygridinfo', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-    });
+    try {
+        var gridInfoRaw = await fetch('/api/users/mygridinfo');
+    }
+    catch (err) {
+        console.log('userGridPostErr:', err)
+        return err
+    }
     let gridInfoJson = await gridInfoRaw.json();
     gridDimensions = JSON.parse(gridInfoJson)
-    
-    console.log(gridDimensions);
-    return gridDimensions;
+
+    console.log(gridDimensions.length);
+
+    return gridDimensions?.length ? gridDimensions : { x: 32, y: 18 }
 };
 
-let currentGridDimensions = gridDimensions
+async function handleSave() {
+    let gis = gridItems.map(gi => gi.getGridInfo())
+    console.log(gis.length)
 
+    await fetch('/api/users/mygridinfo', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(gis),
+    })
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+
+}
 
 // draw the grid
-async function drawGrid() {
+async function drawGrid(gridInfo) {
+    if (gridInfo?.length < 1) gridInfo = null
+    let currentGridDimensions = gridDimensions
     //save the grid container to variable
     const gridContainer = $('#gridContainer')
     // empty it if theres anything in there
     gridContainer.html('')
 
-    let row = 0;
-    let column = 0;
+    var row = 0;
+    var column = 0;
 
     // create a grid
     var { x, y } = currentGridDimensions
@@ -54,9 +70,10 @@ async function drawGrid() {
         // check which row we're on by doing i mod x
         // if it returns anything other than 0 we're not at
         // the end of the row yet
-        if (i >= x && i % x == 0) { row++; column = 0 }
-
-        let currentGi = new GridItem(column, row, i)
+        if (!gridInfo && i >= x && i % x == 0) { row++; column = 0 }
+        let gi = gridInfo ? gridInfo[i] : null
+        console.log('gi', gridInfo)
+        let currentGi = !gridInfo ? new GridItem(column, row, i) : new GridItem(gi.column, gi.row, gi.index, gi.selectedColor)
 
         gridContainer.append(currentGi.gridSquare)
 
@@ -126,6 +143,7 @@ function setColor(newColor) {
     currentColorDisplay.css({ backgroundColor: newColor })
     currentColor = newColor
     iconButton.html(colorIsLocked(newColor) ? lockedIcon : unlockedIcon)
+
 }
 
 function colorLockedToggle() {
@@ -320,22 +338,40 @@ function listColors() {
     return console.log(color_options);
 }
 
-$(document).ready(() => {
+$(document).ready(async () => {
     var currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: currentColor })
     let frmColorPicker = $('#frmColorPicker')
     frmColorPicker.on('submit', handleSetColor)
-    userGridPOST().then(console.log(gridDimensions)).then(drawGrid()).then(() => console.log('# of gridItems:', gridItems.length))
-    drawPalette()
 
-    document.body.onmousedown = function () {
-        ++mouseDown;
-    }
-    document.body.onmouseup = function () {
-        --mouseDown;
-    }
+    //gridDimensions = await userGridPOST()
+    console.log('dimensions', gridDimensions)
+
+    //await drawGrid()
+    console.log('# of gridItems:', gridItems.length)
+    //drawPalette()
+
+    document.body.onmousedown = () => mouseDown = true;
+    document.body.onmouseup = () => mouseDown = false;
+
+    $('#gridContainer').on("mouseleave", () => mouseDown = false)
+
+    // 'grid-save-btn'
+    await fetch('/api/users/mylist')
+        .then(data => data.json())
+        .then(data => {
+            plantData = JSON.parse(data)
+            console.log(plantData)
+            plantData.map(({ type, color }) => addPlantToList(type, color))
+        })
 
 
+    await fetch('/api/users/mygridinfo')
+        .then(data => data.json())
+        .then(data => {
+            console.log('myGridInfo', JSON.parse(data))
+            drawGrid(JSON.parse(data))
+        })
 
 
 })

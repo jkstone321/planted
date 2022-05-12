@@ -1,23 +1,23 @@
 // class for each new grid item to be saved in gridItems array
 // each instance of GridItem will be responsible for itself
 class GridItem {
-    constructor(column, row, index) {
+    constructor(column, row, index, selectedColor) {
         this.gridId = `${index}-${row}`
         this.column = column
         this.row = row
         this.index = index
         this.selected = false
-        this.selectedColor = currentColor
+        this.selectedColor = selectedColor ?? currentColor
         this.borderColor = 'gold'
         this.gridSquare = $(`<div id="${this.gridId}" class="grid">${coordinatesOn ? gridId : '&nbsp;'}</div>`)
-        this.gridSquare.css({ backgroundColor: inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
+        this.gridSquare.css({ backgroundColor: selectedColor ?? inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
         this.gridSquare.on('click', this.toggle)
         this.gridSquare.on('mouseover', this.handleMouseOver)
     }
 
     // call this method to just return the data
     getGridInfo = () => {
-        return { column, row, index, selected, selectedColor } = this
+        return { column: this.column, row: this.row, index: this.index, selected: this.selected, selectedColor: this.selectedColor }
     }
 
     // this will check if mousekey is held down while the mouse is over this square
@@ -32,6 +32,7 @@ class GridItem {
         }
         this.gridSquare.css({ backgroundColor: this.selected ? this.selectedColor : inactiveColor })
         this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
+        handleSave()
         return this
     }
 
