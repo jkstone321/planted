@@ -15,9 +15,6 @@ main {
     border-radius: .5rem;
     display: grid;
     overflow: hidden;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .grid {
