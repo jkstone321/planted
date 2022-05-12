@@ -127,6 +127,7 @@ function setColor(newColor) {
     currentColorDisplay.css({ backgroundColor: newColor })
     currentColor = newColor
     iconButton.html(colorIsLocked(newColor) ? lockedIcon : unlockedIcon)
+
 }
 
 function colorLockedToggle() {

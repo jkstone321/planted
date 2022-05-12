@@ -40,16 +40,24 @@
         const color = e.target.value
         console.log(e.target.id)
         var idNum = e.target.id.split('-')[1]
-        console.log(idNum)
+        console.log("idNum:", idNum)
         var os = $(`#ig-${idNum}`)
         os.css("background-color", color)
+        console.log(idNum, plantData[idNum])
         currentColor = color
+        plantData[idNum].color = color
+
+        fetch('/api/users/mylist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(plantData),
+        }).catch(err => { console.log(err); alert(err.msg) })
+
       }
 
       function handleAddClick() {
         event.preventDefault()
 
-        buttonId++;
         var plantButtonClasses = "btn btn-secondary plantButton w-90"
 
         var pickedPlant = document.getElementById("myInput").value
@@ -70,11 +78,11 @@
 
         inputGroup.change(handleOptionSelect)
         plantList.append(inputGroup)
-
+        plantData.push({ "type": pickedPlant, "color": "" })
+        buttonId++;
       }
 
       function addPlantToList(plant, color) {
-        buttonId++;
         var plantButtonClasses = "btn btn-secondary plantButton w-90"
 
         var pickedPlant = document.getElementById("myInput").value
@@ -95,6 +103,7 @@
 
         inputGroup.change(handleOptionSelect)
         plantList.append(inputGroup)
+        buttonId++;
       }
     </script>
 
