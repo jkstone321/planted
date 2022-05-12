@@ -74,8 +74,7 @@ router.get('/mylist', async (req, res) => {
   }
 });
 
-// add plant to list
-router.put('/mylist', async (req, res) => {
+router.post('/mylist', async (req, res) => {
   try {
     let fuckAnArray = JSON.stringify(req.body)
     console.log('myListBody:', req.body)
