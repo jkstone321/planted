@@ -78,13 +78,6 @@
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
         <div class="list-group" id="plantList">
-          <div id="igContainer1" class="input-group mb-3" style="margin: .25rem 0">
-            <div class="input-group-prepend" onclick="selectPlant(1)">
-              <button id="btn-1" class="btn btn-secondary plantButton w-90">Spacer</button>
-            </div>
-            <select class="custom-select" id="ig-1" aria-label="color selection" style="background-color: black">
-            </select>
-          </div>
         </div>
       </div>
     </div>
@@ -113,10 +106,10 @@
             </div>
           </div>
 
-          <form id="frmColorPicker" style="display: none;"">
-      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
-          <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-          <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+          <form id="frmColorPicker" style="display" : none;"">
+            <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+            <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+            <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
           </form>
 
           <script src="./js/colors.js"></script>
