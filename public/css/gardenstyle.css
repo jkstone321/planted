@@ -96,3 +96,17 @@ body {
 select::-ms-expand {
     display: none;
 }
+
+.input-group-prepend {
+    flex: 0 0 86%;
+}
+
+.input-group-prepend button {
+    width: 100%;
+}
+
+.highlighted {
+    border: 2px solid gold;
+    transform: scale(1.1);
+    transition: .5s;
+}

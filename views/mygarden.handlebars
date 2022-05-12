@@ -22,6 +22,14 @@
     <script>
 
       var buttonId = 0
+      var activePlantId;
+
+      function selectPlant(id) {
+        if (activePlantId) $(`#igContainer${activePlantId}`).removeClass("highlighted")
+        $(`#igContainer${id}`).addClass("highlighted")
+        currentColor = $(`#ig-${id}`).css("background-color")
+        activePlantId = id
+      }
 
       function handleOptionSelect(e) {
         const color = e.target.value
@@ -44,12 +52,11 @@
         var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
 
         var inputGroup = $(`
-        <div class="input-group mb-3" style="margin: .25rem 0">
-          <div class="input-group-prepend">
+        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
+          <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
             <button id="btn-${buttonId}" class="${plantButtonClasses}">${pickedPlant}</button>
           </div>
           <select class="custom-select" id="ig-${buttonId}" aria-label="color selection">
-            <option selected>&nbsp;</option>
             ${colorOptions}
           </select>
         </div>
@@ -98,7 +105,7 @@
   </div>
   <div class="card-body">
 
-    <div id="gridContainer">
+    <div id="gridContainer" style="margin: 1rem auto;">
       <!-- grid squares generated here -->
 
     </div>

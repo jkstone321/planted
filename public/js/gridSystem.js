@@ -1,8 +1,8 @@
 var gridItems = []
-var currentColor = "DarkBlue"
+var currentColor = ""
 var inactiveColor = "white"
 var mouseDown = null;
-var gridSquareSize = 1.5
+var gridSquareSize = 2
 var lockedColors = []
 
 const iconButton = $('#iconButton')
