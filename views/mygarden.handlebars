@@ -78,7 +78,17 @@
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
         <div class="list-group" id="plantList">
+          <div id="igContainer1" class="input-group mb-3" style="margin: .25rem 0">
+            <div class="input-group-prepend" onclick="selectPlant(1)">
+              <button id="btn-1" class="btn btn-secondary plantButton w-90">Spacer</button>
+            </div>
+            <select class="custom-select" id="ig-1" aria-label="color selection" style="background-color: black">
+            </select>
+          </div>
           {{#each chosen_plants as |chosen_plant|}}
+
+
+
           <div class="btn-group dropright"></div>
           <button type="button" class="btn btn-secondary">
             {{chosen_plant.type}}
