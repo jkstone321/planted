@@ -33,8 +33,6 @@ async function userPlantsPOST(){
         body:myNewChosenPlantsArray,
     }).catch(err => {console.log(err); alert(err.msg)})
 };
-
-    // get error from fetch request
 }
 
 

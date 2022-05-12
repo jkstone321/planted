@@ -4,6 +4,7 @@ var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = '1rem'
 var lockedColors = []
+let gridDimensions = userGridPOST();
 
 const iconButton = $('#iconButton')
 const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
@@ -12,13 +13,21 @@ const lockedIcon = $('<i class="fas fa-lock"></i>')
 // change to true to show grid coordinates for the squares
 var coordinatesOn = false
 
-const gridDimensions = [
-    { x: 8, y: 8 },
-    { x: 16, y: 9 },
-    { x: 32, y: 18 }
-]
 
-var currentGridDimensions = gridDimensions[2]
+
+async function userGridPOST() {
+    const gridInfoRaw = await fetch('/api/users/mygridinfo', {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+    });
+    let gridInfoJson = await gridInfoRaw.json();
+    gridDimensions = JSON.parse(gridInfoJson)
+    
+    console.log(gridDimensions);
+    return gridDimensions;
+};
+
+let currentGridDimensions = gridDimensions
 
 
 // draw the grid
@@ -148,7 +157,7 @@ $(document).ready(() => {
     currentColorDisplay.css({ backgroundColor: currentColor })
     let frmColorPicker = $('#frmColorPicker')
     frmColorPicker.on('submit', handleSetColor)
-    drawGrid().then(() => console.log('# of gridItems:', gridItems.length))
+    userGridPOST().then(console.log(gridDimensions)).then(drawGrid()).then(() => console.log('# of gridItems:', gridItems.length))
     drawPalette()
 
     document.body.onmousedown = function () {
@@ -321,4 +330,5 @@ $(document).ready(() => {
 
     }
 })
+
 
