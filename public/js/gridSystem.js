@@ -5,6 +5,7 @@ var mouseDown = null;
 var gridSquareSize = 2
 var lockedColors = []
 let gridDimensions;
+var plantData = []
 
 const iconButton = $('#iconButton')
 const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
@@ -339,8 +340,14 @@ $(document).ready(async () => {
     $('#gridContainer').on("mouseleave", () => mouseDown = false)
 
     // 'grid-save-btn'
-    fetch('/api/users/mylist').then(plantData => plantData.text()).then(plantData => console.log(plantData))
-    // console.log("plantData", plantData.text())
+    await fetch('/api/users/mylist')
+        .then(data => data.json())
+        .then(data => {
+            plantData = JSON.parse(data)
+            console.log(plantData)
+            plantData.map(({ type, color }) => addPlantToList(type, color))
+        })
+
 
 })
 

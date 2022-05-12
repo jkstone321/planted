@@ -72,6 +72,30 @@
         plantList.append(inputGroup)
 
       }
+
+      function addPlantToList(plant, color) {
+        buttonId++;
+        var plantButtonClasses = "btn btn-secondary plantButton w-90"
+
+        var pickedPlant = document.getElementById("myInput").value
+
+        var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
+
+        var inputGroup = $(`
+        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
+          <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
+            <button id="btn-${buttonId}" class="${plantButtonClasses}">${plant}</button>
+          </div>
+          <select class="custom-select" id="ig-${buttonId}" style="background-color: ${color}" aria-label="color selection">
+            ${colorOptions}
+          </select>
+        </div>
+          `)
+        var plantList = $("#plantList");
+
+        inputGroup.change(handleOptionSelect)
+        plantList.append(inputGroup)
+      }
     </script>
 
     <!-- MY LIST -->
@@ -79,7 +103,7 @@
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
         <div class="list-group" id="plantList">
-          {{#each chosen_plants as |chosen_plant|}}
+          {{!-- {{#each chosen_plants as |chosen_plant|}}
           <div class="btn-group dropright"></div>
           <button type="button" class="btn btn-secondary">
             {{chosen_plant.type}}
@@ -96,7 +120,7 @@
 
           </ul>
         </div>
-        {{/each}}
+        {{/each}} --}}
       </div>
 
     </div>
