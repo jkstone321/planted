@@ -1,7 +1,7 @@
 body {
     background-color: gray;
     background-image: url("../assets/background.gif");
-    background-size: cover;
+    background-size: fill;
     background-repeat: no-repeat;
 }
 
