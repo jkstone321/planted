@@ -4,7 +4,7 @@ var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = 2
 var lockedColors = []
-let gridDimensions = userGridPOST();
+let gridDimensions;
 
 const iconButton = $('#iconButton')
 const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
@@ -13,25 +13,25 @@ const lockedIcon = $('<i class="fas fa-lock"></i>')
 // change to true to show grid coordinates for the squares
 var coordinatesOn = false
 
-
-
 async function userGridPOST() {
-    const gridInfoRaw = await fetch('/api/users/mygridinfo', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-    });
+    try {
+        var gridInfoRaw = await fetch('/api/users/mygridinfo');
+    }
+    catch (err) {
+        console.log('userGridPostErr:', err)
+        return err
+    }
     let gridInfoJson = await gridInfoRaw.json();
     gridDimensions = JSON.parse(gridInfoJson)
-    
-    console.log(gridDimensions);
-    return gridDimensions;
+
+    console.log(gridDimensions.length);
+
+    return gridDimensions?.length ? gridDimensions : { x: 32, y: 18 }
 };
-
-let currentGridDimensions = gridDimensions
-
 
 // draw the grid
 async function drawGrid() {
+    let currentGridDimensions = gridDimensions
     //save the grid container to variable
     const gridContainer = $('#gridContainer')
     // empty it if theres anything in there
@@ -320,13 +320,18 @@ function listColors() {
     return console.log(color_options);
 }
 
-$(document).ready(() => {
+$(document).ready(async () => {
     var currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: currentColor })
     let frmColorPicker = $('#frmColorPicker')
     frmColorPicker.on('submit', handleSetColor)
-    userGridPOST().then(console.log(gridDimensions)).then(drawGrid()).then(() => console.log('# of gridItems:', gridItems.length))
-    drawPalette()
+
+    gridDimensions = await userGridPOST()
+    console.log('dimensions', gridDimensions)
+
+    await drawGrid()
+    console.log('# of gridItems:', gridItems.length)
+    //drawPalette()
 
     document.body.onmousedown = () => mouseDown = true;
     document.body.onmouseup = () => mouseDown = false;
