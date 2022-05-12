@@ -22,8 +22,29 @@
   
   ## Preview
 
-  ILL NEED TO TAKE A COUPLE SCREENSHOT OF THE APPLICATION WHEN IT IS IN MVP STATE
-  
+  ### Homepage
+  ![Homepage Preview](/public/assets/readme_screenshots/homepage_sc.png)
+
+  ### About Us
+  ![About Us Preview](/public/assets/readme_screenshots/aboutus_sc.png)
+
+  ### Log In and Sign Up Page
+  ![Login and Signup Preview](/public/assets/readme_screenshots/logninsignup_sc.png)
+
+  ### Garden View
+  ![Garden View Preview](/public/assets/readme_screenshots/gardenview_sc.png)
+
+  ### Searching
+  ![Searching Preview](/public/assets/readme_screenshots/searching_sc.png)
+
+  ### Full List
+  ![Full List Preview](/public/assets/readme_screenshots/fulllist_sc.png)
+
+  ### Starting To Plan
+  ![Starting to Plan Preview](/public/assets/readme_screenshots/coloring_sc.png)
+
+  ### Fully Planned Garden
+  ![Fully Planned Garden Preview](/public/assets/readme_screenshots/fullyplanned_sc.png)
   
   ## Usage
   
@@ -37,6 +58,8 @@
   - Handlebars (Express)
   - MySQL2
   - Sequelize
+  - JQuery
+  - JQueryUI
 
   ## Credits
   
