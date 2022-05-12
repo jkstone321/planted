@@ -112,28 +112,11 @@
       <h3 class="card-header m-0">My List</h3>
       <div class="card-body">
         <div class="list-group" id="plantList">
-          {{!-- {{#each chosen_plants as |chosen_plant|}}
-          <div class="btn-group dropright"></div>
-          <button type="button" class="btn btn-secondary">
-            {{chosen_plant.type}}
-            <ul>
-              <li class="plantColors" style="background-color: red, height: 1rem; width: 1rem;">&nbsp;</li>
-            </ul>
-          </button>
-          <button type="button" id="dropButton" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
-            data-toggle="dropdown" aria-expanded="false">
-            <span class="sr-only">Toggle Dropright</span>
-
-          </button>
-          <ul id="list" class="dropdown-menu">
-
-          </ul>
         </div>
-        {{/each}} --}}
       </div>
-
     </div>
   </div>
+
 </div>
 <!-- GARDEN GRID -->
 <div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
@@ -146,27 +129,30 @@
     <div id="gridContainer" style="margin: 1rem auto;">
       <!-- grid squares generated here -->
 
-      <div id="gridContainer">
+      <div id="gridContainer" style="margin: 1rem auto;">
         <!-- grid squares generated here -->
 
-        <div id="colorPickerContainer" style="display:none">
-          <div id="currentColorDisplay">
-            <!-- this box shows the currently selected color -->
-            <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
+        <div id="gridContainer">
+          <!-- grid squares generated here -->
+
+          <div id="colorPickerContainer" style="display:none">
+            <div id="currentColorDisplay">
+              <!-- this box shows the currently selected color -->
+              <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
+            </div>
+            <div id="colorPalette">
+              <!-- color palette squares generated here -->
+            </div>
           </div>
-          <div id="colorPalette">
-            <!-- color palette squares generated here -->
-          </div>
+
+          <form id="frmColorPicker" style="display" : none;"">
+            <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+            <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+            <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+          </form>
+
+          <script src="./js/colors.js"></script>
+          <script src="./js/rightclickmenu.js"></script>
+          <script src="./js/addtolistPOST.js"></script>
         </div>
-
-        <form id="frmColorPicker" style="display: none;"">
-      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
-        <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-        <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
-        </form>
-
-        <script src="./js/colors.js"></script>
-        <script src="./js/rightclickmenu.js"></script>
-        <script src="./js/addtolistPOST.js"></script>
       </div>
-    </div>
