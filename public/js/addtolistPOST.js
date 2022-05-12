@@ -19,6 +19,7 @@ async function userPlantsPOST() {
     if (!myChosenPlantsArray) {
         myNewChosenPlantsArray = await myChosenPlantsArray.concat(myNewPlant + "]");
         console.log(myNewChosenPlantsArray);
+
         const newChosenPlantDataBaseRaw = await fetch('/api/users/mylist', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -35,6 +36,7 @@ async function userPlantsPOST() {
     };
 
     // get error from fetch request
+
 }
 
 
