@@ -32,6 +32,7 @@ class GridItem {
         }
         this.gridSquare.css({ backgroundColor: this.selected ? this.selectedColor : inactiveColor })
         this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
+        handleSave()
         return this
     }
 
