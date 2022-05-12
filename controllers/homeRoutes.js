@@ -54,8 +54,10 @@ router.get('/mygarden', withAuth, async (req, res) => {
     //get all chosen plants as an array .map to plain text
     //pass those plants to homepages
     //so we can do the each
-  
-    const userData = await User.findByPk(req.session.user_id);
+
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
     const colors = color_options();
     console.log(colors);
     const user = userData.get({ plain: true });
@@ -65,6 +67,7 @@ router.get('/mygarden', withAuth, async (req, res) => {
     console.log(user.chosen_plant);
     res.render('mygarden', {
       chosen_plants,
+      user,
       colors,
       layout: 'gardenview',
       logged_in: req.session.logged_in,

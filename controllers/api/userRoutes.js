@@ -74,7 +74,7 @@ router.get('/mylist', async (req, res) => {
   }
 });
 
-router.put('/mylist', async (req, res) => {
+router.post('/mylist', async (req, res) => {
   try {
     let fuckAnArray = JSON.stringify(req.body)
     const newChosenPlants = await User.update({chosen_plant:fuckAnArray},{where:{id:req.session.user_id}});
