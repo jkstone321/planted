@@ -1,6 +1,8 @@
 # Planted
 
   ## Link to Deployed Website
+  
+  https://agile-wildwood-01808.herokuapp.com/
 
   ## Description
   
