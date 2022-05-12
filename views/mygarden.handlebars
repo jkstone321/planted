@@ -25,9 +25,13 @@
       var activePlantId;
 
       function selectPlant(id) {
+        let newColor = $(`#ig-${id}`).css("background-color")
+
+        if (newColor === "rgb(255, 255, 255)") return
+
         if (activePlantId) $(`#igContainer${activePlantId}`).removeClass("highlighted")
         $(`#igContainer${id}`).addClass("highlighted")
-        currentColor = $(`#ig-${id}`).css("background-color")
+        currentColor = newColor
         activePlantId = id
       }
 
