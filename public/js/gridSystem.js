@@ -319,15 +319,10 @@ $(document).ready(() => {
     drawGrid().then(() => console.log('# of gridItems:', gridItems.length))
     drawPalette()
 
-    document.body.onmousedown = function () {
-        ++mouseDown;
-    }
-    document.body.onmouseup = function () {
-        --mouseDown;
-    }
+    document.body.onmousedown = () => mouseDown = true;
+    document.body.onmouseup = () => mouseDown = false;
 
-
-
+    $('#gridContainer').on("mouseleave", () => mouseDown = false)
 
 })
 
