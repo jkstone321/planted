@@ -10,6 +10,10 @@ body {
     height: 100vh;
 }
 
+#logoName {
+    font-family: 'Snippet', sans-serif;
+}
+
 #main {
     background-color: #18181849;
     color: white;
