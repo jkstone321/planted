@@ -1,6 +1,6 @@
 <!-- SEARCH FORM -->
 <div class="row w-100">
-  <div class="col-lg-2 col-md-3">
+  <div class="col-lg-3 col-md-4 col-sm-5">
 
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
@@ -11,7 +11,8 @@
           <div class="form-group">
             <input type="input" class="form-control" id="myInput" aria-describedby="searchbox-plants">
           </div>
-          <button class="btn btn-secondary w-100" onClick="handleAddClick(Input), userPlantsPOST()">Add to List</button>
+          <button class="btn btn-secondary w-100" onClick="handleAddClick(), userPlantsPOST()">Add to
+            List</button>
 
         </form>
       </div>
@@ -20,40 +21,7 @@
 
     <script>
 
-
-      var Input = document.getElementById("myInput").value;
-      console.log(Input);
-
-
-      function handleAddClick2(Input) {
-
-        event.preventDefault()
-        console.log('d')
-
-
-
-        var plantList = document.getElementById("plantList");
-
-
-        var pickedPlant = document.createElement("button");
-
-
-        pickedPlant.textContent = document.getElementById("myInput").value;
-
-
-        pickedPlant.className = 'list-group-item';
-
-        pickedPlant.classList.add('list-group-item-action');
-
-
-
-        plantList.appendChild(pickedPlant);
-
-
-      }
-
       var buttonId = 0
-
 
       function handleOptionSelect(e) {
         const color = e.target.value
@@ -64,9 +32,10 @@
         os.css("background-color", color)
       }
 
-      function handleAddClick(e) {
-        buttonId++;
+      function handleAddClick() {
         event.preventDefault()
+
+        buttonId++;
         var plantButtonClasses = "btn btn-secondary plantButton"
 
         var pickedPlant = document.getElementById("myInput").value
@@ -91,20 +60,6 @@
 
       }
     </script>
-
-    {{!-- <div class="btn-group dropright">
-      <button type="button" class="btn btn-secondary">
-        Split dropright
-      </button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-        aria-expanded="false">
-        <span class="sr-only">Toggle Dropright</span>
-      </button>
-      <div class="dropdown-menu">
-        <!-- Dropdown menu links -->
-      </div>
-    </div> --}}
-
 
     <!-- MY LIST -->
     <div class="card m-4 p-0" id="my-list">
@@ -135,7 +90,7 @@
   </div>
 </div>
 <!-- GARDEN GRID -->
-<div class="col-lg-10 col-md-9 card my-4 p-0" id="garden-grid">
+<div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
   <div style="display: flex; justify-content: space-between">
     <h3 class="card-header m-0">Big Papa's Garden</h3>
     <button class="btn btn-secondary" id="grid-save-btn">Save</button>
@@ -147,7 +102,7 @@
 
     </div>
 
-    <div id="colorPickerContainer" style="display:flex">
+    <div id="colorPickerContainer" style="display:none">
       <div id="currentColorDisplay">
         <!-- this box shows the currently selected color -->
         <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
@@ -157,13 +112,14 @@
       </div>
     </div>
 
-    <form id="frmColorPicker">
-      <input id="inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
-      <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-      <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+    <form id="frmColorPicker" style="display: none;"">
+      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+    <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+    <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
     </form>
 
     <script src="./js/colors.js"></script>
     <script src="./js/rightclickmenu.js"></script>
     <script src="./js/addtolistPOST.js"></script>
   </div>
+</div>

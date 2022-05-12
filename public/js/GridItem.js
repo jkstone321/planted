@@ -10,7 +10,7 @@ class GridItem {
         this.selectedColor = currentColor
         this.borderColor = 'gold'
         this.gridSquare = $(`<div id="${this.gridId}" class="grid">${coordinatesOn ? gridId : '&nbsp;'}</div>`)
-        this.gridSquare.css({ backgroundColor: inactiveColor, height: gridSquareSize, width: gridSquareSize })
+        this.gridSquare.css({ backgroundColor: inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
         this.gridSquare.on('click', this.toggle)
         this.gridSquare.on('mouseover', this.handleMouseOver)
     }

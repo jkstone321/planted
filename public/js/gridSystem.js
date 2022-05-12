@@ -2,7 +2,7 @@ var gridItems = []
 var currentColor = "DarkBlue"
 var inactiveColor = "white"
 var mouseDown = null;
-var gridSquareSize = '1rem'
+var gridSquareSize = 1.5
 var lockedColors = []
 
 const iconButton = $('#iconButton')
@@ -35,7 +35,12 @@ async function drawGrid() {
     var { x, y } = currentGridDimensions
 
     // set the grid-template-columns to repeat 
-    gridContainer.css("grid-template-columns", `1fr repeat(${x - 1}, ${gridSquareSize})`)
+    //also dynamically set the width to be the gridsquare size * the width
+    gridContainer.css({
+        gridTemplateColumns: `1fr repeat(${x - 1}, ${gridSquareSize}rem)`,
+        width: `${gridSquareSize * x}rem`
+    })
+
     for (let i = 0; i < (x * y); i++) {
         // check which row we're on by doing i mod x
         // if it returns anything other than 0 we're not at
