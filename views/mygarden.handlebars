@@ -26,24 +26,25 @@
       function handleOptionSelect(e) {
         const color = e.target.value
         console.log(e.target.id)
-        var idNum = e.target.id.split('-')
+        var idNum = e.target.id.split('-')[1]
         console.log(idNum)
-        var os = $(`#ig-${1}`)
+        var os = $(`#ig-${idNum}`)
         os.css("background-color", color)
+        currentColor = color
       }
 
       function handleAddClick() {
         event.preventDefault()
 
         buttonId++;
-        var plantButtonClasses = "btn btn-secondary plantButton"
+        var plantButtonClasses = "btn btn-secondary plantButton w-90"
 
         var pickedPlant = document.getElementById("myInput").value
 
         var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
 
         var inputGroup = $(`
-        <div class="input-group mb-3">
+        <div class="input-group mb-3" style="margin: .25rem 0">
           <div class="input-group-prepend">
             <button id="btn-${buttonId}" class="${plantButtonClasses}">${pickedPlant}</button>
           </div>
