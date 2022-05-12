@@ -4,7 +4,7 @@
 
   ## Description
   
-  Planted is an application to creat view and edit a template for your backyard garden. (BRAIN NO WORK I CANT THINK OF MORE DESCRIPTION PLEASE HELP)
+  Planted is an application to create view and edit a template for your backyard garden. Planning a garden in the backyard can be difficult with limited space, planted allows you to maxiamize your limited space. Utilizing the growth potential of your space by planning out where to seed your plants. Our drag and drop grid allows users to select from a wide varity of plants and assign a multiude of colors to your choosen plant, once a plant is choosen you are able to select a grid square indicating a space where your choosen plant will be seeded. Our spacer feature allows you to block off spaces in your graden that could not sustain plant growth such as phyisical objects or infertle soil. This one of a kind grind system has potential to scale to farms and larger gardens. 
 
   ## Table of Contents
 
