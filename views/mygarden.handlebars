@@ -99,13 +99,12 @@
       </div>
 
     </div>
-    
   </div>
 </div>
 <!-- GARDEN GRID -->
 <div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
   <div style="display: flex; justify-content: space-between">
-    <h3 class="card-header m-0">Big Papa's Garden</h3>
+    <h3 class="card-header m-0">{{user.name}}'s Garden</h3>
     <button class="btn btn-secondary" id="grid-save-btn">Save</button>
   </div>
   <div class="card-body">
@@ -113,27 +112,27 @@
     <div id="gridContainer" style="margin: 1rem auto;">
       <!-- grid squares generated here -->
 
-        <div id="gridContainer">
-          <!-- grid squares generated here -->
+      <div id="gridContainer">
+        <!-- grid squares generated here -->
 
-    <div id="colorPickerContainer" style="display:none">
-      <div id="currentColorDisplay">
-        <!-- this box shows the currently selected color -->
-        <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
-      </div>
-      <div id="colorPalette">
-        <!-- color palette squares generated here -->
+        <div id="colorPickerContainer" style="display:none">
+          <div id="currentColorDisplay">
+            <!-- this box shows the currently selected color -->
+            <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
+          </div>
+          <div id="colorPalette">
+            <!-- color palette squares generated here -->
+          </div>
+        </div>
+
+        <form id="frmColorPicker" style="display: none;"">
+      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+        <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+        <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+        </form>
+
+        <script src="./js/colors.js"></script>
+        <script src="./js/rightclickmenu.js"></script>
+        <script src="./js/addtolistPOST.js"></script>
       </div>
     </div>
-
-    <form id="frmColorPicker" style="display: none;"">
-      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
-    <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-    <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
-    </form>
-
-    <script src="./js/colors.js"></script>
-    <script src="./js/rightclickmenu.js"></script>
-    <script src="./js/addtolistPOST.js"></script>
-  </div>
-</div>
