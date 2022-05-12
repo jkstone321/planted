@@ -1,6 +1,6 @@
 <!-- SEARCH FORM -->
 <div class="row w-100">
-  <div class="col-2" id="list-search">
+  <div class="col-lg-3 col-md-4 col-sm-5">
 
     <!-- SEARCH FORM -->
     <div class="card m-4 p-0" id="search-card">
@@ -11,7 +11,8 @@
           <div class="form-group">
             <input type="input" class="form-control" id="myInput" aria-describedby="searchbox-plants">
           </div>
-          <button class="btn btn-secondary w-100" onClick="handleAddClick(Input), userPlantsPOST()">Add to List</button>
+          <button class="btn btn-secondary w-100" onClick="handleAddClick(), userPlantsPOST()">Add to
+            List</button>
 
         </form>
       </div>
@@ -20,55 +21,57 @@
 
     <script>
 
+      var buttonId = 0
+      var activePlantId;
 
-      var Input = document.getElementById("myInput").value;
-      console.log(Input);
+      function selectPlant(id) {
+        let newColor = $(`#ig-${id}`).css("background-color")
 
+        if (newColor === "rgb(255, 255, 255)") return
 
-      function handleAddClick(Input) {
-
-        event.preventDefault()
-        console.log('d')
-
-
-
-        var plantList = document.getElementById("plantList");
-
-
-        var pickedPlant = document.createElement("button");
-
-
-        pickedPlant.textContent = document.getElementById("myInput").value;
-
-
-        pickedPlant.className = 'list-group-item';
-
-        pickedPlant.classList.add('list-group-item-action');
-
-
-
-        plantList.appendChild(pickedPlant);
-
-
+        if (activePlantId) $(`#igContainer${activePlantId}`).removeClass("highlighted")
+        $(`#igContainer${id}`).addClass("highlighted")
+        currentColor = newColor
+        activePlantId = id
       }
 
+      function handleOptionSelect(e) {
+        const color = e.target.value
+        console.log(e.target.id)
+        var idNum = e.target.id.split('-')[1]
+        console.log(idNum)
+        var os = $(`#ig-${idNum}`)
+        os.css("background-color", color)
+        currentColor = color
+      }
 
+      function handleAddClick() {
+        event.preventDefault()
 
+        buttonId++;
+        var plantButtonClasses = "btn btn-secondary plantButton w-90"
+
+        var pickedPlant = document.getElementById("myInput").value
+
+        var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
+
+        var inputGroup = $(`
+        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
+          <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
+            <button id="btn-${buttonId}" class="${plantButtonClasses}">${pickedPlant}</button>
+          </div>
+          <select class="custom-select" id="ig-${buttonId}" aria-label="color selection">
+            ${colorOptions}
+          </select>
+        </div>
+          `)
+        var plantList = $("#plantList");
+
+        inputGroup.change(handleOptionSelect)
+        plantList.append(inputGroup)
+
+      }
     </script>
-
-    {{!-- <div class="btn-group dropright">
-      <button type="button" class="btn btn-secondary">
-        Split dropright
-      </button>
-      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
-        aria-expanded="false">
-        <span class="sr-only">Toggle Dropright</span>
-      </button>
-      <div class="dropdown-menu">
-        <!-- Dropdown menu links -->
-      </div>
-    </div> --}}
-
 
     <!-- MY LIST -->
     <div class="card m-4 p-0" id="my-list">
@@ -79,6 +82,9 @@
           <div class="btn-group dropright"></div>
           <button type="button" class="btn btn-secondary">
             {{chosen_plant.type}}
+            <ul>
+              <li class="plantColors" style="background-color: red, height: 1rem; width: 1rem;">&nbsp;</li>
+            </ul>
           </button>
           <button type="button" id="dropButton" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
             data-toggle="dropdown" aria-expanded="false">
@@ -89,40 +95,45 @@
 
           </ul>
         </div>
-        {{!-- <a href="#" class="list-group-item list-group-item-action">{{chosen_plant.type}}</a> --}}
         {{/each}}
       </div>
 
     </div>
+    
+  </div>
+</div>
+<!-- GARDEN GRID -->
+<div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
+  <div style="display: flex; justify-content: space-between">
+    <h3 class="card-header m-0">Big Papa's Garden</h3>
+    <button class="btn btn-secondary" id="grid-save-btn">Save</button>
+  </div>
+  <div class="card-body">
 
-    <!-- GARDEN GRID -->
-    <div class="card my-4 p-0" id="garden-grid">
-      <h3 class="card-header m-0">Big Papa's Garden</h3>
-      <div class="card-body">
+    <div id="gridContainer" style="margin: 1rem auto;">
+      <!-- grid squares generated here -->
 
         <div id="gridContainer">
           <!-- grid squares generated here -->
 
-        </div>
-
-        <div id="colorPickerContainer" style="display:flex">
-          <div id="currentColorDisplay">
-            <!-- this box shows the currently selected color -->
-            <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
-          </div>
-          <div id="colorPalette">
-            <!-- color palette squares generated here -->
-          </div>
-        </div>
-
-        <form id="frmColorPicker">
-          <input id="inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
-          <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
-          <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
-        </form>
-
-        <script src="./js/colors.js"></script>
-        <script src="./js/rightclickmenu.js"></script>
-        <script src="./js/addtolistPOST.js"></script>
+    <div id="colorPickerContainer" style="display:none">
+      <div id="currentColorDisplay">
+        <!-- this box shows the currently selected color -->
+        <div id="iconButton" onclick="colorLockedToggle()"><i class="fas fa-lock-open"></i></div>
+      </div>
+      <div id="colorPalette">
+        <!-- color palette squares generated here -->
       </div>
     </div>
+
+    <form id="frmColorPicker" style="display: none;"">
+      <input id=" inpCurrentColor" class="form-control" type="text" placeholder="e.g.: red or #FF0000" />
+    <input type="submit" class="btn btn-primary btn-sm" value="Set Color" />
+    <input type="button" onclick="clearGrid()" class="btn btn-secondary btn-sm" value="Clear Grid" />
+    </form>
+
+    <script src="./js/colors.js"></script>
+    <script src="./js/rightclickmenu.js"></script>
+    <script src="./js/addtolistPOST.js"></script>
+  </div>
+</div>
