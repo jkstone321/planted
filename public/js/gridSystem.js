@@ -338,6 +338,10 @@ $(document).ready(async () => {
 
     $('#gridContainer').on("mouseleave", () => mouseDown = false)
 
+    // 'grid-save-btn'
+    fetch('/api/users/mylist').then(plantData => plantData.text()).then(plantData => console.log(plantData))
+    // console.log("plantData", plantData.text())
+
 })
 
 
