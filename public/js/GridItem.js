@@ -1,16 +1,16 @@
 // class for each new grid item to be saved in gridItems array
 // each instance of GridItem will be responsible for itself
 class GridItem {
-    constructor(column, row, index) {
+    constructor(column, row, index, selectedColor) {
         this.gridId = `${index}-${row}`
         this.column = column
         this.row = row
         this.index = index
         this.selected = false
-        this.selectedColor = currentColor
+        this.selectedColor = selectedColor ?? currentColor
         this.borderColor = 'gold'
         this.gridSquare = $(`<div id="${this.gridId}" class="grid">${coordinatesOn ? gridId : '&nbsp;'}</div>`)
-        this.gridSquare.css({ backgroundColor: inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
+        this.gridSquare.css({ backgroundColor: selectedColor ?? inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
         this.gridSquare.on('click', this.toggle)
         this.gridSquare.on('mouseover', this.handleMouseOver)
     }

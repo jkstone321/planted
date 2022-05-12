@@ -4,7 +4,7 @@ var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = 2
 var lockedColors = []
-let gridDimensions;
+let gridDimensions = { x: 32, y: 18 };
 var plantData = []
 
 const iconButton = $('#iconButton')
@@ -32,7 +32,7 @@ async function userGridPOST() {
 
 async function handleSave() {
     let gis = gridItems.map(gi => gi.getGridInfo())
-    console.log(gis)
+    console.log(gis.length)
 
     await fetch('/api/users/mygridinfo', {
         method: 'PUT',
@@ -72,8 +72,8 @@ async function drawGrid(gridInfo) {
         // the end of the row yet
         if (!gridInfo && i >= x && i % x == 0) { row++; column = 0 }
         let gi = gridInfo ? gridInfo[i] : null
-        console.log('gi', gi)
-        let currentGi = !gridInfo ? new GridItem(column, row, i) : new GridItem(gi.column, gi.row, gi.index)
+        console.log('gi', gridInfo)
+        let currentGi = !gridInfo ? new GridItem(column, row, i) : new GridItem(gi.column, gi.row, gi.index, gi.selectedColor)
 
         gridContainer.append(currentGi.gridSquare)
 
@@ -344,10 +344,10 @@ $(document).ready(async () => {
     let frmColorPicker = $('#frmColorPicker')
     frmColorPicker.on('submit', handleSetColor)
 
-    gridDimensions = await userGridPOST()
+    //gridDimensions = await userGridPOST()
     console.log('dimensions', gridDimensions)
 
-    await drawGrid()
+    //await drawGrid()
     console.log('# of gridItems:', gridItems.length)
     //drawPalette()
 
@@ -370,7 +370,7 @@ $(document).ready(async () => {
         .then(data => data.json())
         .then(data => {
             console.log('myGridInfo', JSON.parse(data))
-            drawGrid(data)
+            drawGrid(JSON.parse(data))
         })
 
 
