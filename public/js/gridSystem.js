@@ -39,7 +39,7 @@ async function handleSave() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(gis),
     })
-        .then(data => console.log(data))
+        // .then(data => console.log(data))
         .catch(err => console.log(err))
 
 }
@@ -72,7 +72,7 @@ async function drawGrid(gridInfo) {
         // the end of the row yet
         if (!gridInfo && i >= x && i % x == 0) { row++; column = 0 }
         let gi = gridInfo ? gridInfo[i] : null
-        console.log('gi', gridInfo)
+        // console.log('gi', gridInfo)
         let currentGi = !gridInfo ? new GridItem(column, row, i) : new GridItem(gi.column, gi.row, gi.index, gi.selectedColor)
 
         gridContainer.append(currentGi.gridSquare)
