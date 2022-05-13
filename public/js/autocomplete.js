@@ -1,4 +1,4 @@
-$(async function () {
+$(document).ready(async function () {
   let plantNames = [];
   const plantDataBaseRaw = await fetch('/api/plants', {
     method: 'GET',
@@ -6,7 +6,7 @@ $(async function () {
   });
   let plantDataBaseArray = await plantDataBaseRaw.json();
   for (let i = 0; i < plantDataBaseArray.length; i++) {
-    plantNames.push(plantDataBaseArray[i].name)
+    plantNames.push(plantDataBaseArray[i].name);
   }
   $('#myInput').autocomplete({
     source: plantNames,
