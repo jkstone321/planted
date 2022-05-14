@@ -119,9 +119,12 @@
 
   <!-- GARDEN GRID -->
   <div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
-    <div style="display: flex; justify-content: space-between">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: .5rem;">
       <h3 class="card-header m-0">{{user.name}}'s Garden</h3>
-      {{!-- <button class="btn btn-secondary" id="grid-save-btn" onclick="handleSave()">Save</button> --}}
+      <label class="tgl"><input id="showCoords" type="checkbox" checked data-toggle="toggle"
+          onchange="handleShowCoords()"> Show Grid
+        Coordinates</label>
+      <button class="btn btn-secondary" id="grid-save-btn" onclick="refreshGrid()">Refresh Grid</button>
     </div>
     <div class="card-body">
 

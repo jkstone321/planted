@@ -4,7 +4,7 @@ var inactiveColor = "white"
 var mouseDown = null;
 var gridSquareSize = 2
 var lockedColors = []
-let gridDimensions = { x: 32, y: 18 };
+let gridDimensions = { x: 32, y: 18 }; //576 total squares
 var plantData = []
 
 const iconButton = $('#iconButton')
@@ -12,7 +12,7 @@ const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
 const lockedIcon = $('<i class="fas fa-lock"></i>')
 
 // change to true to show grid coordinates for the squares
-var coordinatesOn = true
+var coordinatesOn = false
 
 // returns grid dimensions.  right now its hard-coded but we will fix this
 async function userGridPOST() {
@@ -43,6 +43,28 @@ async function handleSave() {
         body: JSON.stringify(gis),
     })
         .catch(err => console.log(err))
+
+}
+
+let refreshCount = 0
+let delay = 0
+
+const refreshGrid = () => {
+    // all this code would make the squares look animated when they refresh 
+    // but I dont think I like how it looks.  just refresh them like normal :-(
+
+    // if (refreshCount >= gridItems.length) {
+    //     refreshCount = 0
+    //     delay = 0
+    //     return
+    // }
+    // gridItems[refreshCount].refresh()
+
+    // //delay = delay - 500
+    // refreshCount++
+    // console.log(delay, refreshCount)
+    // window.setTimeout(() => refreshGrid(), delay)
+    gridItems.forEach(gi => gi.refresh())
 
 }
 
@@ -180,158 +202,8 @@ const colorIsLocked = (color) => lockedColors.includes(color)
 var color_options = [];
 
 function listColors() {
-    const pallet = [
-        'AliceBlue',
-        'AntiqueWhite',
-        'Aqua',
-        'Aquamarine',
-        'Azure',
-        'Beige',
-        'Bisque',
-        'Black',
-        'BlanchedAlmond',
-        'Blue',
-        'BlueViolet',
-        'Brown',
-        'BurlyWood',
-        'CadetBlue',
-        'Chartreuse',
-        'Chocolate',
-        'Coral',
-        'CornflowerBlue',
-        'Cornsilk',
-        'Crimson',
-        'Cyan',
-        'DarkBlue',
-        'DarkCyan',
-        'DarkGoldenRod',
-        'DarkGray',
-        'DarkGrey',
-        'DarkGreen',
-        'DarkKhaki',
-        'DarkMagenta',
-        'DarkOliveGreen',
-        'DarkOrange',
-        'DarkOrchid',
-        'DarkRed',
-        'DarkSalmon',
-        'DarkSeaGreen',
-        'DarkSlateBlue',
-        'DarkSlateGray',
-        'DarkSlateGrey',
-        'DarkTurquoise',
-        'DarkViolet',
-        'DeepPink',
-        'DeepSkyBlue',
-        'DimGray',
-        'DimGrey',
-        'DodgerBlue',
-        'FireBrick',
-        'FloralWhite',
-        'ForestGreen',
-        'Fuchsia',
-        'Gainsboro',
-        'GhostWhite',
-        'Gold',
-        'GoldenRod',
-        'Gray',
-        'Grey',
-        'Green',
-        'GreenYellow',
-        'HoneyDew',
-        'HotPink',
-        'IndianRed',
-        'Indigo',
-        'Ivory',
-        'Khaki',
-        'Lavender',
-        'LavenderBlush',
-        'LawnGreen',
-        'LemonChiffon',
-        'LightBlue',
-        'LightCoral',
-        'LightCyan',
-        'LightGoldenRodYellow',
-        'LightGray',
-        'LightGrey',
-        'LightGreen',
-        'LightPink',
-        'LightSalmon',
-        'LightSeaGreen',
-        'LightSkyBlue',
-        'LightSlateGray',
-        'LightSlateGrey',
-        'LightSteelBlue',
-        'LightYellow',
-        'Lime',
-        'LimeGreen',
-        'Linen',
-        'Magenta',
-        'Maroon',
-        'MediumAquaMarine',
-        'MediumBlue',
-        'MediumOrchid',
-        'MediumPurple',
-        'MediumSeaGreen',
-        'MediumSlateBlue',
-        'MediumSpringGreen',
-        'MediumTurquoise',
-        'MediumVioletRed',
-        'MidnightBlue',
-        'MintCream',
-        'MistyRose',
-        'Moccasin',
-        'NavajoWhite',
-        'Navy',
-        'OldLace',
-        'Olive',
-        'OliveDrab',
-        'Orange',
-        'OrangeRed',
-        'Orchid',
-        'PaleGoldenRod',
-        'PaleGreen',
-        'PaleTurquoise',
-        'PaleVioletRed',
-        'PapayaWhip',
-        'PeachPuff',
-        'Peru',
-        'Pink',
-        'Plum',
-        'PowderBlue',
-        'Purple',
-        'RebeccaPurple',
-        'Red',
-        'RosyBrown',
-        'RoyalBlue',
-        'SaddleBrown',
-        'Salmon',
-        'SandyBrown',
-        'SeaGreen',
-        'SeaShell',
-        'Sienna',
-        'Silver',
-        'SkyBlue',
-        'SlateBlue',
-        'SlateGray',
-        'SlateGrey',
-        'Snow',
-        'SpringGreen',
-        'SteelBlue',
-        'Tan',
-        'Teal',
-        'Thistle',
-        'Tomato',
-        'Turquoise',
-        'Violet',
-        'Wheat',
-        // "White",
-        'WhiteSmoke',
-        'Yellow',
-        'YellowGreen',
-    ];
+    const pallet = colors;
 
-    //   console.log('pallet', pallet);
     for (var i = 0; i < 10; i++) {
         var newColor = pallet[Math.floor(Math.random() * 147)]
         color_options.push(newColor);
@@ -340,12 +212,20 @@ function listColors() {
     return console.log(color_options);
 }
 
+function handleShowCoords() {
+    let showCoords = $('#showCoords')[0]
+    if (showCoords.checked !== coordinatesOn) {
+        coordinatesOn = showCoords.checked
+        refreshGrid()
+    }
+}
+
 $(document).ready(async () => {
     var currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: currentColor })
     let frmColorPicker = $('#frmColorPicker')
     frmColorPicker.on('submit', handleSetColor)
-
+    $('#showCoords')[0].checked = false
     //gridDimensions = await userGridPOST()
     console.log('dimensions', gridDimensions)
 
