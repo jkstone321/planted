@@ -118,3 +118,26 @@ select::-ms-expand {
     transition: .5s;
     overflow: hidden;
 }
+
+.tgl {
+    border: 1px solid silver;
+    border-radius: .5rem;
+    padding: .10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tgl .toggle {
+    margin: .10rem;
+}
+
+.input-group-prepend {
+    display: flex;
+    align-items: center;
+    background-color: #6c757d;
+}
+
+.fas {
+    margin: 0 1rem;
+}

@@ -30,7 +30,10 @@
 
         if (newColor === "rgb(255, 255, 255)") return
 
-        if (activePlantId) $(`#igContainer${activePlantId}`).removeClass("highlighted")
+        //remove highlited class from all other plants first
+        plantData.forEach((plant, index) => $(`#igContainer${index}`).removeClass("highlighted"))
+
+        // now add it to the one selected 
         $(`#igContainer${id}`).addClass("highlighted")
         currentColor = newColor
         activePlantId = id
@@ -38,8 +41,9 @@
 
       function handleOptionSelect(e) {
         const color = e.target.value
+        if (!color) return
         console.log(e.target.id)
-        var idNum = e.target.id.split('-')[1]
+        var idNum = Number(e.target.id.split('-')[1])
         console.log("idNum:", idNum)
         var os = $(`#ig-${idNum}`)
         os.css("background-color", color)
@@ -47,12 +51,40 @@
         currentColor = color
         plantData[idNum].color = color
 
-        fetch('/api/users/mylist', {
+        savePlantData()
+        // select the plant we just added
+        selectPlant(idNum)
+
+      }
+
+      async function savePlantData() {
+        return fetch('/api/users/mylist', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(plantData),
-        }).catch(err => { console.log(err); alert(err.msg) })
+        }).then(data => data.json()).catch(err => { console.log(err); alert(err.msg) })
+      }
 
+      async function erasePlantColor(color) {
+        gridItems.map((gi, i) => {
+          console.log(gi.selectedColor, color)
+          gi.rgbColor === color ? gi.setSelected = (false, true) : null
+          if (i === gridItems.length - 1) return gridItems
+        })
+      }
+
+      async function handleDeletePlant(buttonId) {
+        let deletedPlant = plantData[buttonId]
+
+        console.log(deletedPlant)
+        plantData = plantData.filter((p, index) => index !== buttonId)
+
+        if (deletedPlant?.color.length > 0) await erasePlantColor(deletedPlant.color)
+        handleSave()
+
+        let newPlantList = await savePlantData()
+
+        updatePlantList()
       }
 
       function handleAddClick() {
@@ -68,6 +100,7 @@
         <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
           <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
             <button id="btn-${buttonId}" class="${plantButtonClasses}">${pickedPlant}</button>
+            <i onclick="handleDeletePlant(${buttonId})" class="fas fa-trash-alt"></i>
           </div>
           <select class="custom-select" id="ig-${buttonId}" aria-label="color selection">
             ${colorOptions}
@@ -79,7 +112,9 @@
         inputGroup.change(handleOptionSelect)
         plantList.append(inputGroup)
         plantData.push({ "type": pickedPlant, "color": "" })
+
         buttonId++;
+
       }
 
       function addPlantToList(plant, color) {
@@ -90,10 +125,12 @@
         var colorOptions = colors.map(c => `<option class="plantColors" value="${c}" style="background-color: ${c};">&nbsp;</option>`).join("")
 
         var inputGroup = $(`
-        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0">
+        <div id="igContainer${buttonId}" class="input-group mb-3" style="margin: .25rem 0;">
           <div class="input-group-prepend" onclick="selectPlant(${buttonId})">
             <button id="btn-${buttonId}" class="${plantButtonClasses}">${plant}</button>
+            <i onclick="handleDeletePlant(${buttonId})" class="fas fa-trash-alt"></i>
           </div>
+          
           <select class="custom-select" id="ig-${buttonId}" style="background-color: ${color}" aria-label="color selection">
             ${colorOptions}
           </select>
@@ -119,9 +156,13 @@
 
   <!-- GARDEN GRID -->
   <div class="col-lg-9 col-md-8 col-sm-7 card my-4 p-0" id="garden-grid">
-    <div style="display: flex; justify-content: space-between">
+    <div style="display: flex; justify-content: space-between; align-items: center; padding: .5rem;">
       <h3 class="card-header m-0">{{user.name}}'s Garden</h3>
-      {{!-- <button class="btn btn-secondary" id="grid-save-btn" onclick="handleSave()">Save</button> --}}
+      <label class="tgl"><input id="showCoords" type="checkbox" checked data-toggle="toggle"
+          onchange="handleShowCoords()"> Show Grid
+        Coordinates</label>
+      <button class="btn btn-secondary" id="grid-save-btn" onclick="refreshGrid()">Refresh Grid</button>
+      <button class="btn btn-danger" id="grid-clear-btn" onclick="clearGrid()">Clear Grid</button>
     </div>
     <div class="card-body">
 
