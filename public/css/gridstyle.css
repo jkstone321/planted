@@ -32,6 +32,7 @@ main {
     -ms-user-select: none;
     user-select: none;
     color: #333;
+    font-size: .65rem;
 }
 
 .grid:hover {

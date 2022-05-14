@@ -12,8 +12,9 @@ const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
 const lockedIcon = $('<i class="fas fa-lock"></i>')
 
 // change to true to show grid coordinates for the squares
-var coordinatesOn = false
+var coordinatesOn = true
 
+// returns grid dimensions.  right now its hard-coded but we will fix this
 async function userGridPOST() {
     try {
         var gridInfoRaw = await fetch('/api/users/mygridinfo');
@@ -30,16 +31,17 @@ async function userGridPOST() {
     return gridDimensions?.length ? gridDimensions : { x: 32, y: 18 }
 };
 
+// saves grid coordinates
 async function handleSave() {
+    // the getGridInfo method just returns the coordinate data 
+    // for each square so we can save to db
     let gis = gridItems.map(gi => gi.getGridInfo())
-    console.log(gis.length)
 
     await fetch('/api/users/mygridinfo', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(gis),
     })
-        // .then(data => console.log(data))
         .catch(err => console.log(err))
 
 }
