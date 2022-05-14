@@ -5,12 +5,12 @@ class GridItem {
         // this.gridId = `${index}-${row}`
         this.column = column
         this.row = row
-        this.gridId = `${column}-${row}`
+        this.gridId = index//`${column}-${row}`
         this.index = index
         this.selected = false
         this.selectedColor = selectedColor ?? currentColor
         this.borderColor = 'gold'
-        this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${coordinatesOn ? `${this.gridId}` : '&nbsp;'}</span></div>`)
+        this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${showCoords ? `${this.gridId}` : '&nbsp;'}</span></div>`)
         this.gridSquare.css({ backgroundColor: selectedColor ?? inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
         this.gridSquare.on('click', this.toggle)
         this.gridSquare.on('mouseover', this.handleMouseOver)
@@ -33,13 +33,15 @@ class GridItem {
 
         //$(`#${this.gridId}`).css({ backgroundColor: 'black' })
         // window.setTimeout(() => {
-        //     this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${coordinatesOn ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
+        //     this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${showCoords ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
         //     this.gridSquare.css({ backgroundColor: this.selectedColor ? this.selectedColor : inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
         //     //this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         //     $(`#${this.gridId}`).replaceWith(this.gridSquare)
         // }, 50)
-        this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${coordinatesOn ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
+        this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${showCoords ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
         this.gridSquare.css({ backgroundColor: this.selectedColor ? this.selectedColor : inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
+        this.gridSquare.on('click', this.toggle)
+        this.gridSquare.on('mouseover', this.handleMouseOver)
         //this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         $(`#${this.gridId}`).replaceWith(this.gridSquare)
     }
@@ -48,10 +50,12 @@ class GridItem {
         if (this.selected && this.selectedColor !== currentColor) {
             this.selectedColor = currentColor
         }
-        //this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${coordinatesOn ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
+        if (!this.selected) this.selectedColor = inactiveColor
+        //this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${showCoords ? `${this.column}-${this.row}` : '&nbsp;'}</span></div>`)
         this.gridSquare.css({ backgroundColor: this.selected ? this.selectedColor : inactiveColor })
         this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         //$(`#${this.gridId}`).replaceWith(this.gridSquare)
+
         handleSave()
         return this
     }
@@ -74,6 +78,7 @@ class GridItem {
         if (colorIsLocked(this.selectedColor) && value === false && !override) return
         if (colorIsLocked(currentColor) && value === true && this.selectedColor !== currentColor) return
         this.selected = value
+
         this.updateSquare()
         return this
     }

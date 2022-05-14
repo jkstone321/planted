@@ -12,7 +12,7 @@ const unlockedIcon = $('<i class="fas fa-lock-open"></i>')
 const lockedIcon = $('<i class="fas fa-lock"></i>')
 
 // change to true to show grid coordinates for the squares
-var coordinatesOn = false
+var showCoords = false
 
 // returns grid dimensions.  right now its hard-coded but we will fix this
 async function userGridPOST() {
@@ -213,9 +213,10 @@ function listColors() {
 }
 
 function handleShowCoords() {
-    let showCoords = $('#showCoords')[0]
-    if (showCoords.checked !== coordinatesOn) {
-        coordinatesOn = showCoords.checked
+    let showCoordsOn = $('#showCoords')[0]
+    if (showCoordsOn.checked !== showCoords) {
+        showCoords = showCoordsOn.checked
+        localStorage.setItem('showCoords', showCoords)
         refreshGrid()
     }
 }
@@ -229,14 +230,22 @@ $(document).ready(async () => {
     //gridDimensions = await userGridPOST()
     console.log('dimensions', gridDimensions)
 
-    //await drawGrid()
-    console.log('# of gridItems:', gridItems.length)
-    //drawPalette()
-
     document.body.onmousedown = () => mouseDown = true;
     document.body.onmouseup = () => mouseDown = false;
 
+    // fixed the bug where mousedown is stuck on by turning it off
+    // when mouse leaves the gridContainer
     $('#gridContainer').on("mouseleave", () => mouseDown = false)
+
+    // ok deep breath for this one.  showcoordinates is either true or false
+    // the problem is coming from localStorage its a string that says "true"
+    // this means that if we tested it to see it its true, even if it says
+    // "false" it will return true.  the way around it is we check if the value 
+    // === true.  this will actually return a boolean of true or false
+    showCoords = (localStorage.getItem('showCoords') === "true")
+
+    // set the toggle switch to whatever was saved in lcoal storage
+    $('#showCoords').prop('checked', showCoords)
 
     // 'grid-save-btn'
     await fetch('/api/users/mylist')
