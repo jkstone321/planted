@@ -37,7 +37,7 @@ async function handleSave() {
     // for each square so we can save to db
     let gis = gridItems.map(gi => gi.getGridInfo())
 
-    await fetch('/api/users/mygridinfo', {
+    return fetch('/api/users/mygridinfo', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(gis),
@@ -102,6 +102,10 @@ async function drawGrid(gridInfo) {
         gridContainer.append(currentGi.gridSquare)
 
         gridItems.push(currentGi)
+
+        let lastItem = gridItems[gridItems.length - 1]
+        lastItem.rgbColor = $(`#${lastItem.gridId}`).css("backgroundColor")
+        console.log(lastItem.rgbColor)
 
         column++
     }
@@ -222,6 +226,23 @@ function handleShowCoords() {
     }
 }
 
+// get all plants and add to My List
+function updatePlantList() {
+    //try to get plants from list
+    fetch('/api/users/mylist')
+        .then(data => data.json())
+        .then(data => {
+            //we got plants, lets get the data ready to use
+            plantData = JSON.parse(data)
+
+            // clear out any plants in the list if there are any
+            $("#plantList").html("")
+
+            // add each plant to the list
+            plantData.map(({ type, color }) => addPlantToList(type, color))
+        })
+}
+
 $(document).ready(async () => {
     var currentColorDisplay = $('#currentColorDisplay')
     currentColorDisplay.css({ backgroundColor: currentColor })
@@ -229,7 +250,7 @@ $(document).ready(async () => {
     frmColorPicker.on('submit', handleSetColor)
     $('#showCoords')[0].checked = false
     //gridDimensions = await userGridPOST()
-    console.log('dimensions', gridDimensions)
+    //console.log('dimensions', gridDimensions)
 
     document.body.onmousedown = () => mouseDown = true;
     document.body.onmouseup = () => mouseDown = false;
@@ -248,23 +269,15 @@ $(document).ready(async () => {
     // set the toggle switch to whatever was saved in lcoal storage
     $('#showCoords').prop('checked', showCoords)
 
-    // 'grid-save-btn'
-    await fetch('/api/users/mylist')
-        .then(data => data.json())
-        .then(data => {
-            plantData = JSON.parse(data)
-            console.log(plantData)
-            plantData.map(({ type, color }) => addPlantToList(type, color))
-        })
+    updatePlantList()
 
-
+    // get all grid squares and add to My Garden
     await fetch('/api/users/mygridinfo')
         .then(data => data.json())
         .then(data => {
-            console.log('myGridInfo', JSON.parse(data))
+            //console.log('myGridInfo', JSON.parse(data))
             drawGrid(JSON.parse(data))
         })
-
 
 })
 

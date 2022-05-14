@@ -9,6 +9,7 @@ class GridItem {
         this.index = index
         this.selected = false
         this.selectedColor = selectedColor ?? currentColor
+        this.rgbColor = ""
         this.borderColor = 'gold'
         this.gridSquare = $(`<div id="${this.gridId}" class="grid"><span>${showCoords ? `${this.gridId}` : '&nbsp;'}</span></div>`)
         this.gridSquare.css({ backgroundColor: selectedColor ?? inactiveColor, height: `${gridSquareSize}rem`, width: `${gridSquareSize}rem` })
@@ -55,6 +56,7 @@ class GridItem {
         this.gridSquare.css({ backgroundColor: this.selected ? this.selectedColor : inactiveColor })
         this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         //$(`#${this.gridId}`).replaceWith(this.gridSquare)
+
 
         // sometimes this gets called by setSelected() which gets passed override boolean
         // if override is true, we're trying to clear all the squares, not set an individual square on or off

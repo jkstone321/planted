@@ -6,11 +6,11 @@ $(document).ready(async function () {
     headers: { 'Content-Type': 'application/json' },
   });
   plantNames = await plantNamesData.json();
-  console.log(plantNames);
+  //console.log(plantNames);
 });
 
 setTimeout(() => {
-  console.log(plantNames);
+  //console.log(plantNames);
   jQuery.fn.extend({
     propAttr: $.fn.prop || $.fn.attr,
   });

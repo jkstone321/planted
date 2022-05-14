@@ -131,3 +131,13 @@ select::-ms-expand {
 .tgl .toggle {
     margin: .10rem;
 }
+
+.input-group-prepend {
+    display: flex;
+    align-items: center;
+    background-color: #6c757d;
+}
+
+.fas {
+    margin: 0 1rem;
+}
