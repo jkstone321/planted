@@ -5,7 +5,7 @@ class GridItem {
         // this.gridId = `${index}-${row}`
         this.column = column
         this.row = row
-        this.gridId = index//`${column}-${row}`
+        this.gridId = `${column}-${row}`
         this.index = index
         this.selected = false
         this.selectedColor = selectedColor ?? currentColor
