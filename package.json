@@ -11,7 +11,7 @@
     "seed": "node seeds/seed.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Big Papa and the Garden Boys",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
