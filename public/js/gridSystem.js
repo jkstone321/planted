@@ -114,6 +114,7 @@ function clearGrid() {
     // the second property is setting override to true since setSelected
     // wont clear a square if its color has been locked
     gridItems = gridItems.map(gi => gi.setSelected(false, true))
+    handleSave()
 }
 
 function drawPalette() {

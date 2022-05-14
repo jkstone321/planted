@@ -46,7 +46,7 @@ class GridItem {
         $(`#${this.gridId}`).replaceWith(this.gridSquare)
     }
 
-    updateSquare = () => {
+    updateSquare = (override) => {
         if (this.selected && this.selectedColor !== currentColor) {
             this.selectedColor = currentColor
         }
@@ -56,7 +56,12 @@ class GridItem {
         this.setBorderColor(colorIsLocked(this.selectedColor) ? this.selectedColor : 'gold')
         //$(`#${this.gridId}`).replaceWith(this.gridSquare)
 
-        handleSave()
+        // sometimes this gets called by setSelected() which gets passed override boolean
+        // if override is true, we're trying to clear all the squares, not set an individual square on or off
+        // in that case, dont save this square as if the user just clicked it.  instead
+        // wait until all the squares are finished updating and then save them all at once
+        // its WAAAAY faster this way!
+        if (!override) handleSave()
         return this
     }
 
@@ -79,7 +84,7 @@ class GridItem {
         if (colorIsLocked(currentColor) && value === true && this.selectedColor !== currentColor) return
         this.selected = value
 
-        this.updateSquare()
+        this.updateSquare(override)
         return this
     }
 
