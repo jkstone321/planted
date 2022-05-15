@@ -42,9 +42,8 @@
       function handleOptionSelect(e) {
         const color = e.target.value
         if (!color) return
-        console.log(e.target.id)
         var idNum = Number(e.target.id.split('-')[1])
-        console.log("idNum:", idNum)
+        console.log("idNum:", idNum, "color", color)
         var os = $(`#ig-${idNum}`)
         os.css("background-color", color)
         console.log(idNum, plantData[idNum])
@@ -66,9 +65,11 @@
       }
 
       async function erasePlantColor(color) {
+
         gridItems.map((gi, i) => {
-          console.log(gi.selectedColor, color)
-          gi.rgbColor === color ? gi.setSelected = (false, true) : null
+          //console.log('erase', gi.selectedColor, color, gi.selectedColor === color)
+          //if (gi.selectedColor === color) console.log("deleting", gi.gridId, gi.selectedColor)
+          gi.selectedColor === color ? gi.setSelected(false, true) : null
           if (i === gridItems.length - 1) return gridItems
         })
       }
