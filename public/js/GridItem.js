@@ -85,7 +85,6 @@ class GridItem {
         if (colorIsLocked(this.selectedColor) && value === false && !override) return
         if (colorIsLocked(currentColor) && value === true && this.selectedColor !== currentColor) return
         this.selected = value
-
         this.updateSquare(override)
         return this
     }
